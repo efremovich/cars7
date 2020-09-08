@@ -16,6 +16,8 @@ type Params struct {
 	EndDate   string `json:"end_date"`
 	Category  string `json:"category"`
 	Car       string `json:"car"`
+	Password  string `json:"password"`
+	Login     string `json:"login"`
 }
 
 func main() {
@@ -30,9 +32,13 @@ func main() {
 	fmt.Println(http.ListenAndServe(":49200", nil))
 }
 
-func login() {
+func login(params *Params) {
 	client := getClient(false)
-	resp, err := client.Get("http://lk.cars7.ru/Account/LoginApp?login=%D0%A2%D0%B0%D1%82%D0%B5%D0%B2%D0%BE%D1%81%D1%8F%D0%BD&password=Haiastan1987!")
+	queryLoqin := url.QueryEscape(params.Login)
+	loginURL := "http://lk.cars7.ru/Account/LoginApp?login=" + queryLoqin + "&password=" + params.Password
+	fmt.Println(loginURL)
+	resp, err := client.Get(loginURL)
+
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -79,7 +85,7 @@ func getFine(w http.ResponseWriter, r *http.Request) {
 }
 
 func getDataCSV(params *Params) []byte {
-	login()
+	login(params)
 	client := getClient(false)
 	startDate := params.formatTime(params.StartDate, "2006-01-02T15:04:05Z")
 	endDate := params.formatTime(params.EndDate, "2006-01-02T15:04:05Z")
