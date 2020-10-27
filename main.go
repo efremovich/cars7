@@ -22,13 +22,12 @@ type Params struct {
 
 func main() {
 	createJar("cars7")
-
 	http.HandleFunc("/getOrders", getOrders)
 	http.HandleFunc("/getCars", getCars)
 	http.HandleFunc("/getFine", getFine)
-	//http.HandleFunc("/getOrders", getOrders)
-	//http.HandleFunc("/getOrders", getOrders)
-	//http.HandleFunc("/getOrders", getOrders)
+	http.HandleFunc("/getRefills", getRefills)
+	http.HandleFunc("/getCompence", getCompence)
+	http.HandleFunc("/getBonus", getBonus)
 	fmt.Println(http.ListenAndServe(":49200", nil))
 }
 
@@ -84,13 +83,48 @@ func getFine(w http.ResponseWriter, r *http.Request) {
 	w.Write(body)
 }
 
+func getRefills(w http.ResponseWriter, r *http.Request) {
+	var params Params
+	body := StreamToByte(r.Body)
+	err := json.Unmarshal(body, &params)
+	if err != nil {
+		fmt.Println("JSON unmarshal error:", err)
+	}
+	params.Category = "12"
+	body = getDataCSV(&params)
+	w.Write(body)
+}
+
+func getCompence(w http.ResponseWriter, r *http.Request) {
+	var params Params
+	body := StreamToByte(r.Body)
+	err := json.Unmarshal(body, &params)
+	if err != nil {
+		fmt.Println("JSON unmarshal error:", err)
+	}
+	params.Category = "9"
+	body = getDataCSV(&params)
+	w.Write(body)
+}
+
+func getBonus(w http.ResponseWriter, r *http.Request) {
+	var params Params
+	body := StreamToByte(r.Body)
+	err := json.Unmarshal(body, &params)
+	if err != nil {
+		fmt.Println("JSON unmarshal error:", err)
+	}
+	params.Category = "10"
+	body = getDataCSV(&params)
+	w.Write(body)
+}
+
 func getDataCSV(params *Params) []byte {
 	login(params)
 	client := getClient(false)
 	startDate := params.formatTime(params.StartDate, "2006-01-02T15:04:05Z")
 	endDate := params.formatTime(params.EndDate, "2006-01-02T15:04:05Z")
-
-	fmt.Println(startDate)
+	fmt.Printf("Запрос транзакций с %s по %s", startDate, endDate)
 	formData := url.Values{}
 	formData.Set("DateStart", startDate)
 	formData.Set("DateEnd", endDate)
