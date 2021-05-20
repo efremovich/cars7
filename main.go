@@ -41,7 +41,7 @@ func login(params *Params) {
 	if err != nil {
 		fmt.Println(err)
 	}
-	body, err := ioutil.ReadAll(resp.Body)
+	body, _ := ioutil.ReadAll(resp.Body)
 	fmt.Println(string(body))
 }
 
@@ -73,6 +73,7 @@ func getCars(w http.ResponseWriter, r *http.Request) {
 func getFine(w http.ResponseWriter, r *http.Request) {
 
 	var params Params
+
 	body := StreamToByte(r.Body)
 	err := json.Unmarshal(body, &params)
 	if err != nil {
@@ -130,12 +131,12 @@ func getDataCSV(params *Params) []byte {
 	formData.Set("DateEnd", endDate)
 	formData.Set("Car", "")
 
-	resp, err := client.PostForm("http://lk.cars7.ru/Data/ExportToCsv?type="+params.Category+"&category=0", formData)
+	resp, err := client.PostForm("http://lk.cars7.ru/Export/ExportToCsv?type="+params.Category+"&category=0&timezone=-3", formData)
 	if err != nil {
 		fmt.Println(err)
 	}
 
-	body, err := ioutil.ReadAll(resp.Body)
+	body, _ := ioutil.ReadAll(resp.Body)
 	fmt.Println(string(body))
 	type fileStruct struct {
 		FileName string `json:"FileName"`
@@ -147,7 +148,7 @@ func getDataCSV(params *Params) []byte {
 	if err != nil {
 		fmt.Printf("Ошибка преобразования json: %v", err)
 	}
-	resp, err = client.Get("http://lk.cars7.ru/Data/GetFileCsv?url=" + url.QueryEscape(file.File))
+	resp, err = client.Get("http://lk.cars7.ru/Export/GetFileCsv?url=" + url.QueryEscape(file.File))
 	if err != nil {
 		fmt.Println(err)
 	}
