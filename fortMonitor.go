@@ -37,6 +37,8 @@ type Objs struct {
 	Move int     `json:"move"`
 	Oid  int     `json:"oid"`
 	St   int     `json:"st"`
+	IMEI string  `json:"imei"`
+	Name string  `json:"Name"`
 }
 type ObjsInfo struct {
 	Objs   []Objs `json:"objs"`
@@ -81,10 +83,6 @@ func getMileAge(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("JSON unmarshal error:", err)
 	}
 	loginFort(&params)
-	data := url.Values{}
-	data.Set("oid", "0")
-	body = getApi(&params, "GET", "/api/Api.svc/getfullupdateinfo", data)
-
 	now := time.Now()
 	currentYear, currentMonth, _ := now.Date()
 	currentLocation := now.Location()
@@ -100,6 +98,13 @@ func getMileAge(w http.ResponseWriter, r *http.Request) {
 	if params.EndDate != "" {
 		endtDate = params.formatTime(params.EndDate, "2006-01-02 15:04:05")
 	}
+
+	data := url.Values{}
+	data.Set("oid", "0")
+	data.Set("date", endtDate)
+	data.Set("limit", "200")
+	body = getApi(&params, "GET", "/api/Api.svc/getfullupdateinfo", data)
+
 	mileAgeActions := []Actions{}
 	objectsData := ObjectsData{}
 	err = json.Unmarshal(body, &objectsData)
@@ -130,10 +135,29 @@ func getFortCars(w http.ResponseWriter, r *http.Request) {
 
 	loginFort(&params)
 
+	now := time.Now()
+
 	data := url.Values{}
-	data.Set("all", "true")
-	data.Set("node", "root")
-	body = getApi(&params, "GET", "/api/Api.svc/gettree", data)
+	data.Set("date", now.Format("2006-01-02 15:04:05"))
+	data.Set("oid", "0")
+	data.Set("limit", "200")
+	body = getApi(&params, "GET", "/api/Api.svc/getfullupdateinfo", data)
+	carsData := []Objs{}
+	objectsData := ObjectsData{}
+	err = json.Unmarshal(body, &objectsData)
+	for _, obj := range objectsData.ObjsInfo.Objs {
+		data := url.Values{}
+		oid := strconv.Itoa(obj.Oid)
+		data.Set("oid", oid)
+		body = getApi(&params, "GET", "/api/Api.svc/objectinfo", data)
+		objinfo := Objs{}
+		err = json.Unmarshal(body, &objinfo)
+		obj.Name = objinfo.Name
+		obj.IMEI = objinfo.IMEI
+		carsData = append(carsData, obj)
+	}
+
+	body, err = json.Marshal(carsData)
 	w.Write(body)
 }
 
