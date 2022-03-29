@@ -41,10 +41,14 @@ func createJar(em string) {
 }
 
 //getTLSClient получение защищенного клиента HTTPS
-func getClient(isTLSEnabled bool) http.Client {
+func getClient(isTLSEnabled bool, name string) http.Client {
 	redir := redirectPolicyFunc
+
+	if _, ok := coockie[name]; !ok {
+		createJar(name)
+	}
 	client := http.Client{
-		Jar:           coockie["cars7"],
+		Jar:           coockie[name],
 		CheckRedirect: redir,
 	}
 	if isTLSEnabled {

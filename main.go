@@ -18,6 +18,7 @@ type Params struct {
 	Car       string `json:"car"`
 	Password  string `json:"password"`
 	Login     string `json:"login"`
+	URLstring string `json:"url_string"`
 }
 
 func main() {
@@ -28,11 +29,14 @@ func main() {
 	http.HandleFunc("/getRefills", getRefills)
 	http.HandleFunc("/getCompence", getCompence)
 	http.HandleFunc("/getBonus", getBonus)
+
+	http.HandleFunc("/fort/mileage", getMileAge)
+	http.HandleFunc("/fort/cars", getFortCars)
+
 	fmt.Println(http.ListenAndServe(":49200", nil))
 }
-
 func login(params *Params) {
-	client := getClient(false)
+	client := getClient(false, "cars7")
 	queryLoqin := url.QueryEscape(params.Login)
 	loginURL := "http://lk.cars7.ru/Account/LoginApp?login=" + queryLoqin + "&password=" + params.Password
 	fmt.Println(loginURL)
@@ -122,7 +126,7 @@ func getBonus(w http.ResponseWriter, r *http.Request) {
 
 func getDataCSV(params *Params) []byte {
 	login(params)
-	client := getClient(false)
+	client := getClient(false, "cars7")
 	startDate := params.formatTime(params.StartDate, "2006-01-02T15:04:05Z")
 	endDate := params.formatTime(params.EndDate, "2006-01-02T15:04:05Z")
 	fmt.Printf("Запрос транзакций с %s по %s", startDate, endDate)
@@ -131,7 +135,10 @@ func getDataCSV(params *Params) []byte {
 	formData.Set("DateEnd", endDate)
 	formData.Set("Car", "")
 
-	resp, err := client.PostForm("http://lk.cars7.ru/Export/ExportToCsv?type="+params.Category+"&category=0&timezone=-3", formData)
+	resp, err := client.PostForm(
+		"http://lk.cars7.ru/Export/ExportToCsv?type="+params.Category+"&category=0&timezone=-3",
+		formData,
+	)
 	if err != nil {
 		fmt.Println(err)
 	}
