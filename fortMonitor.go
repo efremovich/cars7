@@ -64,6 +64,7 @@ type Actions struct {
 	Fuel              float64 `json:"fuel"`
 	MotoHours         string  `json:"motoHours"`
 	ActionDoubleValue float64 `json:"actionDoubleValue"`
+	Oid               int     `json:"oid"`
 }
 type Total struct {
 	Distance    float64 `json:"distance"`
@@ -118,7 +119,10 @@ func getMileAge(w http.ResponseWriter, r *http.Request) {
 		body = getApi(&params, "POST", "/api/v2/quickreport/getreport", data)
 		mileAgeData := MileAgeData{}
 		err = json.Unmarshal(body, &mileAgeData)
-		mileAgeActions = append(mileAgeActions, mileAgeData.Actions...)
+		for _, act := range mileAgeData.Actions {
+			act.Oid = obj.Oid
+			mileAgeActions = append(mileAgeActions, act)
+		}
 	}
 	body, err = json.Marshal(mileAgeActions)
 	w.Write(body)
