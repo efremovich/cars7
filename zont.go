@@ -3,16 +3,50 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io"
+	"io/ioutil"
+	"log"
 	"net/http"
 	"net/url"
+	"regexp"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/PuerkitoBio/goquery"
 )
 
 type Devices struct {
-	Devices interface{} `json:"devices"`
+	Devices []struct {
+		ID                      int         `json:"id"`
+		IP                      string      `json:"ip"`
+		IsActive                bool        `json:"is_active"`
+		Online                  bool        `json:"online"`
+		OwnerUsername           string      `json:"owner_username"`
+		UserID                  int         `json:"user_id"`
+		LastReceiveTime         int         `json:"last_receive_time"`
+		LastReceiveTimeRelative int         `json:"last_receive_time_relative"`
+		Name                    string      `json:"name"`
+		Color                   string      `json:"color"`
+		Notes                   string      `json:"notes"`
+		Serial                  string      `json:"serial"`
+		VisibleDeviceType       interface{} `json:"visible_device_type"`
+		Imei                    string      `json:"imei"`
+	} `json:"devices"`
+}
+
+type Au struct {
+	Requests []struct {
+		DeviceID       int      `json:"device_id"`
+		Mintime        int      `json:"mintime"`
+		Maxtime        int      `json:"maxtime"`
+		DataTypes      []string `json:"data_types"`
+		RequestOptions struct {
+			Gps struct {
+				IncludeLastBefore bool `json:"include_last_before"`
+			} `json:"gps"`
+		} `json:"request_options"`
+	} `json:"requests"`
 }
 
 func getZontMileAge(w http.ResponseWriter, r *http.Request) {
@@ -22,48 +56,58 @@ func getZontMileAge(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println("JSON unmarshal error:", err)
 	}
-	loginFort(&params)
+
 	now := time.Now()
 	currentYear, currentMonth, _ := now.Date()
 	currentLocation := now.Location()
 
 	firstOfMonth := time.Date(currentYear, currentMonth, 1, 0, 0, 0, 0, currentLocation)
 	lastOfMonth := firstOfMonth.AddDate(0, 1, -1)
-	startDate := firstOfMonth.Format("2006-01-02")
-	endtDate := lastOfMonth.Format("2006-01-02")
+	startDate := firstOfMonth
+	endDate := lastOfMonth
 
 	if params.StartDate != "" {
-		startDate = params.formatTime(params.StartDate, "2006-01-02 15:04:05")
-	}
-	if params.EndDate != "" {
-		endtDate = params.formatTime(params.EndDate, "2006-01-02 15:04:05")
-	}
 
-	data := url.Values{}
-	data.Set("oid", "0")
-	data.Set("date", endtDate)
-	data.Set("limit", "200")
-	body = getApi(&params, "GET", "/api/Api.svc/getfullupdateinfo", data)
-
-	mileAgeActions := []Actions{}
-	objectsData := ObjectsData{}
-	err = json.Unmarshal(body, &objectsData)
-	for _, obj := range objectsData.ObjsInfo.Objs {
-		data := url.Values{}
-		data.Set("from", startDate)
-		oid := strconv.Itoa(obj.Oid)
-		data.Set("oid", oid)
-		data.Set("showFuelingsDrains", "false")
-		data.Set("to", endtDate)
-		body = getApi(&params, "POST", "/api/v2/quickreport/getreport", data)
-		mileAgeData := MileAgeData{}
-		err = json.Unmarshal(body, &mileAgeData)
-		for _, act := range mileAgeData.Actions {
-			act.Oid = obj.Oid
-			mileAgeActions = append(mileAgeActions, act)
+		layout := "2006-01-02T15:04:05"
+		startDate, err = time.Parse(layout, params.StartDate)
+		if err != nil {
+			log.Println(err)
 		}
 	}
-	body, err = json.Marshal(mileAgeActions)
+	if params.EndDate != "" {
+		layout := "2006-01-02T15:04:05"
+		endDate, err = time.Parse(layout, params.EndDate)
+		if err != nil {
+			log.Println(err)
+		}
+	}
+
+	loginZont(&params)
+
+	carsData := []Objs{}
+
+	err, body, carsData = carsDevices(params, err, body, carsData)
+
+	for _, item := range carsData {
+		request := `{"requests": [{
+      "device_id": %v,
+      "mintime": %v,
+      "maxtime": %v,
+      "data_types": [
+        "gps",
+      ],
+      "request_options": {
+        "gps": {
+          "include_last_before": true
+        }
+      }
+    }
+  ]
+}
+`
+		request = fmt.Sprintf(request, item.Oid, startDate.Unix(), endDate.Unix())
+		fmt.Println(request)
+	}
 	w.Write(body)
 
 }
@@ -77,40 +121,42 @@ func getZontCars(w http.ResponseWriter, r *http.Request) {
 	}
 
 	loginZont(&params)
-
-	body = getApi(&params, "GET", "/console/", url.Values{})
-
-	fmt.Println(body)
-
-	now := time.Now()
-
-	data := url.Values{}
-	data.Set("date", now.Format("2006-01-02 15:04:05"))
-	data.Set("oid", "0")
-	data.Set("limit", "200")
-	body = getApi(&params, "GET", "/api/Api.svc/getfullupdateinfo", data)
 	carsData := []Objs{}
-	objectsData := ObjectsData{}
-	err = json.Unmarshal(body, &objectsData)
-	for _, obj := range objectsData.ObjsInfo.Objs {
-		data := url.Values{}
-		oid := strconv.Itoa(obj.Oid)
-		data.Set("oid", oid)
-		body = getApi(&params, "GET", "/api/Api.svc/objectinfo", data)
-		objinfo := Objs{}
-		err = json.Unmarshal(body, &objinfo)
-		obj.Name = objinfo.Name
-		obj.IMEI = objinfo.IMEI
-		carsData = append(carsData, obj)
-	}
+
+	err, body, carsData = carsDevices(params, err, body, carsData)
 
 	body, err = json.Marshal(carsData)
 	w.Write(body)
 }
 
+func carsDevices(params Params, err error, body []byte, carsData []Objs) (error, []byte, []Objs) {
+	client := getClient(false, params.Password)
+	resp, err := client.Get(params.URLstring + "/console/")
+
+	body, _ = ioutil.ReadAll(resp.Body)
+
+	regularExpression := regexp.MustCompile(`JSON\.parse\(\"(.*)\"\);`)
+
+	result := strings.ReplaceAll(regularExpression.FindString(string(body)), `JSON.parse("`, "")
+	result, err = strconv.Unquote(fmt.Sprintf(`"%s"`, result[:len(result)-3]))
+	devicesData := Devices{}
+	err = json.Unmarshal([]byte(result), &devicesData)
+	if err != nil {
+		fmt.Println(err)
+	}
+	deviceData := Objs{}
+	for _, device := range devicesData.Devices {
+		deviceData.IMEI = device.Imei
+		deviceData.Name = device.Name
+		deviceData.Oid = device.ID
+		carsData = append(carsData, deviceData)
+	}
+	return err, body, carsData
+}
+
 func loginZont(params *Params) {
-	client := getClient(false, "fortMonitor")
-	resp, err := client.Get(params.URLstring + "/login.aspx")
+	client := getClient(false, params.Password)
+	resp, err := client.Get(params.URLstring + "/login")
 	if err != nil {
 		fmt.Println(err, "Ошибка авторизации fort-monitor")
 	}
@@ -125,6 +171,43 @@ func loginZont(params *Params) {
 		val, _ := s.Attr("value")
 		data.Add(name, val)
 	})
-	result := getApi(params, "POST", "/login", data)
-	fmt.Println(string(result))
+	getZontApi(params, "POST", "/login", data)
+
+}
+
+func getZontApi(params *Params, contentType, method, urlPath, putData string, data url.Values) []byte {
+
+	client := getClient(false, params.Password)
+	u := params.URLstring + urlPath
+	var rbody io.Reader
+	if method == "GET" {
+		u += "?" + data.Encode()
+	} else if len(putData) > 0 {
+		rbody = strings.NewReader(putData)
+	} else {
+		rbody = strings.NewReader(data.Encode())
+	}
+
+	req, err := http.NewRequest(method, u, rbody)
+	if err != nil {
+		panic(err)
+	}
+	req.Header.Set("Accept", contentType)
+	if method == "POST" {
+		req.Header.Set("Content-Type", contentType)
+	} else if method == "PUT" {
+		req.Header.Set("Content-Type", contentType)
+	}
+	resp, err := client.Do(req)
+	if err != nil {
+		return []byte{}
+	}
+
+	defer resp.Body.Close()
+
+	body, _ := ioutil.ReadAll(resp.Body)
+	if resp.StatusCode != 200 {
+		fmt.Println(string(body))
+	}
+	return body
 }
