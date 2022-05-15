@@ -167,7 +167,7 @@ func getFortCars(w http.ResponseWriter, r *http.Request) {
 
 func getApi(params *Params, method, urlPath string, data url.Values) []byte {
 
-	client := getClient(false, "fortMonitor")
+	client := getClient(false, params.Password)
 	u := params.URLstring + urlPath
 	var rbody io.Reader
 	if method == "GET" {

@@ -8,6 +8,7 @@ import (
 	"log"
 	"net/http"
 	"net/url"
+	"reflect"
 	"regexp"
 	"strconv"
 	"strings"
@@ -16,6 +17,21 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
+type Response struct {
+	Ok        bool `json:"ok"`
+	Responses []struct {
+		DeviceID      int             `json:"device_id"`
+		Ok            bool            `json:"ok"`
+		TimeTruncated bool            `json:"time_truncated"`
+		Gps           [][]interface{} `json:"gps"`
+		Timings       struct {
+			Gps struct {
+				Wall float64 `json:"wall"`
+				Proc float64 `json:"proc"`
+			} `json:"gps"`
+		} `json:"timings"`
+	} `json:"responses"`
+}
 type Devices struct {
 	Devices []struct {
 		ID                      int         `json:"id"`
@@ -90,26 +106,49 @@ func getZontMileAge(w http.ResponseWriter, r *http.Request) {
 
 	for _, item := range carsData {
 		request := `{"requests": [{
-      "device_id": %v,
-      "mintime": %v,
-      "maxtime": %v,
-      "data_types": [
-        "gps",
-      ],
-      "request_options": {
-        "gps": {
-          "include_last_before": true
-        }
-      }
-    }
-  ]
-}
-`
+									  "device_id": %v,
+									  "mintime": %v,
+									  "maxtime": %v,
+									  "data_types": [
+										"gps"
+									  ],
+									  "request_options": {
+										"gps": {
+										  "include_last_before": true
+										}
+									  }
+									}
+								  ]
+								}
+				`
 		request = fmt.Sprintf(request, item.Oid, startDate.Unix(), endDate.Unix())
 		fmt.Println(request)
+		fmt.Printf("start %v end %v", startDate.Format("2006.01.02"), endDate.Format("2006.01.02"))
+		body = getZontApi(&params, "application/json", "POST", "/api/load_data", request, url.Values{})
+		respReq := Response{}
+		err := json.Unmarshal(body, &respReq)
+		if err != nil {
+			fmt.Println(err)
+		}
+		for _, resp := range respReq.Responses {
+			for _, gps := range resp.Gps {
+				relaxeReflex(gps)
+			}
+		}
+		// fmt.Println(string(body))
 	}
 	w.Write(body)
 
+}
+func relaxeReflex(t interface{}) {
+	switch reflect.TypeOf(t).Kind() {
+	case reflect.Slice:
+		s := reflect.ValueOf(t)
+
+		for i := 0; i < s.Len(); i++ {
+			fmt.Println(s.Index(i))
+		}
+	}
 }
 
 func getZontCars(w http.ResponseWriter, r *http.Request) {
@@ -171,7 +210,7 @@ func loginZont(params *Params) {
 		val, _ := s.Attr("value")
 		data.Add(name, val)
 	})
-	getZontApi(params, "POST", "/login", data)
+	getZontApi(params, "application/x-www-form-urlencoded", "POST", "/login", "", data)
 
 }
 
@@ -198,6 +237,14 @@ func getZontApi(params *Params, contentType, method, urlPath, putData string, da
 	} else if method == "PUT" {
 		req.Header.Set("Content-Type", contentType)
 	}
+
+	req.Header.Set("ZONT-Brand", "zont")
+	req.Header.Set("X-ZONT-Client", "web")
+	req.Header.Set("X-ZONT-Client-Version", "2.66.3")
+	req.Header.Set("X-ZONT-Guest", "false")
+	req.Header.Set("X-ZONT-User", "229227")
+	req.Header.Set("ZONT-WebGL-Support", "webgl2")
+
 	resp, err := client.Do(req)
 	if err != nil {
 		return []byte{}

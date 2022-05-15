@@ -1,0 +1,887 @@
+{\u0022server_time\u0022: 1652534207,\u0022account\u0022: {\u0022id\u0022: 229227,\u0022username\u0022:\u0022Dascha722@mail.ru\u0022,\u0022fullname\u0022:\u0022\u0022,\u0022phone\u0022:\u0022917 722\u002D21\u002D35 \u0022,\u0022email\u0022:\u0022dascha722@mail.ru\u0022,\u0022email_confirmed\u0022: true,\u0022is_demo\u0022: false,\u0022guest_password_set\u0022: false,\u0022allow_terminal\u0022: false,\u0022show_network_events\u0022: false,\u0022autoscan_system\u0022: null,\u0022public_api_allowed\u0022: false,\u0022zth_dashboard\u0022: {\u0022show\u0022: false,\u0022enable_modes\u0022: true,\u0022enable_zones\u0022: true,\u0022enable_temperature\u0022: true,\u0022enable_alert\u0022: true
+        },\u0022sims\u0022: [],\u0022foreign_sims\u0022: [
+            {\u0022msisdn\u0022:\u002279297862990\u0022,\u0022user_id\u0022: 229227
+            },
+            {\u0022msisdn\u0022:\u002279272529467\u0022,\u0022user_id\u0022: 229227
+            },
+            {\u0022msisdn\u0022:\u002279272530627\u0022,\u0022user_id\u0022: 229227
+            },
+            {\u0022msisdn\u0022:\u0022799275217548\u0022,\u0022user_id\u0022: 229227
+            }
+        ],\u0022date_last_news_reading\u0022: 1633009518,\u0022webui_beta\u0022: false,\u0022is_guest\u0022: false,\u0022is_staff\u0022: false,\u0022is_superuser\u0022: false,\u0022permissions\u0022: [],\u0022real_account\u0022: {\u0022id\u0022: 229227,\u0022username\u0022:\u0022Dascha722@mail.ru\u0022,\u0022fullname\u0022:\u0022\u0022,\u0022phone\u0022:\u0022917 722\u002D21\u002D35 \u0022,\u0022email\u0022:\u0022dascha722@mail.ru\u0022,\u0022email_confirmed\u0022: true,\u0022is_demo\u0022: false,\u0022guest_password_set\u0022: false,\u0022allow_terminal\u0022: false,\u0022show_network_events\u0022: false,\u0022autoscan_system\u0022: null,\u0022public_api_allowed\u0022: false,\u0022zth_dashboard\u0022: {\u0022show\u0022: false,\u0022enable_modes\u0022: true,\u0022enable_zones\u0022: true,\u0022enable_temperature\u0022: true,\u0022enable_alert\u0022: true
+            },\u0022sims\u0022: [],\u0022foreign_sims\u0022: [
+                {\u0022msisdn\u0022:\u002279297862990\u0022,\u0022user_id\u0022: 229227
+                },
+                {\u0022msisdn\u0022:\u002279272529467\u0022,\u0022user_id\u0022: 229227
+                },
+                {\u0022msisdn\u0022:\u002279272530627\u0022,\u0022user_id\u0022: 229227
+                },
+                {\u0022msisdn\u0022:\u0022799275217548\u0022,\u0022user_id\u0022: 229227
+                }
+            ],\u0022date_last_news_reading\u0022: 1633009518,\u0022webui_beta\u0022: false
+        }
+    },\u0022billing\u0022: {\u0022billing_type\u0022:\u0022zont\u0022,\u0022billing_state\u0022: {\u0022change_no\u0022: 482,\u0022balance_x100\u0022: 0,\u0022ml_balance_x100\u0022: 0,\u0022old_free\u0022: false,\u0022last_day_price_x100\u0022: 0,\u0022charged_up_to\u0022: 1630454400,\u0022additional_history_months\u0022: 0,\u0022post_pay\u0022: false,\u0022credit_limit_amount_x100\u0022: 0,\u0022last_active_change\u0022: null,\u0022last_inactivity_charge\u0022: null,\u0022tariff\u0022: {\u0022current\u0022:\u0022free\u0022,\u0022until\u0022: null,\u0022next\u0022: null
+            },\u0022blocked\u0022: false,\u0022history_months\u0022: 3
+        },\u0022billing_settings\u0022: {\u0022paid\u0022: false,\u0022last_payment_method\u0022:\u0022yakassa\u0022,\u0022auto_payment\u0022: null
+        },\u0022org_details\u0022: null,\u0022day_price_for_user_x100\u0022: 0,\u0022devs_to_charge_for_user\u0022: 3
+    },\u0022is_demo\u0022: false,\u0022devices\u0022: [
+        {\u0022access\u0022: [],\u0022capabilities\u0022: [\u0022has_accelerometer\u0022,\u0022has_accelerometer_toggle\u0022,\u0022has_engine_block\u0022,\u0022has_car_controls\u0022,\u0022has_firmware_upgrade\u0022,\u0022has_fuel_consumption\u0022,\u0022has_gps\u0022,\u0022has_gsm\u0022,\u0022has_gsm_balance\u0022,\u0022has_guard_state\u0022,\u0022has_guard_notification\u0022,\u0022has_notifications\u0022,\u0022has_radiosilence\u0022,\u0022has_telpassword\u0022,\u0022has_trusted_phones\u0022,\u0022has_voltage_12v_low_level\u0022,\u0022has_voltage_sensor\u0022,\u0022has_webasto\u0022,\u0022has_ztc110_guard_polarity\u0022,\u0022has_ztc110_inputconfig\u0022,\u0022has_gsm_blackout_notification\u0022,\u0022has_offline_notifications\u0022,\u0022has_serverside_events_notifications\u0022,\u0022has_ztcconfig_battery\u0022,\u0022has_pcn_arsenal\u0022,\u0022has_sim_in_device\u0022,\u0022has_lithium_ztc\u0022,\u0022has_work_state\u0022
+            ],\u0022device_type\u0022: {\u0022code\u0022:\u0022ZTC\u002D110\u0022,\u0022name\u0022:\u0022ZTC\u002D110\u0022
+            },\u0022hardware_type\u0022: {\u0022code\u0022:\u0022205\u0022,\u0022name\u0022:\u0022205\u0022
+            },\u0022id\u0022: 163737,\u0022ip\u0022:\u002285.26.234.33\u0022,\u0022is_active\u0022: true,\u0022online\u0022: false,\u0022owner_username\u0022:\u0022Dascha722@mail.ru\u0022,\u0022user_id\u0022: 229227,\u0022last_receive_time\u0022: 1646036215,\u0022last_receive_time_relative\u0022: 6497992,\u0022name\u0022:\u0022К053АС 134\u0022,\u0022color\u0022:\u0022#00d600\u0022,\u0022notes\u0022:\u0022\u0022,\u0022serial\u0022:\u00225258559C6129\u0022,\u0022visible_device_type\u0022: null,\u0022firmware_version\u0022: [
+                122,
+                153
+            ],\u0022is_configured_by_wizard\u0022: null,\u0022suggest_firmware_upgrade\u0022: true,\u0022graphs_config\u0022: null,\u0022cams_show\u0022: true,\u0022show_heating_tab\u0022: true,\u0022server_notifications\u0022: {\u0022events\u0022: {\u0022enabled\u0022: false
+                },\u0022offline\u0022: {\u0022enabled\u0022: false,\u0022timeout\u0022: 1200
+                }
+            },\u0022debug_text_messages_regexp\u0022: null,\u0022stationary_location\u0022: null,\u0022cams\u0022: [],\u0022specialist_info\u0022: null,\u0022installation_state\u0022: null,\u0022maintenances\u0022: null,\u0022work_state\u0022: null,\u0022timezone\u0022: 4,\u0022malfunction\u0022: null,\u0022not_on_operation\u0022: null,\u0022driver_name\u0022: null,\u0022driver_number\u0022: null,\u0022driver_date\u0022: null,\u0022mechanic\u0022: null,\u0022sim_number\u0022: null,\u0022fuel_consumption\u0022: {\u0022enabled\u0022: false
+            },\u0022last_guard_event\u0022: null,\u0022sim_in_device\u0022: {\u0022sim_type\u0022:\u0022foreign\u0022,\u0022sim_id\u0022: null,\u0022foreign_msisdn\u0022:\u002279297862990\u0022
+            },\u0022balance\u0022: {\u0022limit\u0022: 30,\u0022ussd\u0022:\u0022*102#\u0022,\u0022warning\u0022: true
+            },\u0022trusted_phones\u0022:\u0022+791772222135\u0022,\u0022gsm_roaming\u0022: null,\u0022imei\u0022:\u0022865733024783839\u0022,\u0022iccid\u0022: null,\u0022last_gps\u0022: [
+                {\u0022time\u0022: 1646034328,\u0022provider\u0022: 0,\u0022x\u0022: 44.48291666666667,\u0022y\u0022: 48.77343333333334,\u0022speed\u0022: 0,\u0022single\u0022: false,\u0022satellites\u0022: null,\u0022hdop\u0022: null
+                },
+                {\u0022time\u0022: 1646034311,\u0022provider\u0022: 0,\u0022x\u0022: 44.48291666666667,\u0022y\u0022: 48.77341666666667,\u0022speed\u0022: 0,\u0022single\u0022: false,\u0022satellites\u0022: null,\u0022hdop\u0022: null
+                },
+                {\u0022time\u0022: 1646034073,\u0022provider\u0022: 0,\u0022x\u0022: 44.4829,\u0022y\u0022: 48.77341666666667,\u0022speed\u0022: 0,\u0022single\u0022: false,\u0022satellites\u0022: null,\u0022hdop\u0022: null
+                },
+                {\u0022time\u0022: 1646034053,\u0022provider\u0022: 0,\u0022x\u0022: 44.482866666666666,\u0022y\u0022: 48.773383333333335,\u0022speed\u0022: 0,\u0022single\u0022: false,\u0022satellites\u0022: null,\u0022hdop\u0022: null
+                },
+                {\u0022time\u0022: 1646034035,\u0022provider\u0022: 0,\u0022x\u0022: 44.48283333333333,\u0022y\u0022: 48.77336666666667,\u0022speed\u0022: 0,\u0022single\u0022: false,\u0022satellites\u0022: null,\u0022hdop\u0022: null
+                }
+            ],\u0022pcn_arsenal\u0022: null,\u0022auto_ignition_params\u0022: {\u0022by\u002Dtemperature\u0022: false,\u0022by\u002Dschedule\u0022: false,\u0022by\u002Dtimeout\u0022: false,\u0022temperature\u0022: 0,\u0022max\u002Dtimes\u0022: 20,\u0022stop\u002Dby\u002Dtemperature\u0022: false
+            },\u0022auto_ignition_duration\u0022: 15,\u0022auto_ignition_schedule\u0022: {\u00220\u0022: {\u0022enabled\u0022: false,\u0022time\u0022: [
+                        0,
+                        0
+                    ],\u0022days\u0022: []
+                },\u00221\u0022: {\u0022enabled\u0022: false,\u0022time\u0022: [
+                        0,
+                        0
+                    ],\u0022days\u0022: []
+                },\u00222\u0022: {\u0022enabled\u0022: false,\u0022time\u0022: [
+                        0,
+                        0
+                    ],\u0022days\u0022: []
+                },\u00223\u0022: {\u0022enabled\u0022: false,\u0022time\u0022: [
+                        0,
+                        0
+                    ],\u0022days\u0022: []
+                },\u00224\u0022: {\u0022enabled\u0022: false,\u0022time\u0022: [
+                        0,
+                        0
+                    ],\u0022days\u0022: []
+                }
+            },\u0022accel_params\u0022: {\u0022enabled\u0022: true,\u0022strong_shock\u0022: 0.109375,\u0022tilt\u0022: 4,\u0022weak_shock\u0022: 0.046875
+            },\u0022notifications\u0022: {\u0022alarm\u0022: {\u0022blackout\u0022:\u0022off\u0022,\u0022doors\u0022:\u0022off\u0022,\u0022ignition\u0022:\u0022off\u0022,\u0022moving\u0022:\u0022off\u0022,\u0022numbers\u0022:\u0022\u0022,\u0022power\u002Doff\u0022:\u0022off\u0022,\u0022power\u002Don\u0022:\u0022off\u0022,\u0022shock\u0022:\u0022off\u0022,\u0022tilt\u0022:\u0022off\u0022,\u0022trunk\u002Dhood\u0022:\u0022off\u0022,\u0022driver_call\u0022:\u0022off\u0022
+                },\u0022autoignition\u0022: {\u0022breakdown\u0022:\u0022off\u0022,\u0022fail\u0022:\u0022off\u0022,\u0022numbers\u0022:\u0022\u0022,\u0022success\u0022:\u0022off\u0022
+                },\u0022guard\u0022: {\u0022numbers\u0022:\u0022\u0022,\u0022off\u0022:\u0022off\u0022,\u0022on\u0022:\u0022off\u0022
+                },\u0022info\u0022: {\u0022balance\u0022:\u0022sms\u0022,\u0022ecu_error\u0022:\u0022sms\u0022,\u0022numbers\u0022:\u0022+79210094155\u0022,\u0022fob_battery\u0022:\u0022sms\u0022
+                }
+            },\u0022temperature_conf\u0022: {\u0022assignments\u0022: [\u0022none\u0022,\u0022none\u0022,\u0022none\u0022,\u0022none\u0022,\u0022none\u0022
+                ]
+            },\u0022autoguard\u0022: {\u0022enabled\u0022: false
+            },\u0022radiosilence\u0022: false,\u0022radiosilence_planned\u0022: null,\u0022ztcconfig_battery\u0022: {\u0022low_control\u0022: true,\u0022low_voltage\u0022: 11.1
+            },\u0022ztc_car_protocol\u0022: null,\u0022car_view\u0022: {\u0022model\u0022:\u0022car\u0022,\u0022mirrored\u0022: false
+            },\u0022webasto_timeout\u0022: 1800,\u0022ztc110_inputconfig\u0022: {\u00221\u0022:\u0022off\u0022,\u00222\u0022:\u0022siren\u0022
+            },\u0022ztc110_guard_polarity\u0022:\u00220v\u0022,\u0022io\u0022: {\u0022gps\u002Dstate\u0022: {\u0022state\u0022: 2,\u0022hdop\u0022: 0,\u0022satellites\u0022: 14
+                },\u0022engine\u002Dblock\u0022: false,\u0022voltage\u0022: 13.1,\u0022gsm\u002Dstate\u0022: {\u0022level\u0022: 13,\u0022state\u0022:\u0022home\u002Dnetwork\u0022,\u0022operator\u0022:\u0022MegaFon\u0022
+                },\u0022shock\u0022: false,\u0022temperature\u0022: [
+                    {\u0022state\u0022:\u0022disconnected\u0022,\u0022value\u0022: 85
+                    },
+                    {\u0022state\u0022:\u0022disconnected\u0022,\u0022value\u0022: 85
+                    },
+                    {\u0022state\u0022:\u0022disconnected\u0022,\u0022value\u0022: 85
+                    },
+                    {\u0022state\u0022:\u0022disconnected\u0022,\u0022value\u0022: 85
+                    },
+                    {\u0022state\u0022:\u0022disconnected\u0022,\u0022value\u0022: 85
+                    }
+                ],\u0022webasto\u0022: false,\u0022guard\u002Dstate\u0022:\u0022disabled\u0022
+            },\u0022filetransfers\u0022: [],\u0022asp_billing\u0022: {\u0022in_service\u0022: true,\u0022allowed_for_user\u0022: false
+            }
+        },
+        {\u0022access\u0022: [],\u0022capabilities\u0022: [\u0022has_accelerometer\u0022,\u0022has_alarm_button\u0022,\u0022has_autoguard\u0022,\u0022has_autostart\u0022,\u0022has_battery\u0022,\u0022has_car_controls\u0022,\u0022has_car_diagnostics\u0022,\u0022has_ecu_errors_reset\u0022,\u0022has_car_sensors\u0022,\u0022has_engine_block\u0022,\u0022has_firmware_upgrade\u0022,\u0022has_fuel_consumption\u0022,\u0022has_gps\u0022,\u0022has_gsm\u0022,\u0022has_gsm_balance\u0022,\u0022has_guard_notification\u0022,\u0022has_guard_state\u0022,\u0022has_notifications\u0022,\u0022has_radiosilence\u0022,\u0022no_rf_add_button\u0022,\u0022no_rf_del_button\u0022,\u0022has_rf_fobs\u0022,\u0022has_siren_control\u0022,\u0022has_telpassword\u0022,\u0022has_temperature_sensors\u0022,\u0022has_trusted_phones\u0022,\u0022has_voltage_12v_low_level\u0022,\u0022has_voltage_sensor\u0022,\u0022has_ztcconfig_battery\u0022,\u0022has_config_file\u0022,\u0022has_service_password\u0022,\u0022has_gsm_blackout_notification\u0022,\u0022has_fob_battery_notification\u0022,\u0022has_offline_notifications\u0022,\u0022has_serverside_events_notifications\u0022,\u0022has_ztc_state_packets\u0022,\u0022has_pcn_arsenal\u0022,\u0022has_sim_in_device\u0022,\u0022has_lithium_ztc\u0022,\u0022has_upload_voicepack_button\u0022,\u0022has_work_state\u0022
+            ],\u0022device_type\u0022: {\u0022code\u0022:\u0022ZTC\u002D100M\u0022,\u0022name\u0022:\u0022ZTC\u002D100M\u0022
+            },\u0022hardware_type\u0022: {\u0022code\u0022:\u0022117\u0022,\u0022name\u0022:\u0022117\u0022
+            },\u0022id\u0022: 165327,\u0022ip\u0022:\u002285.26.234.129\u0022,\u0022is_active\u0022: true,\u0022online\u0022: false,\u0022owner_username\u0022:\u0022Dascha722@mail.ru\u0022,\u0022user_id\u0022: 229227,\u0022last_receive_time\u0022: 1649922767,\u0022last_receive_time_relative\u0022: 2611440,\u0022name\u0022:\u0022А219НЕ 134\u0022,\u0022color\u0022:\u0022#9accdf\u0022,\u0022notes\u0022: null,\u0022serial\u0022:\u00227D32A17429A1\u0022,\u0022visible_device_type\u0022: null,\u0022firmware_version\u0022: [
+                380,
+                379
+            ],\u0022is_configured_by_wizard\u0022: null,\u0022suggest_firmware_upgrade\u0022: true,\u0022graphs_config\u0022: null,\u0022cams_show\u0022: true,\u0022show_heating_tab\u0022: true,\u0022server_notifications\u0022: null,\u0022debug_text_messages_regexp\u0022: null,\u0022stationary_location\u0022: null,\u0022cams\u0022: [],\u0022specialist_info\u0022: null,\u0022installation_state\u0022: null,\u0022maintenances\u0022: null,\u0022work_state\u0022: null,\u0022timezone\u0022: 4,\u0022malfunction\u0022: null,\u0022not_on_operation\u0022: null,\u0022driver_name\u0022: null,\u0022driver_number\u0022: null,\u0022driver_date\u0022: null,\u0022mechanic\u0022: null,\u0022sim_number\u0022: null,\u0022fuel_consumption\u0022: null,\u0022last_guard_event\u0022: null,\u0022sim_in_device\u0022: {\u0022sim_type\u0022:\u0022foreign\u0022,\u0022sim_id\u0022: null,\u0022foreign_msisdn\u0022:\u002279272529467\u0022
+            },\u0022balance\u0022: {\u0022limit\u0022: 30,\u0022ussd\u0022:\u0022*100#\u0022,\u0022warning\u0022: true,\u0022value\u0022:\u0022623\u0022
+            },\u0022trusted_phones\u0022:\u0022+79177222135\u0022,\u0022gsm_roaming\u0022:\u0022any\u0022,\u0022imei\u0022:\u0022862549040924816\u0022,\u0022iccid\u0022: null,\u0022last_gps\u0022: [
+                {\u0022time\u0022: 1649922768,\u0022provider\u0022: 0,\u0022x\u0022: 44.50561666666667,\u0022y\u0022: 48.749583333333334,\u0022speed\u0022: 0,\u0022single\u0022: false,\u0022satellites\u0022: 11,\u0022hdop\u0022: 0
+                },
+                {\u0022time\u0022: 1649922754,\u0022provider\u0022: 0,\u0022x\u0022: 44.5057,\u0022y\u0022: 48.74965,\u0022speed\u0022: 0,\u0022single\u0022: false,\u0022satellites\u0022: 8,\u0022hdop\u0022: 1
+                },
+                {\u0022time\u0022: 1649922753,\u0022provider\u0022: 0,\u0022x\u0022: 44.505716666666665,\u0022y\u0022: 48.7497,\u0022speed\u0022: 0,\u0022single\u0022: false,\u0022satellites\u0022: 8,\u0022hdop\u0022: 1
+                },
+                {\u0022time\u0022: 1649855128,\u0022provider\u0022: 0,\u0022x\u0022: 44.5058,\u0022y\u0022: 48.749766666666666,\u0022speed\u0022: 0,\u0022single\u0022: false,\u0022satellites\u0022: 18,\u0022hdop\u0022: 0
+                },
+                {\u0022time\u0022: 1649855125,\u0022provider\u0022: 0,\u0022x\u0022: 44.505833333333335,\u0022y\u0022: 48.749766666666666,\u0022speed\u0022: 0,\u0022single\u0022: false,\u0022satellites\u0022: 21,\u0022hdop\u0022: 0
+                }
+            ],\u0022pcn_arsenal\u0022: null,\u0022auto_ignition_params\u0022: {\u0022by\u002Dtemperature\u0022: false,\u0022by\u002Dschedule\u0022: false,\u0022by\u002Dtimeout\u0022: false,\u0022temperature\u0022: 0,\u0022max\u002Dtimes\u0022: 20,\u0022stop\u002Dby\u002Dtemperature\u0022: false
+            },\u0022auto_ignition_duration\u0022: 20,\u0022auto_ignition_schedule\u0022: {\u00220\u0022: {\u0022enabled\u0022: false,\u0022time\u0022: [
+                        0,
+                        0
+                    ],\u0022days\u0022: []
+                },\u00221\u0022: {\u0022enabled\u0022: false,\u0022time\u0022: [
+                        0,
+                        0
+                    ],\u0022days\u0022: []
+                },\u00222\u0022: {\u0022enabled\u0022: false,\u0022time\u0022: [
+                        0,
+                        0
+                    ],\u0022days\u0022: []
+                },\u00223\u0022: {\u0022enabled\u0022: false,\u0022time\u0022: [
+                        0,
+                        0
+                    ],\u0022days\u0022: []
+                },\u00224\u0022: {\u0022enabled\u0022: false,\u0022time\u0022: [
+                        0,
+                        0
+                    ],\u0022days\u0022: []
+                }
+            },\u0022accel_params\u0022: {\u0022enabled\u0022: true,\u0022strong_shock\u0022: 0.09375,\u0022tilt\u0022: 2,\u0022weak_shock\u0022: 0.046875
+            },\u0022notifications\u0022: {\u0022alarm\u0022: {\u0022blackout\u0022:\u0022sms\u0022,\u0022doors\u0022:\u0022call\u002Dthen\u002Dsms\u0022,\u0022driver_call\u0022:\u0022call\u002Dthen\u002Dsms\u0022,\u0022ignition\u0022:\u0022call\u002Dthen\u002Dsms\u0022,\u0022moving\u0022:\u0022call\u002Dthen\u002Dsms\u0022,\u0022numbers\u0022:\u0022\u0022,\u0022power\u002Doff\u0022:\u0022call\u002Dthen\u002Dsms\u0022,\u0022power\u002Don\u0022:\u0022off\u0022,\u0022shock\u0022:\u0022call\u002Dthen\u002Dsms\u0022,\u0022tilt\u0022:\u0022call\u002Dthen\u002Dsms\u0022,\u0022trunk\u002Dhood\u0022:\u0022call\u002Dthen\u002Dsms\u0022,\u0022weak_shock\u0022:\u0022off\u0022
+                },\u0022autoignition\u0022: {\u0022breakdown\u0022:\u0022call\u002Dthen\u002Dsms\u0022,\u0022fail\u0022:\u0022call\u002Dthen\u002Dsms\u0022,\u0022numbers\u0022:\u0022\u0022,\u0022success\u0022:\u0022call\u002Dthen\u002Dsms\u0022
+                },\u0022guard\u0022: {\u0022numbers\u0022:\u0022\u0022,\u0022off\u0022:\u0022short\u002Dcall\u0022,\u0022on\u0022:\u0022off\u0022
+                },\u0022info\u0022: {\u0022balance\u0022:\u0022sms\u0022,\u0022ecu_error\u0022:\u0022sms\u0022,\u0022fob_battery\u0022:\u0022sms\u0022,\u0022numbers\u0022:\u0022\u0022
+                }
+            },\u0022temperature_conf\u0022: {\u0022assignments\u0022: [\u0022none\u0022,\u0022none\u0022,\u0022none\u0022,\u0022none\u0022,\u0022none\u0022
+                ]
+            },\u0022autoguard\u0022: {\u0022enabled\u0022: false
+            },\u0022radiosilence\u0022: false,\u0022radiosilence_planned\u0022: null,\u0022ztcconfig_battery\u0022: {\u0022low_control\u0022: true,\u0022low_voltage\u0022: 11.5
+            },\u0022ztc_car_protocol\u0022: {\u0022model\u0022:\u0022НЕ ИСПОЛЬЗУЕТСЯ\u0022
+            },\u0022car_view\u0022: {\u0022model\u0022:\u0022car\u0022,\u0022mirrored\u0022: false
+            },\u0022custom_controls\u0022: [],\u0022service_password_set\u0022: false,\u0022ztc_savestate\u0022: {\u0022coordex\u0022: [\u0022altitude\u0022,\u0022avg_va\u0022,\u0022hdop\u0022,\u0022satellites\u0022
+                ],\u0022mindata\u0022: [\u0022gsm_level\u0022,\u0022gsm_state\u0022,\u0022gsm_balance\u0022,\u0022temp_1\u0022,\u0022temp_2\u0022,\u0022temp_3\u0022,\u0022temp_4\u0022,\u0022temp_5\u0022,\u0022voltage\u0022
+                ]
+            },\u0022service_mode\u0022: false,\u0022silent_mode\u0022: {\u0022siren\u0022: {\u0022number\u0022: 0,\u0022handsfree\u0022: false,\u0022guard\u0022: false,\u0022alarm\u0022: false
+                },\u0022sensors\u0022: {\u0022number\u0022: 0,\u0022shock\u0022: false,\u0022weak_shock\u0022: false,\u0022tilt\u0022: false
+                }
+            },\u0022io\u0022: {\u0022engine\u002Dblock\u0022: false,\u0022engine\u002Dstate\u0022: false,\u0022doors\u0022: false,\u0022balance\u002Dvalue\u0022:\u0022623\u0022,\u0022custom\u002Dcontrols\u002Dstate\u0022: {\u00220\u0022: 0,\u00221\u0022: 0,\u00222\u0022: 0,\u00223\u0022: 0,\u00224\u0022: 0,\u00225\u0022: 0,\u00226\u0022: 0,\u00227\u0022: 0,\u00228\u0022: 0,\u00229\u0022: 0,\u002210\u0022: 0,\u002211\u0022: 0,\u002212\u0022: 0,\u002213\u0022: 0,\u002214\u0022: 0,\u002215\u0022: 0
+                },\u0022guard\u002Dstate\u0022:\u0022disabled\u0022,\u0022siren\u0022: false,\u0022gps\u002Dstate\u0022: {\u0022state\u0022: 1,\u0022hdop\u0022: 255,\u0022satellites\u0022: 0
+                },\u0022trunk\u0022: false,\u0022ignition\u002Dstate\u0022: false,\u0022voltage\u0022: 11.9,\u0022gsm\u002Dstate\u0022: {\u0022level\u0022: 0,\u0022state\u0022:\u0022searching\u0022,\u0022operator\u0022:\u0022MegaFon\u0022
+                },\u0022hood\u0022: false,\u0022temperature\u0022: [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],\u0022shock\u0022: false,\u0022auto\u002Dignition\u0022: {\u0022available\u0022: false,\u0022state\u0022:\u0022disabled\u0022,\u0022configuration\u0022: {\u0022engine\u0022: false,\u0022webasto\u0022: false
+                    },\u0022current_mode\u0022: {\u0022engine\u0022: false,\u0022webasto\u0022: false
+                    },\u0022until\u0022: null
+                }
+            },\u0022filetransfers\u0022: [],\u0022asp_billing\u0022: {\u0022in_service\u0022: true,\u0022allowed_for_user\u0022: false
+            }
+        },
+        {\u0022access\u0022: [],\u0022capabilities\u0022: [\u0022has_accelerometer\u0022,\u0022has_alarm_button\u0022,\u0022has_autoguard\u0022,\u0022has_autostart\u0022,\u0022has_battery\u0022,\u0022has_car_controls\u0022,\u0022has_car_diagnostics\u0022,\u0022has_ecu_errors_reset\u0022,\u0022has_car_sensors\u0022,\u0022has_engine_block\u0022,\u0022has_firmware_upgrade\u0022,\u0022has_fuel_consumption\u0022,\u0022has_gps\u0022,\u0022has_gsm\u0022,\u0022has_gsm_balance\u0022,\u0022has_guard_notification\u0022,\u0022has_guard_state\u0022,\u0022has_notifications\u0022,\u0022has_radiosilence\u0022,\u0022no_rf_add_button\u0022,\u0022no_rf_del_button\u0022,\u0022has_rf_fobs\u0022,\u0022has_siren_control\u0022,\u0022has_telpassword\u0022,\u0022has_temperature_sensors\u0022,\u0022has_trusted_phones\u0022,\u0022has_voltage_12v_low_level\u0022,\u0022has_voltage_sensor\u0022,\u0022has_ztcconfig_battery\u0022,\u0022has_config_file\u0022,\u0022has_service_password\u0022,\u0022has_gsm_blackout_notification\u0022,\u0022has_fob_battery_notification\u0022,\u0022has_offline_notifications\u0022,\u0022has_serverside_events_notifications\u0022,\u0022has_ztc_state_packets\u0022,\u0022has_pcn_arsenal\u0022,\u0022has_sim_in_device\u0022,\u0022has_lithium_ztc\u0022,\u0022has_upload_voicepack_button\u0022,\u0022has_work_state\u0022
+            ],\u0022device_type\u0022: {\u0022code\u0022:\u0022ZTC\u002D100M\u0022,\u0022name\u0022:\u0022ZTC\u002D100M\u0022
+            },\u0022hardware_type\u0022: {\u0022code\u0022:\u0022117\u0022,\u0022name\u0022:\u0022117\u0022
+            },\u0022id\u0022: 178313,\u0022ip\u0022:\u002285.26.164.38\u0022,\u0022is_active\u0022: true,\u0022online\u0022: true,\u0022owner_username\u0022:\u0022Dascha722@mail.ru\u0022,\u0022user_id\u0022: 229227,\u0022last_receive_time\u0022: 1652534159,\u0022last_receive_time_relative\u0022: 48,\u0022name\u0022:\u0022М389ВТ 134\u0022,\u0022color\u0022:\u0022#89a800\u0022,\u0022notes\u0022:\u0022\u0022,\u0022serial\u0022:\u00226663132AF408\u0022,\u0022visible_device_type\u0022: null,\u0022firmware_version\u0022: [
+                380,
+                379
+            ],\u0022is_configured_by_wizard\u0022: null,\u0022suggest_firmware_upgrade\u0022: true,\u0022graphs_config\u0022: null,\u0022cams_show\u0022: true,\u0022show_heating_tab\u0022: true,\u0022server_notifications\u0022: {\u0022events\u0022: {\u0022enabled\u0022: false
+                },\u0022offline\u0022: {\u0022enabled\u0022: false,\u0022timeout\u0022: 1200
+                }
+            },\u0022debug_text_messages_regexp\u0022: null,\u0022stationary_location\u0022: null,\u0022cams\u0022: [],\u0022specialist_info\u0022: null,\u0022installation_state\u0022: null,\u0022maintenances\u0022: null,\u0022work_state\u0022: null,\u0022timezone\u0022: 4,\u0022malfunction\u0022: null,\u0022not_on_operation\u0022: null,\u0022driver_name\u0022: null,\u0022driver_number\u0022: null,\u0022driver_date\u0022: null,\u0022mechanic\u0022: null,\u0022sim_number\u0022: null,\u0022fuel_consumption\u0022: {\u0022enabled\u0022: false
+            },\u0022last_guard_event\u0022: null,\u0022sim_in_device\u0022: {\u0022sim_type\u0022:\u0022foreign\u0022,\u0022sim_id\u0022: null,\u0022foreign_msisdn\u0022:\u002279272530627\u0022
+            },\u0022balance\u0022: {\u0022limit\u0022: 30,\u0022ussd\u0022:\u0022*100#\u0022,\u0022warning\u0022: true,\u0022value\u0022: 228
+            },\u0022trusted_phones\u0022:\u0022+79177222135\u0022,\u0022gsm_roaming\u0022:\u0022any\u0022,\u0022imei\u0022:\u0022862549040925128\u0022,\u0022iccid\u0022: null,\u0022last_gps\u0022: [
+                {\u0022time\u0022: 1652533485,\u0022provider\u0022: 0,\u0022x\u0022: 44.427083333333336,\u0022y\u0022: 48.59955,\u0022speed\u0022: 0,\u0022single\u0022: false,\u0022satellites\u0022: 20,\u0022hdop\u0022: 0
+                },
+                {\u0022time\u0022: 1652533482,\u0022provider\u0022: 0,\u0022x\u0022: 44.42706666666667,\u0022y\u0022: 48.59956666666667,\u0022speed\u0022: 3,\u0022single\u0022: false,\u0022satellites\u0022: 20,\u0022hdop\u0022: 0
+                },
+                {\u0022time\u0022: 1652533477,\u0022provider\u0022: 0,\u0022x\u0022: 44.4272,\u0022y\u0022: 48.59961666666667,\u0022speed\u0022: 10,\u0022single\u0022: false,\u0022satellites\u0022: 20,\u0022hdop\u0022: 0
+                },
+                {\u0022time\u0022: 1652533475,\u0022provider\u0022: 0,\u0022x\u0022: 44.4273,\u0022y\u0022: 48.59963333333334,\u0022speed\u0022: 12,\u0022single\u0022: false,\u0022satellites\u0022: 20,\u0022hdop\u0022: 0
+                },
+                {\u0022time\u0022: 1652533474,\u0022provider\u0022: 0,\u0022x\u0022: 44.42733333333333,\u0022y\u0022: 48.59965,\u0022speed\u0022: 12,\u0022single\u0022: false,\u0022satellites\u0022: 20,\u0022hdop\u0022: 0
+                }
+            ],\u0022pcn_arsenal\u0022: null,\u0022auto_ignition_params\u0022: {\u0022by\u002Dtemperature\u0022: false,\u0022by\u002Dschedule\u0022: false,\u0022by\u002Dtimeout\u0022: false,\u0022temperature\u0022: 0,\u0022max\u002Dtimes\u0022: 20,\u0022stop\u002Dby\u002Dtemperature\u0022: false
+            },\u0022auto_ignition_duration\u0022: 20,\u0022auto_ignition_schedule\u0022: {\u00220\u0022: {\u0022enabled\u0022: false,\u0022time\u0022: [
+                        0,
+                        0
+                    ],\u0022days\u0022: []
+                },\u00221\u0022: {\u0022enabled\u0022: false,\u0022time\u0022: [
+                        0,
+                        0
+                    ],\u0022days\u0022: []
+                },\u00222\u0022: {\u0022enabled\u0022: false,\u0022time\u0022: [
+                        0,
+                        0
+                    ],\u0022days\u0022: []
+                },\u00223\u0022: {\u0022enabled\u0022: false,\u0022time\u0022: [
+                        0,
+                        0
+                    ],\u0022days\u0022: []
+                },\u00224\u0022: {\u0022enabled\u0022: false,\u0022time\u0022: [
+                        0,
+                        0
+                    ],\u0022days\u0022: []
+                }
+            },\u0022accel_params\u0022: {\u0022enabled\u0022: true,\u0022strong_shock\u0022: 0.09375,\u0022tilt\u0022: 2,\u0022weak_shock\u0022: 0.046875
+            },\u0022notifications\u0022: {\u0022alarm\u0022: {\u0022blackout\u0022:\u0022off\u0022,\u0022doors\u0022:\u0022off\u0022,\u0022driver_call\u0022:\u0022off\u0022,\u0022ignition\u0022:\u0022off\u0022,\u0022moving\u0022:\u0022off\u0022,\u0022numbers\u0022:\u0022\u0022,\u0022power\u002Doff\u0022:\u0022off\u0022,\u0022power\u002Don\u0022:\u0022off\u0022,\u0022shock\u0022:\u0022off\u0022,\u0022tilt\u0022:\u0022off\u0022,\u0022trunk\u002Dhood\u0022:\u0022off\u0022,\u0022weak_shock\u0022:\u0022off\u0022
+                },\u0022autoignition\u0022: {\u0022breakdown\u0022:\u0022off\u0022,\u0022fail\u0022:\u0022off\u0022,\u0022numbers\u0022:\u0022\u0022,\u0022success\u0022:\u0022off\u0022
+                },\u0022guard\u0022: {\u0022numbers\u0022:\u0022\u0022,\u0022off\u0022:\u0022off\u0022,\u0022on\u0022:\u0022off\u0022
+                },\u0022info\u0022: {\u0022balance\u0022:\u0022off\u0022,\u0022ecu_error\u0022:\u0022off\u0022,\u0022fob_battery\u0022:\u0022off\u0022,\u0022numbers\u0022:\u0022\u0022
+                }
+            },\u0022temperature_conf\u0022: {\u0022assignments\u0022: [\u0022none\u0022,\u0022none\u0022,\u0022none\u0022,\u0022none\u0022,\u0022none\u0022
+                ]
+            },\u0022autoguard\u0022: {\u0022enabled\u0022: false
+            },\u0022radiosilence\u0022: false,\u0022radiosilence_planned\u0022: null,\u0022ztcconfig_battery\u0022: {\u0022low_control\u0022: false,\u0022low_voltage\u0022: 11.5
+            },\u0022ztc_car_protocol\u0022: {\u0022model\u0022:\u0022НЕ ИСПОЛЬЗУЕТСЯ\u0022
+            },\u0022car_view\u0022: {\u0022model\u0022:\u0022car\u0022,\u0022mirrored\u0022: false
+            },\u0022custom_controls\u0022: [],\u0022service_password_set\u0022: false,\u0022ztc_savestate\u0022: {\u0022coordex\u0022: [\u0022altitude\u0022,\u0022avg_va\u0022,\u0022hdop\u0022,\u0022satellites\u0022
+                ],\u0022mindata\u0022: [\u0022gsm_level\u0022,\u0022gsm_state\u0022,\u0022gsm_balance\u0022,\u0022temp_1\u0022,\u0022temp_2\u0022,\u0022temp_3\u0022,\u0022temp_4\u0022,\u0022temp_5\u0022,\u0022voltage\u0022
+                ]
+            },\u0022service_mode\u0022: false,\u0022silent_mode\u0022: {\u0022siren\u0022: {\u0022number\u0022: 0,\u0022handsfree\u0022: false,\u0022guard\u0022: false,\u0022alarm\u0022: false
+                },\u0022sensors\u0022: {\u0022number\u0022: 0,\u0022shock\u0022: false,\u0022weak_shock\u0022: false,\u0022tilt\u0022: false
+                }
+            },\u0022io\u0022: {\u0022engine\u002Dblock\u0022: false,\u0022engine\u002Dstate\u0022: false,\u0022doors\u0022: false,\u0022balance\u002Dvalue\u0022: 228,\u0022custom\u002Dcontrols\u002Dstate\u0022: {\u00220\u0022: 0,\u00221\u0022: 0,\u00222\u0022: 0,\u00223\u0022: 0,\u00224\u0022: 0,\u00225\u0022: 0,\u00226\u0022: 0,\u00227\u0022: 0,\u00228\u0022: 0,\u00229\u0022: 0,\u002210\u0022: 0,\u002211\u0022: 0,\u002212\u0022: 0,\u002213\u0022: 0,\u002214\u0022: 0,\u002215\u0022: 0
+                },\u0022guard\u002Dstate\u0022:\u0022disabled\u0022,\u0022siren\u0022: false,\u0022gps\u002Dstate\u0022: {\u0022state\u0022: 2,\u0022hdop\u0022: 1,\u0022satellites\u0022: 5
+                },\u0022trunk\u0022: false,\u0022ignition\u002Dstate\u0022: false,\u0022voltage\u0022: 13.1,\u0022gsm\u002Dstate\u0022: {\u0022level\u0022: 22,\u0022state\u0022:\u0022home\u002Dnetwork\u0022,\u0022operator\u0022:\u0022MegaFon\u0022
+                },\u0022hood\u0022: false,\u0022temperature\u0022: [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],\u0022shock\u0022: false,\u0022auto\u002Dignition\u0022: {\u0022available\u0022: false,\u0022state\u0022:\u0022disabled\u0022,\u0022configuration\u0022: {\u0022engine\u0022: false,\u0022webasto\u0022: false
+                    },\u0022current_mode\u0022: {\u0022engine\u0022: false,\u0022webasto\u0022: false
+                    },\u0022until\u0022: null
+                }
+            },\u0022filetransfers\u0022: [],\u0022asp_billing\u0022: {\u0022in_service\u0022: true,\u0022allowed_for_user\u0022: false
+            }
+        }
+    ],\u0022device_tree\u0022: [],\u0022ui_settings\u0022: {\u0022zth_dashboard_active\u0022: false,\u0022selected_tab_key\u0022:\u0022state\u002Dtab\u0022,\u0022trips_list\u0022: {\u0022width\u0022: 713
+        },\u0022selected_device_id\u0022: 165327,\u0022map_dashboard_active\u0022: false,\u0022speedgraph\u0022: {\u0022collapsed\u0022: false
+        }
+    },\u0022important_events\u0022: [
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1652522737,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1652509966,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1652450601,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1652415976,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1652363581,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1652332628,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1652327544,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1652275005,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1652249731,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1652167209,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1652080913,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1652026518,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651993753,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651935624,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651904273,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651830968,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651742731,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651683145,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651679685,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651676807,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651658000,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651644611,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651552939,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651512101,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651472242,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651389255,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651358344,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651305550,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651247471,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651212321,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651155358,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651125288,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651067417,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1651037579,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650980755,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650965903,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650952101,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650893772,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650890713,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650874954,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650874638,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650874559,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650873941,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650871293,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650871257,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650793797,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650792444,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650792330,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650792220,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650791972,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650791918,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650778708,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650713230,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650701567,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650698024,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650631596,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650602111,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650550363,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650512872,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650467062,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650429034,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650374868,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650355059,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650340206,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650266791,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650260693,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650186883,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650171813,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650086835,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650044142,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650032739,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650029654,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650018484,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650015125,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650008227,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1650000926,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649932554,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 165327,\u0022time\u0022: 1649922702,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649914857,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649852141,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 165327,\u0022time\u0022: 1649850703,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649828689,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649772288,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 165327,\u0022time\u0022: 1649744799,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649737389,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649695910,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649677403,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649662517,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649649291,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649573626,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649509984,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649505122,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649484773,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649442063,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649438381,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649425415,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649389681,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649340879,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649309477,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649220439,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649167902,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649131162,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649087870,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649076979,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1649051285,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648968513,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648895562,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648881042,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648819541,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648789757,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648719193,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648710570,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648529917,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648482770,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648372062,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648367837,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648292740,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648274629,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648220446,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648197568,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648196633,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648193503,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648187038,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648138651,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1648120589,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 165327,\u0022time\u0022: 1648116015,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647963063,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647958841,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647940146,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647922946,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647895323,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647870271,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647863389,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647854870,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 165327,\u0022time\u0022: 1647852258,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647836285,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647809047,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647804295,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647799911,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647781041,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647778665,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647776161,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647758683,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647713086,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647708758,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647692599,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647689055,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647681647,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1647078116,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646811251,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646803239,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646740527,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646737556,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646719587,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646679705,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646675927,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646672124,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646667015,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646650684,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646579969,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646574846,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646572797,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646545604,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646514258,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646510965,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646505004,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646500751,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646485996,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646456079,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646429624,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646395978,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646385513,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646381836,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646373832,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646363831,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646342528,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646316573,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646302158,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646298566,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646286731,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646260878,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646248461,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646240994,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646228937,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646198058,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646166779,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646152618,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646141574,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646109006,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646083052,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646061756,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646058278,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646048233,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1646021701,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1645993882,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 163737,\u0022time\u0022: 1645977764,\u0022type\u0022:\u0022MainPowerFound\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022MainPowerFound\u0022,\u0022title\u0022:\u0022Появление основного питания\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1645962510,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 178313,\u0022time\u0022: 1645901659,\u0022type\u0022:\u0022Alarm\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022Alarm\u0022,\u0022title\u0022:\u0022Тревога\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 163737,\u0022time\u0022: 1645895841,\u0022type\u0022:\u0022MainPowerFound\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022MainPowerFound\u0022,\u0022title\u0022:\u0022Появление основного питания\u0022,\u0022details\u0022: null
+        },
+        {\u0022device_id\u0022: 163737,\u0022time\u0022: 1645895815,\u0022type\u0022:\u0022MainPowerLost\u0022,\u0022important\u0022: true,\u0022unread\u0022: true,\u0022icon\u0022:\u0022MainPowerLost\u0022,\u0022title\u0022:\u0022Пропадание основного питания\u0022,\u0022details\u0022: null
+        }
+    ],\u0022last_firmwares\u0022: {\u0022205\u0022: {\u0022ZTC\u002D100\u0022: {\u0022id\u0022:\u002257aafb6a05b60500f92fcf14\u0022,\u0022version\u0022: [
+                    122,
+                    149
+                ],\u0022rollout\u0022: null
+            },\u0022ZTA\u002D110\u0022: {\u0022id\u0022:\u002256edd53605b605024e5a4f16\u0022,\u0022version\u0022: [
+                    123,
+                    153
+                ],\u0022rollout\u0022: null
+            },\u0022ZTC\u002D110\u0022: {\u0022id\u0022:\u00225671560f7180d345b612a7cc\u0022,\u0022version\u0022: [
+                    122,
+                    153
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022132\u0022: {\u0022ZTC\u002D700N\u0022: {\u0022id\u0022:\u002261a88d7414dd4060512a27ac\u0022,\u0022version\u0022: [
+                    402,
+                    423
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022414\u0022: {\u0022SX350\u0022: {\u0022id\u0022:\u00225e26c6c89c8b874c282b1b60\u0022,\u0022version\u0022: [
+                    158,
+                    290
+                ],\u0022rollout\u0022: 0
+            },\u0022SX250\u0022: {\u0022id\u0022:\u0022578e0ce505b6050067c4a0d6\u0022,\u0022version\u0022: [
+                    129,
+                    163
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022622\u0022: {\u0022CLIMATIC\u0022: {\u0022id\u0022:\u002261c473fb71d5429bc89c8086\u0022,\u0022version\u0022: [
+                    209,
+                    1
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022615\u0022: {\u0022H2000+\u0022: {\u0022id\u0022:\u002261c475aad316033951f73e8b\u0022,\u0022version\u0022: [
+                    209,
+                    1
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022203\u0022: {\u0022ZTC\u002D110\u0022: {\u0022id\u0022:\u0022560824a97180d378400176e1\u0022,\u0022version\u0022: [
+                    102,
+                    151
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022114\u0022: {\u0022ZTC\u002D710\u0022: {\u0022id\u0022:\u00225e4cd0cff5ad2c0f76802ed7\u0022,\u0022version\u0022: [
+                    410,
+                    393
+                ],\u0022rollout\u0022: 0
+            }
+        },\u0022112\u0022: {\u0022ZTC\u002D720\u0022: {\u0022id\u0022:\u00225e4cd098b6466f8466e6ef4c\u0022,\u0022version\u0022: [
+                    410,
+                    393
+                ],\u0022rollout\u0022: 0
+            }
+        },\u0022204\u0022: {\u0022ZTC\u002D100\u0022: {\u0022id\u0022:\u0022567155af7180d345b612a7ae\u0022,\u0022version\u0022: [
+                    114,
+                    147
+                ],\u0022rollout\u0022: null
+            },\u0022ZTA\u002D110\u0022: {\u0022id\u0022:\u002256edd50a05b60502525a54c9\u0022,\u0022version\u0022: [
+                    115,
+                    151
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022117\u0022: {\u0022ZTC\u002D100M\u0022: {\u0022id\u0022:\u00225de67fcbe5e93d68403040fc\u0022,\u0022version\u0022: [
+                    407,
+                    389
+                ],\u0022rollout\u0022: 0
+            }
+        },\u0022403\u0022: {\u0022SX300\u0022: {\u0022id\u0022:\u00225e26c709b61d35f218082294\u0022,\u0022version\u0022: [
+                    158,
+                    290
+                ],\u0022rollout\u0022: 0
+            },\u0022SX250\u0022: {\u0022id\u0022:\u0022578e0cb205b605005dc4a338\u0022,\u0022version\u0022: [
+                    129,
+                    163
+                ],\u0022rollout\u0022: 0
+            }
+        },\u0022115\u0022: {\u0022ZTC\u002D700M\u0022: {\u0022id\u0022:\u00225e4cd10bf5ad2c0f76802ed8\u0022,\u0022version\u0022: [
+                    410,
+                    393
+                ],\u0022rollout\u0022: 0
+            }
+        },\u0022623\u0022: {\u0022H1000+\u0022: {\u0022id\u0022:\u002261c474ce48c9bc5bc96e907f\u0022,\u0022version\u0022: [
+                    209,
+                    1
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022404\u0022: {\u0022GTW\u002D100\u0022: {\u0022id\u0022:\u00225ba8a2d305b60500eb787f2d\u0022,\u0022version\u0022: [
+                    137,
+                    84
+                ],\u0022rollout\u0022: null
+            },\u0022T100\u0022: {\u0022id\u0022:\u00225d67928a05b6050421ee000c\u0022,\u0022version\u0022: [
+                    154,
+                    148
+                ],\u0022rollout\u0022: 0
+            }
+        },\u0022415\u0022: {\u0022H1000\u0022: {\u0022id\u0022:\u00225e26c5eb383e5a9018d37330\u0022,\u0022version\u0022: [
+                    158,
+                    290
+                ],\u0022rollout\u0022: 0
+            }
+        },\u0022620\u0022: {\u0022CLIMATIC\u0022: {\u0022id\u0022:\u002261c473b3d7b2eea5878be04c\u0022,\u0022version\u0022: [
+                    209,
+                    1
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022406\u0022: {\u0022SX170\u0022: {\u0022id\u0022:\u00225add5a8705b6050009536d20\u0022,\u0022version\u0022: [
+                    140,
+                    240
+                ],\u0022rollout\u0022: 0
+            }
+        },\u0022621\u0022: {\u0022CLIMATIC\u0022: {\u0022id\u0022:\u002261c473df1a3432f935ad156f\u0022,\u0022version\u0022: [
+                    209,
+                    1
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022106\u0022: {\u0022ZTC\u002D500\u0022: {\u0022id\u0022:\u0022560824a67180d378400176b3\u0022,\u0022version\u0022: [
+                    147,
+                    143
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022108\u0022: {\u0022ZTC\u002D700\u0022: {\u0022id\u0022:\u00225e01c3cea7919191e47dd610\u0022,\u0022version\u0022: [
+                    407,
+                    389
+                ],\u0022rollout\u0022: 0
+            }
+        },\u0022701\u0022: {\u0022SMART20_PRO\u0022: {\u0022id\u0022:\u002262285231c3dfff8c00e5496c\u0022,\u0022version\u0022: [
+                    230,
+                    1
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022700\u0022: {\u0022H1V02_PRO\u0022: {\u0022id\u0022:\u00226228526aaa9f1c5848a5f557\u0022,\u0022version\u0022: [
+                    230,
+                    1
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022637\u0022: {\u0022CONNECT_PLUS\u0022: {\u0022id\u0022:\u002261c47497952259f03f137250\u0022,\u0022version\u0022: [
+                    209,
+                    1
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022632\u0022: {\u0022CONNECT_PLUS\u0022: {\u0022id\u0022:\u002261c47479d7b2eea5878be066\u0022,\u0022version\u0022: [
+                    209,
+                    1
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022130\u0022: {\u0022ZTC\u002D800\u0022: {\u0022id\u0022:\u00225da04aaf05b6050067449dda\u0022,\u0022version\u0022: [
+                    327,
+                    385
+                ],\u0022rollout\u0022: 0
+            }
+        },\u0022616\u0022: {\u0022C2000+\u0022: {\u0022id\u0022:\u002261c4736dd316033951f73e0f\u0022,\u0022version\u0022: [
+                    209,
+                    1
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022412\u0022: {\u0022SX250\u0022: {\u0022id\u0022:\u00225983007e05b605024271a1d2\u0022,\u0022version\u0022: [
+                    129,
+                    202
+                ],\u0022rollout\u0022: 0
+            }
+        },\u0022133\u0022: {\u0022ZTC\u002D300\u0022: {\u0022id\u0022:\u002261963e69c4e2253bd2053735\u0022,\u0022version\u0022: [
+                    402,
+                    423
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022515\u0022: {\u0022H2000+\u0022: {\u0022id\u0022:\u002261c4759248c9bc5bc96e909b\u0022,\u0022version\u0022: [
+                    209,
+                    1
+                ],\u0022rollout\u0022: null
+            },\u0022H2000\u0022: {\u0022id\u0022:\u00225e26c645b61d35f218082280\u0022,\u0022version\u0022: [
+                    330,
+                    290
+                ],\u0022rollout\u0022: 0
+            }
+        },\u0022618\u0022: {\u0022SMART+\u0022: {\u0022id\u0022:\u002261c475ee927c7c27bdb7fdfb\u0022,\u0022version\u0022: [
+                    209,
+                    1
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022630\u0022: {\u0022H1V_PLUS\u0022: {\u0022id\u0022:\u002261c47532952259f03f137270\u0022,\u0022version\u0022: [
+                    209,
+                    1
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022202\u0022: {\u0022ZTC\u002D100\u0022: {\u0022id\u0022:\u0022560824a97180d378400176df\u0022,\u0022version\u0022: [
+                    98,
+                    142
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022626\u0022: {\u0022H1V_PLUS\u0022: {\u0022id\u0022:\u002261c474fd952259f03f137262\u0022,\u0022version\u0022: [
+                    209,
+                    1
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022631\u0022: {\u0022H1V_PLUS\u0022: {\u0022id\u0022:\u002261c47545a56de7875870a685\u0022,\u0022version\u0022: [
+                    209,
+                    1
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022122\u0022: {\u0022ZTC\u002D200\u0022: {\u0022id\u0022:\u00225e4cd147f5ad2c0f76802eda\u0022,\u0022version\u0022: [
+                    410,
+                    393
+                ],\u0022rollout\u0022: 0
+            }
+        },\u0022119\u0022: {\u0022ZTC\u002D700S\u0022: {\u0022id\u0022:\u00225cc6cb0a05b60501c4d18dbc\u0022,\u0022version\u0022: [
+                    383,
+                    379
+                ],\u0022rollout\u0022: 0
+            }
+        },\u0022636\u0022: {\u0022SMART+\u0022: {\u0022id\u0022:\u002261c47604d316033951f73e95\u0022,\u0022version\u0022: [
+                    209,
+                    1
+                ],\u0022rollout\u0022: null
+            }
+        },\u0022405\u0022: {\u0022T102\u0022: {\u0022id\u0022:\u00225f5b054eccf777f0a509956b\u0022,\u0022version\u0022: [
+                    161,
+                    154
+                ],\u0022rollout\u0022: 0
+            }
+        },\u0022118\u0022: {\u0022ZTC\u002D110M\u0022: {\u0022id\u0022:\u00225de6804259969e7af8333e16\u0022,\u0022version\u0022: [
+                    407,
+                    389
+                ],\u0022rollout\u0022: 0
+            }
+        }
+    },\u0022access_suggestions\u0022: {\u0022in\u0022: [],\u0022out\u0022: []
+    },\u0022map_providers_config\u0022: {\u0022providers\u0022: [
+            {\u0022id\u0022:\u0022yandex\u0022,\u0022name\u0022:\u0022Яндекс\u0022,\u0022types\u0022: {\u0022street\u0022: {\u0022layers\u0022: [
+                            {\u0022url\u0022:\u0022https: //core\u002Drenderer\u002Dtiles.maps.yandex.net/tiles?l\u003Dmap\u0026v\u003D21.12.07\u002D1\u002Db211103130830\u0026x\u003D{x}\u0026y\u003D{y}\u0026z\u003D{z}\u0026scale\u003D{scale}\u0026lang\u003Dru_RU\u0022,\u0022scale\u0022:{\u0022_eval\u0022:\u0022window.devicePixelRatio || 1\u0022}}]},\u0022satellite\u0022:{\u0022layers\u0022:[{\u0022url\u0022:\u0022https://core\u002Dsat.maps.yandex.net/tiles?l\u003Dsat\u0026v\u003D3.929.0\u0026x\u003D{x}\u0026y\u003D{y}\u0026z\u003D{z}\u0026lang\u003Dru_RU\u0022}]},\u0022hybrid\u0022:{\u0022layers\u0022:[{\u0022url\u0022:\u0022https://core\u002Dsat.maps.yandex.net/tiles?l\u003Dsat\u0026v\u003D3.929.0\u0026x\u003D{x}\u0026y\u003D{y}\u0026z\u003D{z}\u0026lang\u003Dru_RU\u0022},{\u0022url\u0022:\u0022https://core\u002Drenderer\u002Dtiles.maps.yandex.net/tiles?l\u003Dskl\u0026v\u003D21.12.07\u002D1\u002Db211103130830\u0026x\u003D{x}\u0026y\u003D{y}\u0026z\u003D{z}\u0026scale\u003D{scale}\u0026lang\u003Dru_RU\u0022,\u0022scale\u0022:{\u0022_eval\u0022:\u0022window.devicePixelRatio || 1\u0022}}]}},\u0022traffic_layer\u0022:{\u0022url\u0022:\u0022https://core\u002Djams\u002Drdr\u002Dcache.maps.yandex.net/1.1/tiles?l\u003Dtrf,trfe\u0026x\u003D{x}\u0026y\u003D{y}\u0026z\u003D{z}\u0026scale\u003D{scale}\u0026tm\u003D{time}\u0022,\u0022scale\u0022:{\u0022_eval\u0022:\u0022window.devicePixelRatio || 1\u0022},\u0022time\u0022:{\u0022_eval\u0022:\u0022function () { return parseInt(Date.now()/1e3)\u003B }\u0022}}},{\u0022id\u0022:\u0022google\u0022,\u0022name\u0022:\u0022Google\u0022,\u0022types\u0022:{\u0022street\u0022:{\u0022layers\u0022:[{\u0022url\u0022:\u0022https://www.google.com/maps/vt/pb\u003D!1m4!1m3!1i{z}!2i{x}!3i{y}!2m3!1e0!2sm!3i418118508!3m8!2sru!3sru!5e1105!12m4!1e68!2m2!1sset!2sRoadmap!4e0!5m1!5f{scale}!1e0!23i4111425\u0022,\u0022scale\u0022:{\u0022_eval\u0022:\u0022window.devicePixelRatio || 1\u0022}}]},\u0022satellite\u0022:{\u0022layers\u0022:[{\u0022url\u0022:\u0022https://khms{server_no}.google.com/kh?v\u003D908\u0026hl\u003Dru\u002DRU\u0026x\u003D{x}\u0026y\u003D{y}\u0026z\u003D{z}\u0022,\u0022server_no\u0022:{\u0022_eval\u0022:\u0022function (p) { return (p.x + p.y) % 4\u003B }\u0022}}]},\u0022hybrid\u0022:{\u0022layers\u0022:[{\u0022url\u0022:\u0022https://khms{server_no}.google.com/kh?v\u003D908\u0026hl\u003Dru\u002DRU\u0026x\u003D{x}\u0026y\u003D{y}\u0026z\u003D{z}\u0022,\u0022server_no\u0022:{\u0022_eval\u0022:\u0022function (p) { return (p.x + p.y) % 4\u003B }\u0022}},{\u0022url\u0022:\u0022https://www.google.com/maps/vt?\u0026pb\u003D!1m5!1m4!1i{z}!2i{x}!3i{y}!4i256!2m3!1e0!2sm!3i426127844!3m10!2sru!3sru!5e1249!12m1!1e18!12m4!1e68!2m2!1sset!2sRoadmapSatellite!4e0!5m4!1e3!5f{scale}!7m1!1b1!23i4111425\u0022,\u0022scale\u0022:{\u0022_eval\u0022:\u0022window.devicePixelRatio || 1\u0022}}]}},\u0022traffic_layer\u0022:{\u0022url\u0022:\u0022https://www.google.com/maps/vt?\u0026pb\u003D!1m5!1m4!1i{z}!2i{x}!3i{y}!4i256!2m10!1e2!2straffic!3i{time}!4m2!1sincidents!2s1!4m2!1sincidents_text!2s1!5i1!3m10!2sru!3sru!5e1249!12m1!1e3!12m4!1e68!2m2!1sset!2sRoadmapSatellite!4e0!5m3!1e3!7m1!1b1!23i4111425\u0022,\u0022time\u0022:{\u0022_eval\u0022:\u0022function() { return parseInt(Date.now()/600e3)\u003B }\u0022}}},{\u0022id\u0022:\u0022dgis\u0022,\u0022name\u0022:\u00222ГИС\u0022,\u0022types\u0022:{\u0022street\u0022:{\u0022layers\u0022:[{\u0022url\u0022:\u0022https://tile{s}.maps.2gis.com/tiles?x\u003D{x}\u0026y\u003D{y}\u0026z\u003D{z}\u0026v\u003D1\u0022,\u0022subdomains\u0022:[\u00220\u0022,\u00221\u0022,\u00222\u0022,\u00223\u0022]}]}}},{\u0022id\u0022:\u0022osm\u0022,\u0022name\u0022:\u0022OpenStreetMap\u0022,\u0022types\u0022:{\u0022street\u0022:{\u0022layers\u0022:[{\u0022url\u0022:\u0022https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png\u0022,\u0022subdomains\u0022:[\u0022a\u0022,\u0022b\u0022,\u0022c\u0022],\u0022minZoom\u0022:2,\u0022maxZoom\u0022:18}]}}},{\u0022id\u0022:\u0022kosmosnimki\u0022,\u0022name\u0022:\u0022Космоснимки\u0022,\u0022types\u0022:{\u0022street\u0022:{\u0022layers\u0022:[{\u0022url\u0022:\u0022https://tilessputnik.ru/{z}/{x}/{y}.png\u0022,\u0022minZoom\u0022:2,\u0022maxZoom\u0022:18}]}}},{\u0022id\u0022:\u0022wikimapia\u0022,\u0022name\u0022:\u0022Wikimapia\u0022,\u0022types\u0022:{\u0022street\u0022:{\u0022layers\u0022:[{\u0022url\u0022:\u0022https://i{srvnum}.wikimapia.org/?x\u003D{x}\u0026y\u003D{y}\u0026zoom\u003D{z}\u0026lng\u003D1\u0022,\u0022minZoom\u0022:2,\u0022maxZoom\u0022:18,\u0022srvnum\u0022:{\u0022_eval\u0022:\u0022function (p) { return (p.x % (1\u003C\u003Cp.z)) % 4 + (p.y % (1\u003C\u003Cp.z)) % 4 * 4\u003B }\u0022}}]}}},{\u0022id\u0022:\u0022rosreestr\u0022,\u0022name\u0022:\u0022Росреестр\u0022,\u0022types\u0022:{\u0022street\u0022:{\u0022layers\u0022:[{\u0022url\u0022:\u0022https://pkk.rosreestr.ru/arcgis/rest/services/BaseMaps/BaseMap/MapServer/tile/{z}/{y}/{x}\u0022,\u0022minZoom\u0022:2,\u0022maxZoom\u0022:14},{\u0022url\u0022:\u0022https://pkk.rosreestr.ru/arcgis/rest/services/BaseMaps/Anno/MapServer/tile/{z}/{y}/{x}\u0022,\u0022minZoom\u0022:2,\u0022maxZoom\u0022:14},{\u0022type\u0022:\u0022RosreestrCadastre\u0022,\u0022url\u0022:\u0022https://pkk.rosreestr.ru/arcgis/rest/services/PKK6/Cadastre/MapServer/export?layers\u003Dshow%3A0%2C1%2C2%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C23%2C24%2C29%2C30%2C31%2C32%2C33%2C34%2C35%2C38%2C39\u0026dpi\u003D96\u0026format\u003DPNG32\u0026bbox\u003D{bbox}\u0026bboxSR\u003D102100\u0026imageSR\u003D102100\u0026size\u003D1024%2C1024\u0026transparent\u003Dtrue\u0026f\u003Dimage\u0022,\u0022minZoom\u0022:2,\u0022maxZoom\u0022:18}]}}}]},\u0022paid_devicetypes\u0022:[\u0022ARNAVI\u0022,\u0022NEOMATIK\u0022,\u0022L1000\u0022,\u0022T100\u0022,\u0022ZTC\u002D110\u0022,\u0022E\u002D100\u0022,\u0022H1V02_PRO\u0022,\u0022ZTC\u002D120\u0022,\u0022ZTC\u002D720\u0022,\u0022SX350\u0022,\u0022WIALONBIN\u0022,\u0022ZTC\u002D300\u0022,\u0022GLT\u002D102\u0022,\u0022EGTS\u0022,\u0022GTW\u002D100\u0022,\u0022CLIMATIC+\u0022,\u0022CONNECT_PLUS\u0022,\u0022SMART+\u0022,\u0022A200E\u0022,\u0022ZTC\u002D111\u0022,\u0022G\u002D100M\u0022,\u0022tracker\u0022,\u0022CAMERA_ONLY\u0022,\u0022A100M\u0022,\u0022VALTEC_1\u0022,\u0022L1000S\u0022,\u0022E\u002D100M\u0022,\u0022GRAPH_PANEL\u0022,\u0022A110M\u0022,\u0022A200N\u0022,\u0022ZONTINO\u0022,\u0022C2000+\u0022,\u0022GTW\u002D102\u0022,\u0022SMART_ESP\u0022,\u0022BOILER_ADAPTER\u0022,\u0022ZTC\u002D710\u0022,\u0022H1000_PRO\u0022,\u0022A200\u0022,\u0022IO_EXTENSION\u0022,\u0022ZTC\u002D500\u0022,\u0022DUMMY\u0022,\u0022ZTC\u002D300N\u0022,\u0022ZTC\u002D100M\u0022,\u0022ZTC\u002D800\u0022,\u0022TELTONIK\u0022,\u0022VALTEC_K300\u0022,\u0022CONNECT_ESP\u0022,\u0022ZTC\u002D700N\u0022,\u0022A000\u0022,\u0022SX170\u0022,\u0022ZTA\u002D110\u0022,\u0022SX250\u0022,\u0022H1000+\u0022,\u0022T102\u0022,\u0022ZTC\u002D700S\u0022,\u0022A110\u0022,\u0022H1V_PLUS\u0022,\u0022STILL\u0022,\u0022ZTC\u002D200\u0022,\u0022A400E\u0022,\u0022GALILEO\u0022,\u0022SMART20_PRO\u0022,\u0022H3000\u0022,\u0022CLIMATIC\u0022,\u0022H700_PRO\u0022,\u0022SMART_1_0\u0022,\u0022SCANTRACK\u002DAUTO\u0022,\u0022ZTC\u002D700\u0022,\u0022NAVTEL\u0022,\u0022SKYLINE\u002DAUTO\u0022,\u0022A300\u0022,\u0022DUT\u0022,\u0022ZTC\u002D100\u0022,\u0022ZTC\u002D701M\u0022,\u0022A100\u0022,\u0022A201\u0022,\u0022G\u002D100\u0022,\u0022ZTC\u002D700M\u0022,\u0022GLT\u002D100\u0022,\u0022SATSOL\u0022,\u0022A400\u0022,\u0022SX300\u0022,\u0022H2000+\u0022,\u0022GRANIT\u0022,\u0022H1000\u0022,\u0022H2001\u0022,\u0022H2000_PRO\u0022,\u0022ZTC\u002D110M\u0022,\u0022ZTC\u002D900\u0022,\u0022H2000\u0022,\u0022H1V02_PRO_EBUS\u0022],\u0022news\u0022:[{\u0022title\u0022:\u0022Снижаем цены на автосигнализации!\u0022,\u0022description\u0022:\u0022В преддверии теплых солнечных дней☀ хотим дополнительно порадовать всех снижением цен!\u005Cr\u005Cn\u005Cr\u005CnС 25 апреля по 31 мая ➡️ предлагаем выгодно купить спутниковую противоугонную систему ZONT для ✅максимальной защиты от угона и ✅комфортного пользования автомобилем.\u005Cr\u005Cn\u005Cr\u005CnОформить покупку автосигнализации со скидкой можно в нашем интернет\u002Dмагазине.\u0022,\u0022link\u0022:\u0022https://zont\u002Donline.ru/internet\u002Dmagazin/auto\u0022,\u0022active_after\u0022:1650887397.646,\u0022icon\u0022:\u0022sale\u0022},{\u0022title\u0022:\u0022Канал zont\u002Donline в Telegram!🔥\u0022,\u0022description\u0022:\u0022⚡Мы запустили официальный канал ZONT для всех, кому удобно и привычно использовать один из самых приватных мессенджеров.\u005Cr\u005Cn\u005Cr\u005CnОбещаем не злоупотреблять вашим вниманием и публиковать только полезный проверенный контент:\u005Cr\u005Cn\u005Cr\u005Cn👉 последние новости сервиса\u005Cr\u005Cn👉 новинки модельного ряда\u005Cr\u005Cn👉 актуальные акции\u005Cr\u005Cn👉 лайфхаки и крутые проекты наших партнёров\u005Cr\u005Cn\u005Cr\u005Cnt.me/zontonlineru\u0022,\u0022link\u0022:\u0022https://t.me/zontonlineru\u0022,\u0022active_after\u0022:1649413930.235,\u0022icon\u0022:\u0022news\u0022},{\u0022title\u0022:\u0022Наши серверы в России!👍\u0022,\u0022description\u0022:\u0022Уважаемые пользователи оборудования ZONT и MEGA SX, сообщаем вам, что мы выполнили задачу по дублированию наших серверов на территории РФ.\u005Cr\u005Cn\u005Cr\u005CnВы можете быть уверены, что ваш ZONT, независимо от политических решений, будет, как и прежде, всегда на связи!💡\u005Cr\u005Cn\u005Cr\u005CnМы существенно увеличили серверную мощность в несколько раз для:\u005Cr\u005Cn💫 еще более стабильной работы,\u005Cr\u005Cn💫 увеличения быстродействия передачи данных,\u005Cr\u005Cn💫 приема новых пользователей.\u005Cr\u005Cn\u005Cr\u005CnКстати, использовавшиеся ранее серверы, размещенные за границей, мы перевели в состоянии «холодного старта». Это значит, что в случае возникновения необходимости мы задублируем данные в течение всего 2\u002D3 часов.\u0022,\u0022link\u0022:\u0022\u0022,\u0022active_after\u0022:1646222930.941,\u0022icon\u0022:\u0022news\u0022},{\u0022title\u0022:\u0022Решениµ Ð¿ÑÐ¾Ð±Ð»ÐµÐ¼Ñ Ñ Ð³ÑÐ°ÑÐ¸ÐºÐ°Ð¼Ð¸\u0022,\u0022description\u0022:\u0022Ð£ Ð¿ÑÐ¸Ð±Ð¾ÑÐ¾Ð² SMART2.0, H2000+, H1000+, C2000+ Ð¸ H1V gen2 ÑÐ¾ ÑÑÐ°ÑÑÐ¼Ð¸ Ð²ÐµÑÑÐ¸ÑÐ¼Ð¸ Ð¿ÑÐ¾ÑÐ¸Ð²Ð¾Ðº ÑÐµÐ³Ð¾Ð´Ð½Ñ Ð¼Ð¾Ð³ÑÑ Ð½Ð°Ð±Ð»ÑÐ´Ð°ÑÑÑÑ Ð¿ÑÐ¾Ð±Ð»ÐµÐ¼Ñ Ñ Ð¾ÑÐ¾Ð±ÑÐ°Ð¶ÐµÐ½Ð¸ÐµÐ¼ Ð³ÑÐ°ÑÐ¸ÐºÐ¾Ð².\u005Cr\u005Cn\u005Cr\u005CnÐÑÐ»Ð¸ Ð²Ñ ÑÑÐ¾Ð»ÐºÐ½ÑÐ»Ð¸ÑÑ Ñ ÑÐ°ÐºÐ¾Ð¹ Ð¿ÑÐ¾Ð±Ð»ÐµÐ¼Ð¾Ð¹ â Ð¿ÐµÑÐµÐ·Ð°Ð³ÑÑÐ·Ð¸ÑÐµ, Ð¿Ð¾Ð¶Ð°Ð»ÑÐ¹ÑÑÐ°, Ð²Ð°Ñ Ð¿ÑÐ¸Ð±Ð¾Ñ, Ð»Ð¸Ð±Ð¾ Ð¾Ð±Ð½Ð¾Ð²Ð¸ÑÐµ Ð¿ÑÐ¾ÑÐ¸Ð²ÐºÑ Ð² Ð½ÑÐ¼.\u0022,\u0022link\u0022:\u0022\u0022,\u0022active_after\u0022:1646199763.178,\u0022icon\u0022:\u0022incident\u0022},{\u0022title\u0022:\u0022ÐÐ¾Ð²Ð¸Ð½ÐºÐ°! ZONT ZTC\u002D700N ð\u0022,\u0022description\u0022:\u0022ÐÐ¾Ð²ÑÐ¹ ÑÐ¿ÑÑÐ½Ð¸ÐºÐ¾Ð²ÑÐ¹ Ð¿ÑÐ¾ÑÐ¸Ð²Ð¾ÑÐ³Ð¾Ð½Ð½ÑÐ¹ ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑ Ñ ÑÐ°Ð´Ð¸Ð¾ÐºÐ°Ð½Ð°Ð»Ð¾Ð¼ â â¡ZONT ZTC\u002D700N\u005Cr\u005Cn\u005Cr\u005Cnð¥2CAN+LIN | GSM | GPS/ÐÐÐÐÐÐ¡Ð¡\u005Cr\u005Cnð¥10/10 Ð²ÑÐ¾Ð´Ð¾Ð²/Ð²ÑÑÐ¾Ð´Ð¾Ð²\u005Cr\u005Cn\u005Cr\u005CnÐ¡ÑÐµÐ´Ð¸ Ð¿ÑÐµÐ¸Ð¼ÑÑÐµÑÑÐ² ÑÐ¸ÑÑÐµÐ¼Ñ:\u005Cr\u005Cn\u005Cr\u005Cnâ¡ï¸ ÐÐ¸Ð°Ð»Ð¾Ð³Ð¾Ð²ÑÐ¹ ÐºÐ¾Ð´ Ñ ÑÐ¸ÑÑÐ¾Ð²Ð°Ð½Ð¸ÐµÐ¼ AES128,\u005Cr\u005Cnâ¡ï¸ ÐÐ²ÑÐ¾Ð·Ð°Ð¿ÑÑÐº Ð¸ Ð±Ð»Ð¾ÐºÐ¸ÑÐ¾Ð²ÐºÐ° Ð´Ð²Ð¸Ð³Ð°ÑÐµÐ»Ñ,\u005Cr\u005Cnâ¡ï¸ ÐÐ¾Ð´Ð´ÐµÑÐ¶ÐºÐ° ÑÐ°Ð´Ð¸Ð¾ÑÑÑÑÐ¾Ð¹ÑÑÐ² ZONT,\u005Cr\u005Cnâ¡ï¸ ÐÑÑÑÐ¾ÐµÐ½Ð½ÑÐ¹ Ð°ÐºÐºÑÐ¼ÑÐ»ÑÑÐ¾Ñ ÑÐµÐ·ÐµÑÐ²Ð½Ð¾Ð³Ð¾ Ð¿Ð¸ÑÐ°Ð½Ð¸Ñ,\u005Cr\u005Cnâ¡ï¸ Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ ÑÐ¾ ÑÑÐ°ÑÐ½Ð¾Ð³Ð¾ ÐºÐ»ÑÑÐ°, ÑÐ¼Ð°ÑÑÑÐ¾Ð½Ð° Ð¸Ð»Ð¸ ÑÐ°Ð´Ð¸Ð¾Ð±ÑÐµÐ»Ð¾ÐºÐ° Ð¸Ð· ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ°.\u005Cr\u005Cn\u005Cr\u005CnÐÐ°ÐºÐ°Ð·Ð°ÑÑ ÑÐ¸ÑÑÐµÐ¼Ñ Ð¼Ð¾Ð¶Ð½Ð¾ Ð¿Ð¾ ÑÐµÐ»ÐµÑÐ¾Ð½Ñ Ð¾ÑÐ´ÐµÐ»Ð° Ð¿ÑÐ¾Ð´Ð°Ð¶ 8 (831) 220\u002D76\u002D60 Ð¸Ð»Ð¸ Ð½Ð° ÑÐ°Ð¹ÑÐµ zont\u002Donline.ru\u0022,\u0022link\u0022:\u0022https://zont\u002Donline.ru/internet\u002Dmagazin/auto/ztc\u002D700n\u0022,\u0022active_after\u0022:1639559463.186,\u0022icon\u0022:\u0022news\u0022},{\u0022title\u0022:\u0022ÐÐ¾Ð²Ð¸Ð½ÐºÐ°! ZONT ZTC\u002D300 ð\u0022,\u0022description\u0022:\u0022ÐÑÐµÐ´ÑÑÐ°Ð²Ð»ÑÐµÐ¼ Ð½Ð¾Ð²ÑÑ Ð¼Ð¾Ð´ÐµÐ»Ñ Ð² ÑÐµÐ³Ð¼ÐµÐ½ÑÐµ Ð½ÐµÐ´Ð¾ÑÐ¾Ð³Ð¸Ñ Ð°Ð²ÑÐ¾ÑÐ¸Ð³Ð½Ð°Ð»Ð¸Ð·Ð°ÑÐ¸Ð¹ â â¡ZONT ZTC\u002D300\u005Cr\u005Cn\u005Cr\u005Cnð¥CAN+LIN | GSM | GPS/ÐÐÐÐÐÐ¡Ð¡ð¥\u005Cr\u005Cn\u005Cr\u005CnÐÑÐ½Ð¾Ð²Ð½ÑÐµ Ð¿ÑÐµÐ¸Ð¼ÑÑÐµÑÑÐ²Ð° ÑÐ¸ÑÑÐµÐ¼Ñ:\u005Cr\u005Cn\u005Cr\u005Cnð ÐÐ½ÑÐµÐ»Ð»ÐµÐºÑÑÐ°Ð»ÑÐ½ÑÐ¹ Ð°Ð²ÑÐ¾Ð·Ð°Ð¿ÑÑÐº Ð¸ Ð´Ð¸ÑÑÐ°Ð½ÑÐ¸Ð¾Ð½Ð½Ð°Ñ Ð±Ð»Ð¾ÐºÐ¸ÑÐ¾Ð²ÐºÐ° Ð´Ð²Ð¸Ð³Ð°ÑÐµÐ»Ñ.\u005Cr\u005Cnð Ð¢ÐµÐ»ÐµÐ¼Ð°ÑÐ¸ÑÐµÑÐºÐ¸Ð¹ ÑÐµÑÐ²Ð¸Ñ Ð¸ ÑÐ¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ ÑÐ¾ ÑÐ¼Ð°ÑÑÑÐ¾Ð½Ð°.\u005Cr\u005Cnð Ð Ð°ÑÑÐ¸ÑÐµÐ½Ð½Ð¾Ðµ ÐºÐ¾Ð»Ð¸ÑÐµÑÑÐ²Ð¾ Ð²ÑÐ¾Ð´Ð¾Ð²/Ð²ÑÑÐ¾Ð´Ð¾Ð² Ð´Ð»Ñ ÑÐµÐ°Ð»Ð¸Ð·Ð°ÑÐ¸Ð¸ Ð¿ÐµÑÑÐ¾Ð½Ð°Ð»ÑÐ½ÑÑ Ð°Ð»Ð³Ð¾ÑÐ¸ÑÐ¼Ð¾Ð².\u005Cr\u005Cnð ÐÐ¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑÑ Ð¿Ð¾Ð´ÐºÐ»ÑÑÐµÐ½Ð¸Ñ Ð³Ð¾Ð»Ð¾ÑÐ¾Ð²Ð¾Ð¹ ÑÐ¸ÑÐµÐ½Ñ.\u005Cr\u005Cnð Ð¤ÑÐ½ÐºÑÐ¸Ñ Ð´Ð¸Ð°Ð³Ð½Ð¾ÑÑÐ¸ÐºÐ¸ Ð´Ð²Ð¸Ð³Ð°ÑÐµÐ»Ñ Ð¿ÑÐ¸ ÑÐ²Ð¾Ð±Ð¾Ð´Ð½Ð¾Ð¹ CAN\u002DÑÐ¸Ð½Ðµ.\u005Cr\u005Cn\u005Cr\u005CnÐ Ð²ÑÑ ÑÑÐ¾ Ð·Ð° 11 500 ÑÑÐ±Ð»ÐµÐ¹!\u005Cr\u005Cn\u005Cr\u005CnÐÐ°ÐºÐ°Ð·Ð°ÑÑ ÑÐ¸ÑÑÐµÐ¼Ñ Ð¼Ð¾Ð¶Ð½Ð¾ Ð¿Ð¾ ÑÐµÐ»ÐµÑÐ¾Ð½Ñ Ð¾ÑÐ´ÐµÐ»Ð° Ð¿ÑÐ¾Ð´Ð°Ð¶ 8 (831) 220\u002D76\u002D60 Ð¸Ð»Ð¸ Ð½Ð° ÑÐ°Ð¹ÑÐµ zont\u002Donline.ru\u0022,\u0022link\u0022:\u0022https://zont\u002Donline.ru/internet\u002Dmagazin/auto/ztc\u002D300\u0022,\u0022active_after\u0022:1637922415.793,\u0022icon\u0022:\u0022news\u0022},{\u0022title\u0022:\u0022ÐÑÐ¾Ð±ÑÐ°Ð¶ÐµÐ½Ð¸Ðµ Ð±Ð°Ð»Ð°Ð½ÑÐ° ÑÐ¸Ð¼\u002DÐºÐ°ÑÑ ÐÐ¢Ð¡\u0022,\u0022description\u0022:\u0022Ð£Ð²Ð°Ð¶Ð°ÐµÐ¼ÑÐµ Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»Ð¸, Ð² Ð½Ð°ÑÑÐ¾ÑÑÐµÐµ Ð²ÑÐµÐ¼Ñ ÑÐ¾ ÑÑÐ¾ÑÐ¾Ð½Ñ Ð¾Ð¿ÐµÑÐ°ÑÐ¾ÑÐ° ÑÐ²ÑÐ·Ð¸ ÐÐ¢Ð¡ Ð¼Ð¾Ð¶ÐµÑ Ð½Ð°Ð±Ð»ÑÐ´Ð°ÑÑÑÑ Ð¿ÑÐ¾Ð³ÑÐ°Ð¼Ð¼Ð½ÑÐ¹ ÑÐ±Ð¾Ð¹ Ð² Ð°Ð»Ð³Ð¾ÑÐ¸ÑÐ¼Ðµ ÐºÐ¾Ð½ÑÑÐ¾Ð»Ñ Ð±Ð°Ð»Ð°Ð½ÑÐ° ÑÑÐµÐ´ÑÑÐ² Ð´Ð»Ñ ÑÑÐ¸Ñ ÑÐ¸Ð¼\u002DÐºÐ°ÑÑ.\u005Cr\u005Cn\u005Cr\u005CnÐ¡Ð¸Ð¼\u002DÐºÐ°ÑÑÐ° ÐÐ¢Ð¡ Ð¸Ð· ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ° Ð¿Ð¾ÑÑÐ°Ð²ÐºÐ¸ ZONT \u002D ÐºÐ¾ÑÐ¿Ð¾ÑÐ°ÑÐ¸Ð²Ð½Ð°Ñ Ð¸ Ð¾Ð¿Ð»Ð°ÑÐ¸Ð²Ð°ÐµÑÑÑ Ð½Ð°Ð¼Ð¸ (ÐÐÐ \u005C\u0022ZONT\u002DONLINE \u005C\u0022). \u005Cr\u005Cn\u005Cr\u005CnÐÐ° ÑÐ°Ð±Ð¾ÑÐµ Ð¿ÑÐ¸Ð±Ð¾ÑÐ° Ð½ÐµÐºÐ¾ÑÑÐµÐºÑÐ½Ð¾Ðµ Ð¾ÑÐ¾Ð±ÑÐ°Ð¶ÐµÐ½Ð¸Ðµ Ð±Ð°Ð»Ð°Ð½ÑÐ° Ð½Ð¸ÐºÐ°Ðº Ð½Ðµ ÑÐºÐ°Ð·ÑÐ²Ð°ÐµÑÑÑ. \u005Cr\u005Cn\u005Cr\u005CnÐ Ð°Ð±Ð¾ÑÐ¾ÑÐ¿Ð¾ÑÐ¾Ð±Ð½Ð¾ÑÑÑ ÑÐ¸Ð¼\u002DÐºÐ°ÑÑÑ ÐÐ¢Ð¡ ÐºÐ¾Ð½ÑÑÐ¾Ð»Ð¸ÑÑÐµÑÑÑ Ð¿Ð¾ Ð´Ð°Ð½Ð½ÑÐ¼ Ð¾Ð¿Ð»Ð°ÑÐµÐ½Ð½Ð¾Ð³Ð¾ Ð¿ÐµÑÐ¸Ð¾Ð´Ð°, ÐºÐ¾ÑÐ¾ÑÑÐ¹ Ð¾ÑÐ¾Ð±ÑÐ°Ð¶Ð°ÐµÑÑÑ Ð² Ð»Ð¸ÑÐ½Ð¾Ð¼ ÐºÐ°Ð±Ð¸Ð½ÐµÑÐµ ÑÐµÑÐ²Ð¸ÑÐ° Ð½Ð° Ð²ÐºÐ»Ð°Ð´ÐºÐ°Ñ \u005C\u0022Ð¡Ð¾ÑÑÐ¾ÑÐ½Ð¸Ðµ\u005C\u0022 Ð¸ \u005C\u0022Ð¡Ð¸Ð¼\u002DÐºÐ°ÑÑÑ\u005C\u0022.\u005Cr\u005Cn\u005Cr\u005CnÐÑÐ¸Ð½Ð¾ÑÐ¸Ð¼ Ð¸Ð·Ð²Ð¸Ð½ÐµÐ½Ð¸Ñ Ð·Ð° Ð²ÑÐµÐ¼ÐµÐ½Ð½ÑÐµ Ð½ÐµÑÐ´Ð¾Ð±ÑÑÐ²Ð°. ÐÐ¿ÐµÑÐ°ÑÐ¾Ñ ÑÐ²ÑÐ·Ð¸ Ð·Ð°Ð½Ð¸Ð¼Ð°ÐµÑÑÑ ÑÐµÑÐµÐ½Ð¸ÐµÐ¼ Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ Ð²Ð¾Ð¿ÑÐ¾ÑÐ°.\u0022,\u0022link\u0022:\u0022\u0022,\u0022active_after\u0022:1637045802.39,\u0022icon\u0022:\u0022incident\u0022},{\u0022title\u0022:\u0022ÐÐ±Ð½Ð¾Ð²Ð»ÐµÐ½Ð½ÑÐµ Ð½Ð°ÑÑÑÐ¾Ð¹ÐºÐ¸ ÑÑÐµÐ½Ð°ÑÐ¸ÐµÐ² âï¸\u0022,\u0022description\u0022:\u0022ÐÑÐ»Ð¸ÑÐ½Ð°Ñ Ð½Ð¾Ð²Ð¾ÑÑÑ Ð´Ð»Ñ Ð²ÑÐµÑ Ð¿Ð¾ÐºÐ»Ð¾Ð½Ð½Ð¸ÐºÐ¾Ð² Ð¸ÑÐ¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°Ð½Ð¸Ñ ÑÑÐµÐ½Ð°ÑÐ¸ÐµÐ² Ð² ÑÐ°Ð±Ð¾ÑÐµ ÐºÐ¾Ð½ÑÑÐ¾Ð»Ð»ÐµÑÐ¾Ð² ZONT â Ð¼Ñ Ð·Ð½Ð°ÑÐ¸ÑÐµÐ»ÑÐ½Ð¾ Ð¿Ð¾Ð²ÑÑÐ¸Ð»Ð¸ ÑÐ´Ð¾Ð±ÑÑÐ²Ð¾ Ð½Ð°ÑÑÑÐ¾ÐµÐº. ð\u005Cr\u005Cn\u005Cr\u005CnÐÐ±ÑÐµÐ´Ð¸Ð½Ð¸Ð»Ð¸ Ð²Ð°ÑÐ¸ Ð¿Ð¾Ð¶ÐµÐ»Ð°Ð½Ð¸Ñ Ñ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑÑÐ¼Ð¸ Ð²Ð¸Ð·ÑÐ°Ð»ÑÐ½Ð¾Ð³Ð¾ ÑÐ·ÑÐºÐ° Ð¿ÑÐ¾Ð³ÑÐ°Ð¼Ð¼Ð¸ÑÐ¾Ð²Ð°Ð½Ð¸Ñ. ð» ÐÐ»Ð°Ð³Ð¾Ð´Ð°ÑÑ Ð¸ÑÐ¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°Ð½Ð¸Ñ Ð±Ð»Ð¾ÐºÐ¾Ð² ÑÐ°Ð·Ð»Ð¸ÑÐ½ÑÑ ÑÐ¾ÑÐ¼ Ð¸ ÑÐ²ÐµÑÐ¾Ð² ÑÑÑÐµÑÑÐ²ÐµÐ½Ð½Ð¾ ÑÐ½Ð¸Ð¶ÐµÐ½Ð° Ð²ÐµÑÐ¾ÑÑÐ½Ð¾ÑÑÑ Ð¾ÑÐ¸Ð±Ð¾Ðº Ð¿ÑÐ¸ ÑÐ¾Ð·Ð´Ð°Ð½Ð¸Ð¸ ÑÑÐµÐ½Ð°ÑÐ¸ÐµÐ².\u005Cr\u005Cn\u005Cr\u005Cnâï¸ ÐÐ»Ñ ÑÐ°Ð±Ð¾ÑÑ Ñ Ð½Ð¾Ð²ÑÐ¼ Ð°Ð»Ð³Ð¾ÑÐ¸ÑÐ¼Ð¾Ð¼ ÑÑÐµÐ½Ð°ÑÐ¸ÐµÐ² Ð½ÐµÐ¾Ð±ÑÐ¾Ð´Ð¸Ð¼Ð¾ Ð¾Ð±Ð½Ð¾Ð²Ð¸ÑÑ Ð¿ÑÐ¾ÑÐ¸Ð²ÐºÑ ÐºÐ¾Ð½ÑÑÐ¾Ð»Ð»ÐµÑÐ° Ð½Ð° Ð²ÐµÑÑÐ¸Ñ 185.\u005Cr\u005Cn\u005Cr\u005CnÐÐ°Ð¿Ð¾Ð¼Ð¸Ð½Ð°ÐµÐ¼, ÑÑÐ¾ Ð¾Ð±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¿ÑÐ¾ÑÐ¸Ð²ÐºÐ¸ Ð¾ÑÐ½Ð¾Ð²Ð½Ð¾Ð³Ð¾ Ð¿ÑÐ¸Ð±Ð¾ÑÐ° Ð¾ÑÑÑÐµÑÑÐ²Ð»ÑÐµÑÑÑ Ð² 2 ÐºÐ»Ð¸ÐºÐ°. â¡ï¸ Ð ÑÐµÑÐ²Ð¸ÑÐ½Ð¾Ð¼ ÑÐµÐ¶Ð¸Ð¼Ðµ Ð¿ÐµÑÐµÐ¹Ð´Ð¸ÑÐµ Ð² ÑÐ°Ð·Ð´ÐµÐ» Â«Ð¡ÐµÑÐ²Ð¸ÑÂ». ÐÐ°Ð¶Ð¼Ð¸ÑÐµ Ð½Ð° ÐºÐ½Ð¾Ð¿ÐºÑ Â«ÐÐ±Ð½Ð¾Ð²Ð¸ÑÑÂ», ÑÐ°ÑÐ¿Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð½ÑÑ ÑÑÐ´Ð¾Ð¼ Ñ Ð¿ÑÐ¸Ð±Ð¾ÑÐ¾Ð¼.\u005Cr\u005Cn\u005Cr\u005CnÐÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ Ð½Ð°ÑÑÑÐ¾Ð¹ÐºÐ¸ ÑÑÐµÐ½Ð°ÑÐ¸ÐµÐ² Ð¿ÑÐ¸Ð²ÐµÐ´ÐµÐ½Ð¾ Ð² Ð ÑÐºÐ¾Ð²Ð¾Ð´ÑÑÐ²Ð°Ñ Ð¿Ð¾ ÑÐºÑÐ¿Ð»ÑÐ°ÑÐ°ÑÐ¸Ð¸ ÑÐ½Ð¸Ð²ÐµÑÑÐ°Ð»ÑÐ½ÑÑ ÐºÐ¾Ð½ÑÑÐ¾Ð»Ð»ÐµÑÐ¾Ð² (ZONT H1000+, H2000+, C2000+).\u0022,\u0022link\u0022:\u0022https://zont\u002Donline.ru/news/settings\u002Dblockly\u0022,\u0022active_after\u0022:1634797591.986,\u0022icon\u0022:\u0022service_news\u0022},{\u0022title\u0022:\u0022ÐÐ°ÑÑÑÐ¾Ð¹ÐºÐ¸ Ð²Ð¸Ð´Ð° ÑÑÐ°Ð½ÑÐ¿Ð¾ÑÑÐ½Ð¾Ð³Ð¾ ÑÑÐµÐ´ÑÑÐ²Ð°ð¥\u0022,\u0022description\u0022:\u0022Ð£ Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»ÐµÐ¹ Ð¿ÑÐ¾ÑÐ¸Ð²Ð¾ÑÐ³Ð¾Ð½Ð½ÑÑ ÑÐ¸ÑÑÐµÐ¼ ZONT ZTC Ð¿Ð¾ÑÐ²Ð¸Ð»Ð°ÑÑ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑÑ Ð¿ÐµÑÑÐ¾Ð½Ð°Ð»Ð¸Ð·Ð¸ÑÐ¾Ð²Ð°ÑÑ Ð¾Ð±ÑÐ°Ð· ÑÐ²Ð¾ÐµÐ³Ð¾ ÑÑÐ°Ð½ÑÐ¿Ð¾ÑÑÐ½Ð¾Ð³Ð¾ ÑÑÐµÐ´ÑÑÐ²Ð° Ð² Ð¾Ð½Ð»Ð°Ð¹Ð½\u002DÑÐµÑÐ²Ð¸ÑÐµ Ð¸ Ð¼Ð¾Ð±Ð¸Ð»ÑÐ½Ð¾Ð¼ Ð¿ÑÐ¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ð¸ ZONT.\u005Cr\u005Cn\u005Cr\u005CnÐÐ·Ð¾Ð±ÑÐ°Ð¶ÐµÐ½Ð¸Ðµ Ð°Ð²ÑÐ¾ Ð¼Ð¾Ð¶Ð½Ð¾ Ð¸Ð·Ð¼ÐµÐ½Ð¸ÑÑ Ð½Ð° Ð²ÐºÐ»Ð°Ð´ÐºÐµ Â«Ð¡Ð¾ÑÑÐ¾ÑÐ½Ð¸ÐµÂ» ÑÐµÑÐµÐ· Â«ÐÐ°ÑÑÑÐ¾Ð¹ÐºÐ¸ Ð²Ð¸Ð´Ð°Â» (Ð¸ÐºÐ¾Ð½ÐºÐ° Â«ÐºÐ¸ÑÑÐ¾ÑÐºÐ°Â»).\u005Cr\u005Cn\u005Cr\u005CnÐÐ»Ñ Ð²Ð»Ð°Ð´ÐµÐ»ÑÑÐµÐ² ðÐ°Ð²ÑÐ¾Ð¼Ð¾Ð±Ð¸Ð»ÐµÐ¹ Ð¿ÑÐµÐ´Ð»Ð°Ð³Ð°ÑÑÑÑ ÑÐµÑÑÑ ÑÐ¸Ð¿Ð¾Ð² ÐºÑÐ·Ð¾Ð²Ð°:\u005Cr\u005Cnð¸ cÐµÐ´Ð°Ð½,\u005Cr\u005Cnð¸ ÑÑÑÑÐ±ÑÐº,\u005Cr\u005Cnð¸ Ð²Ð½ÐµÐ´Ð¾ÑÐ¾Ð¶Ð½Ð¸Ðº,\u005Cr\u005Cnð¸ ÐºÑÐ¿Ðµ,\u005Cr\u005Cnð¸ Ð¿Ð¸ÐºÐ°Ð¿,\u005Cr\u005Cnð¸ Ð¼Ð¸ÐºÑÐ¾Ð°Ð²ÑÐ¾Ð±ÑÑ.\u005Cr\u005Cn\u005Cr\u005CnÐ¢Ð°ÐºÐ¶Ðµ Ð´Ð»Ñ Ð²ÑÐ±Ð¾ÑÐ° Ð´Ð¾ÑÑÑÐ¿Ð½Ñ Ð¼Ð¾ÑÐ¾ÑÐ¸ÐºÐ», ÑÐ°Ð¼Ð¾ÐºÐ°Ñ, Ð»Ð¾Ð´ÐºÐ° Ð¸ Ð´ÑÑÐ³Ð¸Ðµ ÑÑÐ°Ð½ÑÐ¿Ð¾ÑÑÐ½ÑÐµ ÑÑÐµÐ´ÑÑÐ²Ð°. \u005Cr\u005Cn\u005Cr\u005CnÐÐ¾Ð¶Ð½Ð¾ Ð²Ð¾ÑÐ¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÑÑÑ Ð¿ÐµÑÐµÐºÐ»ÑÑÐ°ÑÐµÐ»ÐµÐ¼, ÐºÐ¾ÑÐ¾ÑÑÐ¹ Ð¿Ð¾Ð·Ð²Ð¾Ð»ÑÐµÑ Ð¿Ð¾Ð²ÐµÑÐ½ÑÑÑ Ð¸Ð·Ð¾Ð±ÑÐ°Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð¿ÑÐ°Ð²Ð¾â¡ Ð¸Ð»Ð¸ â¬Ð²Ð»ÐµÐ²Ð¾.\u005Cr\u005Cn\u005Cr\u005CnÐÑÐ´ÐµÐ»ÑÐ½Ð¾ Ð²ÑÐ½ÐµÑÐµÐ½Ñ ÐºÐ½Ð¾Ð¿ÐºÐ¸ ð¢Â«ÐÐ°ÑÑÑÐ¾Ð¹ÐºÐ¸ Ð·Ð²ÑÐºÐ¾Ð²Â» Ð¸ ð§Â«Ð ÐµÐ¶Ð¸Ð¼ ÑÐµÑÐ²Ð¸ÑÐ° Ð¸ Ð½Ð°ÑÑÑÐ¾Ð¹ÐºÐ° Ð´Ð°ÑÑÐ¸ÐºÐ¾Ð²Â».\u005Cr\u005Cn\u005Cr\u005CnÐÐ»Ñ Ð¿Ð¾ÑÐ²Ð»ÐµÐ½Ð¸Ñ Ð½Ð¾Ð²ÑÑ Ð½Ð°ÑÑÑÐ¾ÐµÐº Ð² Ð¿ÑÐ¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ð¸ Ð´Ð»Ñ Ð¼Ð¾Ð±Ð¸Ð»ÑÐ½ÑÑ ÑÑÑÑÐ¾Ð¹ÑÑÐ² Apple Ð¸ Android Ð½Ðµ Ð·Ð°Ð±ÑÐ´ÑÑÐµ Ð¾Ð±Ð½Ð¾Ð²Ð¸ÑÑ Ð¿ÑÐ¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ.\u0022,\u0022link\u0022:\u0022\u0022,\u0022active_after\u0022:1633674633.355,\u0022icon\u0022:\u0022service_news\u0022},{\u0022title\u0022:\u0022ÐÑÐ¿Ð¸ÑÐµ Ð°Ð²ÑÐ¾ÑÐ¸Ð³Ð½Ð°Ð»Ð¸Ð·Ð°ÑÐ¸Ñ Ð¸ Ð¿Ð¾Ð»ÑÑÐ¸ÑÐµ Ð¿Ð¾Ð´Ð°ÑÐ¾Ðº!\u0022,\u0022description\u0022:\u0022ZONT â¡ï¸ZÐÐÐ£Ð¡ÐÐÐÐ¢ Ð ÐÐÐ«ÐÐ Ð«Ð¨â¡ï¸ \u005Cr\u005Cn\u005Cr\u005CnÐÐµ ÑÐ¿ÑÑÑÐ¸ÑÐµ ÑÐ°Ð½Ñ Ð¿Ð¾Ð»ÑÑÐ¸ÑÑ Ð¾Ð´Ð¸Ð½ Ð¸Ð· ðÐ¿ÑÐ¸Ð·Ð¾Ð² Ð¿ÑÐ¸ Ð¿Ð¾ÐºÑÐ¿ÐºÐµ Ð°Ð²ÑÐ¾ÑÐ¸Ð³Ð½Ð°Ð»Ð¸Ð·Ð°ÑÐ¸Ð¸ Ð² Ð¿ÐµÑÐ¸Ð¾Ð´ Ñ 22 ÑÐµÐ½ÑÑÐ±ÑÑ Ð¿Ð¾ 22 Ð´ÐµÐºÐ°Ð±ÑÑ 2021 Ð³Ð¾Ð´Ð°:\u005Cr\u005Cn\u005Cr\u005Cnâ­ï¸ 5 ÑÐ»ÐµÐºÑÑÐ¾Ð½Ð½ÑÑ ÑÐµÑÑÐ¸ÑÐ¸ÐºÐ°ÑÐ¾Ð² OZON \u002D ÐºÐ°Ð¶Ð´ÑÐ¹ Ð½Ð° ÑÑÐ¼Ð¼Ñ 3 000 ÑÑÐ±Ð»ÐµÐ¹,\u005Cr\u005Cnâ­ï¸ ÑÐ¸ÑÐ½ÐµÑ\u002DÐ±ÑÐ°ÑÐ»ÐµÑ GEOZON Heart Rate,\u005Cr\u005Cnâ­ï¸ Ð±ÐµÑÐ¿ÑÐ¾Ð²Ð¾Ð´Ð½Ð°Ñ ÐºÐ¾Ð»Ð¾Ð½ÐºÐ° GLIM,\u005Cr\u005Cnâ­ï¸ 8 ÑÐ¸ÑÐ¼ÐµÐ½Ð½ÑÑ ÑÑÐ²ÐµÐ½Ð¸ÑÐ¾Ð² ZONT, ÑÑÐµÐ´Ð¸ ÐºÐ¾ÑÐ¾ÑÑÑ ÑÑÐºÐ·Ð°Ðº, 2 ÑÐµÑÐ¼Ð¾ÐºÑÑÐ¶ÐºÐ¸, 2 ÑÐ¿Ð¾ÑÑÐ¸Ð²Ð½ÑÐµ Ð±ÑÑÑÐ»ÐºÐ¸ Ð¸ 3 Ð±ÐµÐ¹ÑÐ±Ð¾Ð»ÐºÐ¸.\u005Cr\u005Cn\u005Cr\u005CnÐÐ¾Ð´Ð¿Ð¸ÑÑÐ²Ð°Ð¹ÑÐµÑÑ Ð½Ð° Ð½Ð°Ñ Ð¸Ð½ÑÑÐ°Ð³ÑÐ°Ð¼\u002DÐ°ÐºÐºÐ°ÑÐ½Ñ @zontonlineru Ð¸ ÑÐ·Ð½Ð°Ð¹ÑÐµ ÑÑÐ»Ð¾Ð²Ð¸Ñ ÑÑÐ°ÑÑÐ¸Ñ Ð² ÑÐ¾Ð·ÑÐ³ÑÑÑÐµ.\u0022,\u0022link\u0022:\u0022https://www.instagram.com/p/CUHauQ4KEus/\u0022,\u0022active_after\u0022:1632300734.916,\u0022icon\u0022:\u0022sale\u0022},{\u0022title\u0022:\u0022ÐÐ¸ÑÐ¶Ð° ÑÐ¿ÐµÑÐ¸Ð°Ð»Ð¸ÑÑÐ¾Ð² Microline Expert âï¸\u0022,\u0022description\u0022:\u0022ÐÑÐ»Ð¸ Ð²Ð°Ð¼ Ð½ÑÐ¶Ð½Ð¾ ÑÑÑÐ°Ð½Ð¾Ð²Ð¸ÑÑ Ð¸ Ð½Ð°ÑÑÑÐ¾Ð¸ÑÑ Ð¿ÑÐ¸Ð±Ð¾ÑÑ Ð°Ð²ÑÐ¾Ð¼Ð°ÑÐ¸Ð·Ð°ÑÐ¸Ð¸ Ð¸ Ð¾ÑÑÐ°Ð½Ñ ð¥ZONT Ð¸Ð»Ð¸ ðMEGA SX, Ð½Ð°Ð¹Ð´Ð¸ÑÐµ Ð¿ÑÐ¾ÑÐµÑÑÐ¸Ð¾Ð½Ð°Ð»Ð° Ð²ÑÐµÐ³Ð¾ Ð·Ð° Ð¿Ð°ÑÑ ÐºÐ»Ð¸ÐºÐ¾Ð²! â\u005Cr\u005Cn\u005Cr\u005CnÐÐ¸ÑÐ¶Ð° ÑÐ¿ÐµÑÐ¸Ð°Ð»Ð¸ÑÑÐ¾Ð² â ÑÑÐ¾ Ð¾Ð±ÑÐµÐ´Ð¾ÑÑÑÐ¿Ð½ÑÐ¹ ÑÐµÑÑÑÑ, Ð½Ð° ÐºÐ¾ÑÐ¾ÑÐ¾Ð¼ Ð¿ÑÐµÐ´ÑÑÐ°Ð²Ð»ÐµÐ½Ñ ÑÐµÑÑÐ¸ÑÐ¸ÑÐ¸ÑÐ¾Ð²Ð°Ð½Ð½ÑÐµ Ð¼Ð°ÑÑÐµÑÐ° ÑÐ¾ ÑÐ²Ð¾Ð¸Ð¼Ð¸ Ð²ÑÐ¿Ð¾Ð»Ð½ÐµÐ½Ð½ÑÐ¼Ð¸ Ð¿ÑÐ¾ÐµÐºÑÐ°Ð¼Ð¸.\u005Cr\u005Cn\u005Cr\u005CnÐÐ´ÐµÑÑ Ð²Ñ Ð¼Ð¾Ð¶ÐµÑÐµ:\u005Cr\u005Cnâ­ï¸ Ð²ÑÐ±ÑÐ°ÑÑ ÑÐ¿ÐµÑÐ¸Ð°Ð»Ð¸ÑÑÐ° Ð² Ð²Ð°ÑÐµÐ¼ ÑÐµÐ³Ð¸Ð¾Ð½Ðµ,\u005Cr\u005Cnâ­ï¸ ÑÐ·Ð½Ð°ÑÑ ÐµÐ³Ð¾ ÑÐµÐ¹ÑÐ¸Ð½Ð³ Ð¸ Ð¿ÑÐ¾ÑÐ¸ÑÐ°ÑÑ Ð¾ÑÐ·ÑÐ²Ñ,\u005Cr\u005Cnâ­ï¸ Ð¾Ð·Ð½Ð°ÐºÐ¾Ð¼Ð¸ÑÑÑÑ Ñ Ð¿Ð¾ÑÑÑÐ¾Ð»Ð¸Ð¾ Ð¿ÑÐ¾ÐµÐºÑÐ¾Ð² Ð¼Ð°ÑÑÐµÑÐ°,\u005Cr\u005Cnâ­ï¸ Ð¾ÑÑÐ°Ð²Ð¸ÑÑ Ð·Ð°ÑÐ²ÐºÑ Ð½Ð° Ð²ÑÐ¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ ÑÐ°Ð±Ð¾Ñ.\u005Cr\u005Cn\u0022,\u0022link\u0022:\u0022https://lk.microline.ru/workers\u0022,\u0022active_after\u0022:1631781111.142,\u0022icon\u0022:\u0022news\u0022},{\u0022title\u0022:\u0022ÐÑÐ¼ÐµÐ½Ð° Ð°Ð±Ð¾Ð½ÐµÐ½ÑÑÐºÐ¾Ð¹ Ð¿Ð»Ð°ÑÑ Ð¸ Ð½Ð¾Ð²ÑÐ¹ ÑÐ°ÑÐ¸Ñ PRO\u0022,\u0022description\u0022:\u0022ð Ð¡ 1 ÑÐµÐ½ÑÑÐ±ÑÑ Ð¾ÑÐ¼ÐµÐ½ÑÐµÑÑÑ Ð°Ð±Ð¾Ð½ÐµÐ½ÑÑÐºÐ°Ñ Ð¿Ð»Ð°ÑÐ° Ð·Ð° Ð¸ÑÐ¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð² Ð¾Ð´Ð½Ð¾Ð¼ Ð°ÐºÐºÐ°ÑÐ½ÑÐµ Ð±Ð¾Ð»ÐµÐµ 5 ÑÑÑÑÐ¾Ð¹ÑÑÐ².\u005Cr\u005Cn\u005Cr\u005CnÐÐ»Ñ ÑÐ´Ð¾Ð±ÑÑÐ²Ð° ÑÐ°Ð±Ð¾ÑÑ Ñ Ð½ÐµÑÐºÐ¾Ð»ÑÐºÐ¸Ð¼Ð¸ ÑÑÑÑÐ¾Ð¹ÑÑÐ²Ð°Ð¼Ð¸ Ð² Ð¾Ð´Ð½Ð¾Ð¼ Ð°ÐºÐºÐ°ÑÐ½ÑÐµ Ð²Ð²Ð¾Ð´Ð¸Ð¼ ÐµÐ´Ð¸Ð½ÑÐ¹ ÑÐ°ÑÐ¸Ñ PROð \u005Cr\u005Cn\u005Cr\u005CnÐÐ³Ð¾ Ð¿ÑÐµÐ¸Ð¼ÑÑÐµÑÑÐ²Ð°Ð¼Ð¸ Ð¼Ð¾Ð¶ÐµÑ Ð²Ð¾ÑÐ¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÑÑÑ Ð»ÑÐ±Ð¾Ð¹ Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»Ñ ZONT, Ð½ÐµÐ·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ Ð¾Ñ ÐºÐ¾Ð»Ð¸ÑÐµÑÑÐ²Ð° Ð¿Ð¾Ð´ÐºÐ»ÑÑÐµÐ½Ð½ÑÑ Ð¸ Ð¸ÑÐ¿Ð¾Ð»ÑÐ·ÑÐµÐ¼ÑÑ Ð¿ÑÐ¸Ð±Ð¾ÑÐ¾Ð². \u005Cr\u005Cn\u005Cr\u005Cnð ÐÑÑÐ¿Ð¿Ð¸ÑÐ¾Ð²ÐºÐ° ÑÑÑÑÐ¾Ð¹ÑÑÐ²:\u005Cr\u005CnÐ¾Ð±ÑÐµÐ´Ð¸Ð½ÐµÐ½Ð¸Ðµ ÑÑÑÑÐ¾Ð¹ÑÑÐ² Ð¿Ð¾ Ð½Ð°ÑÐµÐ»ÐµÐ½Ð½ÑÐ¼ Ð¿ÑÐ½ÐºÑÐ°Ð¼, ÑÐ¸Ð¿Ð°Ð¼ Ð¿ÑÐ¸Ð±Ð¾ÑÐ¾Ð², Ð´Ð°ÑÐµ ÑÑÑÐ°Ð½Ð¾Ð²ÐºÐ¸ Ð¸ Ñ.Ð´. \u005Cr\u005Cn\u005Cr\u005Cnð Ð¡Ð²Ð¾Ð´Ð½Ð°Ñ ÐºÐ°ÑÑÐ° ÑÑÑÑÐ¾Ð¹ÑÑÐ² ÑÐ¾ ÑÑÐ°ÑÑÑÐ°Ð¼Ð¸:\u005Cr\u005CnÐ½Ð°Ð³Ð»ÑÐ´Ð½Ð¾Ðµ Ð¾ÑÐ¾Ð±ÑÐ°Ð¶ÐµÐ½Ð¸Ðµ ÑÑÑÑÐ¾Ð¹ÑÑÐ², ÐºÐ¾ÑÐ¾ÑÑÐµ Ð² Ð´Ð°Ð½Ð½ÑÐ¹ Ð¼Ð¾Ð¼ÐµÐ½Ñ Ð½Ð°ÑÐ¾Ð´ÑÑÑÑ Ð½Ðµ Ð½Ð° ÑÐ²ÑÐ·Ð¸ Ð¸Ð»Ð¸ Ð² Ð¾ÑÐ¸Ð±ÐºÐµ. \u005Cr\u005Cn\u005Cr\u005Cnð 2 Ð³Ð¾Ð´Ð° ÑÑÐ°Ð½ÐµÐ½Ð¸Ñ Ð¸ÑÑÐ¾ÑÐ¸Ð¸:\u005Cr\u005CnÐ´Ð¾ÑÑÑÐ¿Ð½Ð¾ Ð´Ð»Ñ Ð¸Ð½ÑÐ¾ÑÐ¼Ð°ÑÐ¸Ð¸ ÑÐ¾ Ð²ÑÐµÑ ÑÑÑÑÐ¾Ð¹ÑÑÐ² Ð±ÐµÐ· Ð¾Ð³ÑÐ°Ð½Ð¸ÑÐµÐ½Ð¸Ñ Ð¿Ð¾ ÐºÐ¾Ð»Ð¸ÑÐµÑÑÐ²Ñ.\u005Cr\u005Cn\u005Cr\u005Cnð ÐÐµÐ¾Ð·Ð¾Ð½Ñ Ð´Ð»Ñ Ð°Ð²ÑÐ¾Ð¼Ð¾Ð±Ð¸Ð»ÑÐ½ÑÑ ÑÐ¸Ð³Ð½Ð°Ð»Ð¸Ð·Ð°ÑÐ¸Ð¹:\u005Cr\u005CnÐ½Ð°ÑÑÑÐ¾Ð¹ÐºÐ° Ð½ÐµÐºÐ¾ÑÐ¾ÑÑÑ Ð¾Ð³ÑÐ°Ð½Ð¸ÑÐµÐ½Ð¸Ð¹. ÐÐ°Ð¿ÑÐ¸Ð¼ÐµÑ, Ð²Ñ Ð¿Ð¾Ð»ÑÑÐ¸ÑÐµ Ð¼Ð³Ð½Ð¾Ð²ÐµÐ½Ð½Ð¾Ðµ ÑÐ²ÐµÐ´Ð¾Ð¼Ð»ÐµÐ½Ð¸Ðµ Ð¾ Ð²ÑÐµÐ·Ð´Ðµ Ð°Ð²ÑÐ¾Ð¼Ð¾Ð±Ð¸Ð»Ñ Ð·Ð° Ð¾Ð±Ð¾Ð·Ð½Ð°ÑÐµÐ½Ð½ÑÐµ Ð¿ÑÐµÐ´ÐµÐ»Ñ Ð³Ð¾ÑÐ¾Ð´Ð° Ð¸Ð»Ð¸ Ð¿ÑÐµÐ²ÑÑÐµÐ½Ð¸Ð¸ Ð·Ð°Ð´Ð°Ð½Ð½Ð¾Ð¹ ÑÐºÐ¾ÑÐ¾ÑÑÐ¸. \u005Cr\u005Cn\u005Cr\u005CnÐ¡ÑÐ¾Ð¸Ð¼Ð¾ÑÑÑ ÑÐ°ÑÐ¸ÑÐ° PRO ÑÐ¾ÑÑÐ°Ð²Ð»ÑÐµÑ 199 ÑÑÐ±Ð»ÐµÐ¹ Ð² Ð¼ÐµÑÑÑ.\u005Cr\u005Cn\u005Cr\u005CnÐ£Ð¶Ðµ ÑÐµÐ¹ÑÐ°Ñ Ð¿Ð¾Ð´ÐºÐ»ÑÑÐ¸ÑÑ ÑÐ°ÑÐ¸Ñ PRO Ð¼Ð¾Ð¶Ð½Ð¾ Ð² ÑÐ°Ð·Ð´ÐµÐ»Ðµ Â«Ð¢Ð°ÑÐ¸Ñ Ð¸ ÑÑÐ»ÑÐ³Ð¸Â», Ð²Ð¾Ð¹Ð´Ñ Ð² Ð»Ð¸ÑÐ½ÑÐ¹ ÐºÐ°Ð±Ð¸Ð½ÐµÑ Ð¾Ð½Ð»Ð°Ð¹Ð½\u002DÑÐµÑÐ²Ð¸ÑÐ° ZONT ÑÐµÑÐµÐ· Ð±ÑÐ°ÑÐ·ÐµÑ.\u005Cr\u005Cn\u005Cr\u005CnÐÐ»Ñ Ð¿ÐµÑÐµÑÐ¾Ð´Ð° Ð½Ð° ÑÐ°ÑÐ¸Ñ PRO Ñ Ð¿Ð¾Ð¼Ð¾ÑÑÑ Ð¿ÑÐ¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ñ Ð´Ð»Ñ Ð¼Ð¾Ð±Ð¸Ð»ÑÐ½ÑÑ ÑÑÑÑÐ¾Ð¹ÑÑÐ² Apple Ð¸ Android \u002D Ð¾Ð±Ð½Ð¾Ð²Ð¸ÑÐµ Ð¿ÑÐ¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ, ÐºÐ»Ð¸ÐºÐ½Ð¸ÑÐµ Ð½Ð° Ð·Ð½Ð°ÑÐ¾Ðº Ð¼ÐµÐ½Ñ â¡ Ð¸ Ð¿Ð¾Ð´ÐºÐ»ÑÑÐ¸ÑÐµ ÑÐ°ÑÐ¸Ñ PRO Ð² ÑÐ°Ð·Ð´ÐµÐ»Ðµ Â«Ð¢Ð°ÑÐ¸Ñ Ð¸ ÑÑÐ»ÑÐ³Ð¸Â».\u0022,\u0022link\u0022:\u0022https://zont\u002Donline.ru/news/zont\u002Dpro\u0022,\u0022active_after\u0022:1630488051.579,\u0022icon\u0022:\u0022service_news\u0022},{\u0022title\u0022:\u0022Ð¢ÐµÑÐ¿Ð¾Ð´Ð´ÐµÑÐ¶ÐºÐ° Ð±ÐµÐ· Ð²ÑÑÐ¾Ð´Ð½ÑÑ âï¸\u0022,\u0022description\u0022:\u0022ÐÐ°ÑÐ¸Ð½Ð°Ñ Ñ ÑÑÐ¾Ð¹ Ð½ÐµÐ´ÐµÐ»Ð¸ ÑÐµÑÐ¿Ð¾Ð´Ð´ÐµÑÐ¶ÐºÐ°âï¸ Ð¾ÐºÐ°Ð·ÑÐ²Ð°ÐµÑ Ð¿Ð¾Ð¼Ð¾ÑÑ Ð¸ ÐºÐ¾Ð½ÑÑÐ»ÑÑÐ¸ÑÑÐµÑ ÐµÐ¶ÐµÐ´Ð½ÐµÐ²Ð½Ð¾! ÐÐ· Ð»Ð¸ÑÐ½Ð¾Ð³Ð¾ ÐºÐ°Ð±Ð¸Ð½ÐµÑÐ° Ð²ÑÐµÐ³Ð´Ð° Ð¼Ð¾Ð¶Ð½Ð¾ Ð¾ÑÐ¿ÑÐ°Ð²Ð¸ÑÑ Ð¾Ð±ÑÐ°ÑÐµÐ½Ð¸Ðµ. \u005Cr\u005Cn\u005Cr\u005Cnð» ÐÐµÑÑÐ¸Ñ ÐÐ \u002D ÐºÐ»Ð¸Ðº Ð¿Ð¾ Ð¸ÐºÐ¾Ð½ÐºÐµ Â«?Â», ÑÐ°ÑÐ¿Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð½Ð¾Ð¹ Ð² Ð²ÐµÑÑÐ½ÐµÐ¹ ÑÑÑÐ¾ÐºÐµ Ð¼ÐµÐ½Ñ.  \u005Cr\u005Cn\u005Cr\u005Cnð² ÐÐ¾Ð±Ð¸Ð»ÑÐ½Ð¾Ðµ Ð¿ÑÐ¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ â ÐºÐ»Ð¸Ðº Ð¿Ð¾ Ð¸ÐºÐ¾Ð½ÐºÐµ â¡ Ð² Ð»ÐµÐ²Ð¾Ð¼ ÑÐ³Ð»Ñ, Ð·Ð°ÑÐµÐ¼ Ð½Ð° Ð¸ÐºÐ¾Ð½ÐºÑ Â«?Â».\u005Cr\u005Cn\u005Cr\u005CnÐÐ»Ñ Ð»Ð¸ÑÐ½Ð¾Ð³Ð¾ Ð¾Ð±ÑÐµÐ½Ð¸Ñ ÑÐ¾ ÑÐ¿ÐµÑÐ¸Ð°Ð»Ð¸ÑÑÐ°Ð¼Ð¸ Ð¸ÑÐ¿Ð¾Ð»ÑÐ·ÑÐ¹ÑÐµ ð8\u002D800 700\u002D72\u002D91. ÐÐ±ÑÐ·Ð°ÑÐµÐ»ÑÐ½Ð¾ Ð¾ÑÑÐ°Ð²Ð»ÑÐ¹ÑÐµ Ð¿Ð¾Ð´ÑÐ¾Ð±Ð½Ð¾Ðµ ÑÐ¾Ð¾Ð±ÑÐµÐ½Ð¸Ðµ Ð½Ð° Ð°Ð²ÑÐ¾Ð¾ÑÐ²ÐµÑÑÐ¸ÐºÐµ. ÐÐ»Ð°Ð³Ð¾Ð´Ð°ÑÑ Ð¿Ð¾Ð»ÑÑÐµÐ½Ð½Ð¾Ð¹ Ð¿ÐµÑÐ²Ð¸ÑÐ½Ð¾Ð¹ Ð¸Ð½ÑÐ¾ÑÐ¼Ð°ÑÐ¸Ð¸ ÑÐ¿ÐµÑÐ¸Ð°Ð»Ð¸ÑÑ Ð¿ÐµÑÐµÐ·Ð²Ð¾Ð½Ð¸Ñ Ð²Ð°Ð¼ Ñ ÑÐ¶Ðµ Ð³Ð¾ÑÐ¾Ð²ÑÐ¼ ÑÐµÑÐµÐ½Ð¸ÐµÐ¼.\u0022,\u0022link\u0022:\u0022\u0022,\u0022active_after\u0022:1629697932.575,\u0022icon\u0022:\u0022news\u0022},{\u0022title\u0022:\u0022Ð£Ð¿ÑÐ°Ð²Ð»ÑÐµÐ¼ ARISTON Ð¿Ð¾ ÑÐ¸ÑÑÐ¾Ð²Ð¾Ð¹ ÑÐ¸Ð½Ðµ! \u0022,\u0022description\u0022:\u0022ÐÐ¾Ð²ÑÐµ Ð°Ð´Ð°Ð¿ÑÐµÑÑ (Ð¿Ð»Ð°ÑÑ) E\u002DBus ÑÐµÐ¿ÐµÑÑ ÑÐ¸ÑÐ°ÑÑ ÑÐ¸ÑÑÐ¾Ð²Ð¾Ð¹ Ð¿ÑÐ¾ÑÐ¾ÐºÐ¾Ð» BridgeNet ÐºÐ¾ÑÐ»Ð¾Ð² ARISTON!ð¥\u005Cr\u005Cn\u005Cr\u005CnÐ­ÑÐ¾ Ð·Ð½Ð°ÑÐ¸Ñ, ÑÑÐ¾ Ð¸ ÑÑÐ¸Ð¼ ÐºÐ¾ÑÐ»Ð°Ð¼ ÑÑÐ°Ð»Ð¸ Ð´Ð¾ÑÑÑÐ¿Ð½Ñ:\u005Cr\u005Cnð¸ Ð¿Ð»Ð°Ð²Ð½Ð°Ñ ÑÐµÐ³ÑÐ»Ð¸ÑÐ¾Ð²ÐºÐ° Ð¼Ð¾ÑÐ½Ð¾ÑÑÐ¸ (Ð¼Ð¾Ð´ÑÐ»ÑÑÐ¸Ñ Ð³Ð¾ÑÐµÐ»ÐºÐ¸)\u005Cr\u005Cnð¸ Ð´Ð¸ÑÑÐ°Ð½ÑÐ¸Ð¾Ð½Ð½Ð¾Ðµ ÑÐ¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ ÐÐÐ¡ ÑÐµÑÐµÐ· ÐºÐ¾ÑÐµÐ»\u005Cr\u005Cnð¸ ÑÑÐ¸ÑÑÐ²Ð°Ð½Ð¸Ðµ Ð¿Ð°ÑÐ°Ð¼ÐµÑÑÐ¾Ð² ÑÐ°Ð±Ð¾ÑÑ ÐºÐ¾ÑÐ»Ð°\u005Cr\u005Cnð¸ ÑÑÐ¸ÑÑÐ²Ð°Ð½Ð¸Ðµ Ð¾ÑÐ¸Ð±Ð¾Ðº Ñ ÑÐ°ÑÑÐ¸ÑÑÐ¾Ð²ÐºÐ¾Ð¹\u005Cr\u005Cn\u005Cr\u005Cnð ÐÐ±ÑÐ°ÑÐ¸ÑÐµ Ð²Ð½Ð¸Ð¼Ð°Ð½Ð¸Ðµ, ÑÑÐ¾ Ñ ARISTON ÑÐ°Ð±Ð¾ÑÐ°ÑÑ Ð°Ð´Ð°Ð¿ÑÐµÑÑ, Ð¾ÑÐ¼ÐµÑÐµÐ½Ð½ÑÐµ ÑÐ¿ÐµÑÐ¸Ð°Ð»ÑÐ½Ð¾Ð¹ Ð½Ð°ÐºÐ»ÐµÐ¹ÐºÐ¾Ð¹ Ð½Ð° ÐºÐ¾ÑÐ¾Ð±ÐºÐµ Â«Ð Ð°Ð±Ð¾ÑÐ°ÐµÑ Ð¸ Ñ AristonÂ».\u005Cr\u005Cn\u0022,\u0022link\u0022:\u0022https://zont\u002Donline.ru/news/ariston\u0022,\u0022active_after\u0022:1627978983.266,\u0022icon\u0022:\u0022news\u0022},{\u0022title\u0022:\u0022ÐÐµÑÐµÑÐ¾Ð´Ð¸ Ð½Ð° ÑÐµÐ¼Ð½ÑÑ ÑÐµÐ¼Ñ!\u0022,\u0022description\u0022:\u0022Ð¡ ÑÐ°Ð´Ð¾ÑÑÑÑ ÑÐ¾Ð¾Ð±ÑÐ°ÐµÐ¼, ÑÑÐ¾ Ð² Ð¼Ð¾Ð±Ð¸Ð»ÑÐ½Ð¾Ð¼ Ð¿ÑÐ¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ð¸ Ð¸ Ð»Ð¸ÑÐ½Ð¾Ð¼ ÐºÐ°Ð±Ð¸Ð½ÐµÑÐµ Ð²ÐµÐ±\u002DÑÐµÑÐ²Ð¸ÑÐ° ZONT ÑÑÐ°Ð»Ð° Ð´Ð¾ÑÑÑÐ¿Ð½Ð° ÑÐµÐ¼Ð½Ð°Ñ ÑÐµÐ¼Ð°.ð\u005Cr\u005Cn\u005Cr\u005CnÐ¢ÐµÐ¼Ð½ÑÐ¹ ÑÐµÐ¶Ð¸Ð¼ ÑÐ¼ÐµÐ½ÑÑÐ°ÐµÑ ÑÐ²ÐµÑ, Ð¸Ð·Ð»ÑÑÐ°ÐµÐ¼ÑÐ¹ ÑÐºÑÐ°Ð½Ð¾Ð¼, Ð¿ÑÐ¸ ÑÑÐ¾Ð¼ ÑÐ¾ÑÑÐ°Ð½ÑÐµÑ Ð¼Ð¸Ð½Ð¸Ð¼Ð°Ð»ÑÐ½ÑÐ¹ ÑÐ²ÐµÑÐ¾Ð²Ð¾Ð¹ ÐºÐ¾Ð½ÑÑÐ°ÑÑ Ð´Ð»Ñ ÑÐ´Ð¾Ð±ÑÑÐ²Ð° Ð¿ÑÐ¾ÑÐ¼Ð¾ÑÑÐ° Ð¸ ÑÑÐµÐ½Ð¸Ñ. ÐÐ½Ð¾Ð³Ð¸Ðµ Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»Ð¸ Ð¾ÑÐ¼ÐµÑÐ°ÑÑ ÑÐ½Ð¸Ð¶ÐµÐ½Ð¸Ðµ ÑÑÐ¾Ð¼Ð»ÑÐµÐ¼Ð¾ÑÑÐ¸ Ð³Ð»Ð°Ð·, ÑÐ´Ð¾Ð±ÑÑÐ²Ð¾ Ð¸ÑÐ¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°Ð½Ð¸Ñ Ð² ÑÐµÐ¼Ð½Ð¾ÑÐµ Ð¸ ÑÐºÐ¾Ð½Ð¾Ð¼Ð¸Ñ Ð·Ð°ÑÑÐ´Ð° Ð°ÐºÐºÑÐ¼ÑÐ»ÑÑÐ¾ÑÐ°.ð\u005Cr\u005Cn\u005Cr\u005Cnâï¸ ÐÐ»Ñ Ð¸ÑÐ¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°Ð½Ð¸Ñ ÑÐµÐ¼Ð½Ð¾Ð¹ ÑÐµÐ¼Ñ Ð² Ð¼Ð¾Ð±Ð¸Ð»ÑÐ½Ð¾Ð¼ Ð¿ÑÐ¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ð¸ ZONT \u002D Ð¾Ð±Ð½Ð¾Ð²Ð¸ÑÐµ Ð¿ÑÐ¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ. ÐÐ°ÑÐµÐ¼ Ð½Ð°Ð¶Ð¼Ð¸ÑÐµ ÑÐ¿ÑÐ°Ð²Ð° Ð½Ð° Ð·Ð½Ð°ÑÐ¾Ðº Ð¼ÐµÐ½Ñ â¡. ÐÑÐ¿Ð¾Ð»ÑÐ·ÑÐ¹ÑÐµ Ð´Ð»Ñ Ð¿ÐµÑÐµÐºÐ»ÑÑÐµÐ½Ð¸Ñ ÑÐµÐ¼Ñ Ð»ÐµÐ²ÑÑ Ð¸ÐºÐ¾Ð½ÐºÑ Ð² Ð²ÐµÑÑÐ½ÐµÐ¹ ÑÐ°ÑÑÐ¸ Ð¿Ð¾ÑÐ²Ð¸Ð²ÑÐµÐ³Ð¾ÑÑ Ð¿Ð¾Ð»Ñ Ð¸Ð»Ð¸ Ð¿ÐµÑÐµÐ¹Ð´Ð¸ÑÐµ Ð² ÐÐ°ÑÑÑÐ¾Ð¹ÐºÐ¸ Ð¿ÑÐ¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ñ.\u005Cr\u005Cn\u005Cr\u005Cnâï¸ ÐÐ½Ð¾Ð¿ÐºÐ° Ð¿ÐµÑÐµÐºÐ»ÑÑÐµÐ½Ð¸Ñ ÑÐµÐ¼Ñ Ð² Ð»Ð¸ÑÐ½Ð¾Ð¼ ÐºÐ°Ð±Ð¸Ð½ÐµÑÐµ Ð²ÐµÐ±\u002DÑÐµÑÐ²Ð¸ÑÐ° ZONT Ð½Ð°ÑÐ¾Ð´Ð¸ÑÑÑ Ð² Ð²ÐµÑÑÐ½ÐµÐ¹ ÑÑÑÐ¾ÐºÐµ, ÑÑÐ´Ð¾Ð¼ Ñ ÑÐ°Ð·Ð´ÐµÐ»Ð¾Ð¼ Â«Ð¡Ð¸Ð¼\u002DÐºÐ°ÑÑÑÂ».\u005Cr\u005Cn\u005Cr\u005CnÐÐ·Ð¼ÐµÐ½Ð¸ÑÑ ÑÐµÐ¼Ñ Ð²Ñ Ð¼Ð¾Ð¶ÐµÑÐµ Ð² Ð»ÑÐ±Ð¾Ð¹ Ð¼Ð¾Ð¼ÐµÐ½Ñ.\u0022,\u0022link\u0022:\u0022\u0022,\u0022active_after\u0022:1621324498.487,\u0022icon\u0022:\u0022service_news\u0022},{\u0022title\u0022:\u0022ÐÑÐ¸Ð³Ð»Ð°ÑÐ°ÐµÐ¼ Ð½Ð° ÑÐµÑÑÐ¸ÑÐ¾Ð²Ð°Ð½Ð¸Ðµ ð\u0022,\u0022description\u0022:\u0022Ð£Ð²Ð°Ð¶Ð°ÐµÐ¼ÑÐµ Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»Ð¸, Ð¿ÑÐ¸Ð³Ð»Ð°ÑÐ°ÐµÐ¼ Ð²Ð°Ñ Ð¿Ð¾Ð¿Ð¾Ð»Ð½Ð¸ÑÑ Ð´ÑÑÐ¶Ð½ÑÑ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñâï¸ Ð±ÐµÑÐ°\u002DÑÐµÑÑÐ¸ÑÐ¾Ð²ÑÐ¸ÐºÐ¾Ð² ZONT. \u005Cr\u005Cn\u005Cr\u005CnÐ£Ð·Ð½Ð°Ð²Ð°Ð¹ÑÐµ Ð¸ ÑÐµÑÑÐ¸ÑÑÐ¹ÑÐµ Ð½Ð¾Ð²ÑÐµ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑÐ¸ Ð²Ð°ÑÐ¸Ñ Ð¿ÑÐ¸Ð±Ð¾ÑÐ¾Ð², Ð²ÐµÐ±\u002DÐºÐ°Ð±Ð¸Ð½ÐµÑÐ° Ð¸ Ð¼Ð¾Ð±Ð¸Ð»ÑÐ½Ð¾Ð³Ð¾ Ð¿ÑÐ¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ñ Ð´Ð¾ ÑÐ¾Ð³Ð¾, ÐºÐ°Ðº Ð¾Ð½Ð¸ ÑÑÐ°Ð½ÑÑ Ð¾ÑÐºÑÑÑÑ Ð´Ð»Ñ Ð²ÑÐµÑ Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»ÐµÐ¹.ð\u005Cr\u005Cn\u005Cr\u005CnÐ Ð°Ð·ÑÐ°Ð±Ð¾ÑÑÐ¸ÐºÐ¸ ZONT ÑÐµÐ³ÑÐ»ÑÑÐ½Ð¾ Ð¿Ð¾Ð¿Ð¾Ð»Ð½ÑÑÑ Ð±ÐµÑÐ°\u002DÐ²ÐµÑÑÐ¸Ð¸ Ð¿ÑÐ¸Ð±Ð¾ÑÐ¾Ð² Ð¸ Ð²ÐµÐ±\u002DÐºÐ°Ð±Ð¸Ð½ÐµÑÐ° ÑÐ°Ð·Ð»Ð¸ÑÐ½ÑÐ¼Ð¸ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑÑÐ¼Ð¸ Ð¸ ÑÑÐ½ÐºÑÐ¸ÑÐ¼Ð¸. Ð¢Ð°Ðº, ÑÐµÐ¹ÑÐ°Ñ Ð¼Ð¾Ð¶Ð½Ð¾ Ð¿ÑÐ¾ÑÐµÑÑÐ¸ÑÐ¾Ð²Ð°ÑÑ ðÂ«ÑÐµÐ¼Ð½ÑÑ ÑÐµÐ¼ÑÂ» Ð¼Ð¾Ð±Ð¸Ð»ÑÐ½Ð¾Ð³Ð¾ Ð¿ÑÐ¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ñ.\u005Cr\u005Cn\u005Cr\u005CnÐÐ»Ð³Ð¾ÑÐ¸ÑÐ¼ ÑÑÐ°ÑÑÐ¸Ñ Ð² Ð±ÐµÑÐ°\u002DÑÐµÑÑÐ¸ÑÐ¾Ð²Ð°Ð½Ð¸Ð¸ Ð¿ÑÐ¾Ð¿Ð¸ÑÐ°Ð½ Ð½Ð° Ð½Ð°ÑÐµÐ¼ ÑÐ°Ð¹ÑÐµ zont\u002Donline.ru Ð² ÑÐ°Ð·Ð´ÐµÐ»Ðµ Â«ÐÐ¾Ð´Ð´ÐµÑÐ¶ÐºÐ°Â»â:\u0022,\u0022link\u0022:\u0022https://zont\u002Donline.ru/knowledge/baza\u002Dzont/beta\u002Dtestirovanie/beta\u002Dtestirovanie\u002Dfunkcij\u002Dpriborov\u002Dzont\u0022,\u0022active_after\u0022:1619692124.252,\u0022icon\u0022:\u0022service_news\u0022},{\u0022title\u0022:\u0022ÐÐ²ÑÐ¾ÑÐ¸Ð³Ð½Ð°Ð»Ð¸Ð·Ð°ÑÐ¸Ð¸ ZONT ZTC ÑÐµÐ¿ÐµÑÑ Ð² Ð¾Ð½Ð»Ð°Ð¹Ð½\u002DÑÐµÑÐ²Ð¸ÑÐµ AutoScan+\u0022,\u0022description\u0022:\u0022Ð¤ÑÐ½ÐºÑÐ¸Ð¸ Ð¼Ð¾Ð½Ð¸ÑÐ¾ÑÐ¸Ð½Ð³Ð° Ð¸ Ð°Ð²ÑÐ¾ÑÐ¸Ð³Ð½Ð°Ð»Ð¸Ð·Ð°ÑÐ¸Ð¸ Ð¾Ð±ÑÐµÐ´Ð¸Ð½ÐµÐ½Ñ Ð² Ð¾Ð´Ð½Ð¾Ð¼ ÑÐµÑÐµÐ½Ð¸Ð¸ Ð´Ð»Ñ Ð»ÐµÐ³ÐºÐ¾Ð²ÑÑ Ð°Ð²ÑÐ¾Ð¿Ð°ÑÐºÐ¾Ð²:\u005Cr\u005Cn\u005Cr\u005Cnâ£ ÑÐ°ÐºÑÐ¾Ð¿Ð°ÑÐºÐ¸\u005Cr\u005Cnâ£ Ð¿ÑÐ¾ÐºÐ°Ñ Ð°Ð²ÑÐ¾\u005Cr\u005Cnâ£ ÐºÐ°ÑÑÐµÑÐ¸Ð½Ð³\u005Cr\u005Cnâ£ ÑÐ»ÑÐ¶Ð±Ñ Ð´Ð¾ÑÑÐ°Ð²ÐºÐ¸\u005Cr\u005Cnâ£ Ð»Ð¸Ð·Ð¸Ð½Ð³ Ð°Ð²ÑÐ¾Ð¼Ð¾Ð±Ð¸Ð»ÐµÐ¹\u005Cr\u005Cnâ£ Ð§ÐÐ (ÐºÐ¾Ð½ÑÑÐ¾Ð»Ñ ÑÐºÐ¸Ð¿Ð°Ð¶ÐµÐ¹)\u005Cr\u005Cnâ£ Ð§ÐÐ (Ð¾ÑÑÐ°Ð½Ð° Ð¿Ð¾Ð´Ð²Ð¸Ð¶Ð½ÑÑ Ð¾Ð±ÑÐµÐºÑÐ¾Ð²)\u005Cr\u005Cnâ£ ÐºÐ¾ÑÐ¿Ð¾ÑÐ°ÑÐ¸Ð²Ð½ÑÐ¹ ÑÑÐ°Ð½ÑÐ¿Ð¾ÑÑ\u005Cr\u005Cn\u005Cr\u005CnÐ Ð´Ð¾Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ Ðº ÑÑÐ½ÐºÑÐ¸ÑÐ¼ Ð¿ÑÐ¾ÑÐ¸Ð²Ð¾ÑÐ³Ð¾Ð½Ð½ÑÑ ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ¾Ð² Ð´Ð»Ñ Ð²Ð»Ð°Ð´ÐµÐ»ÑÑÐµÐ² Ð°Ð²ÑÐ¾Ð¿Ð°ÑÐºÐ¾Ð² Ð´Ð¾ÑÑÑÐ¿Ð½Ñ ÑÐ»ÐµÐ´ÑÑÑÐ¸Ðµ Ð¿ÑÐµÐ¸Ð¼ÑÑÐµÑÑÐ²Ð°:\u005Cr\u005Cn\u005Cr\u005Cnâ  ÐÐ½ÑÑÑÑÐ¼ÐµÐ½ÑÑ Ð¿ÑÐ¾ÑÐµÑÑÐ¸Ð¾Ð½Ð°Ð»ÑÐ½Ð¾Ð³Ð¾ Ð¼Ð¾Ð½Ð¸ÑÐ¾ÑÐ¸Ð½Ð³Ð° (Ð¾ÑÑÐµÑÑ, Ð¢Ð, Ð³ÐµÐ¾Ð·Ð¾Ð½Ñ).\u005Cr\u005Cnâ  ÐÐ½ÑÑÐ¸ÑÐ¸Ð²Ð½Ð¾ Ð¿Ð¾Ð½ÑÑÐ½ÑÐ¹ Ð¸Ð½ÑÐµÑÑÐµÐ¹Ñ AutoScan+\u005Cr\u005Cnâ  ÐÐ¸Ð±ÐºÐ¸Ðµ Ð½Ð°ÑÑÑÐ¾Ð¹ÐºÐ¸ ÑÐ¾Ð²Ð¼ÐµÑÑÐ½Ð¾Ð³Ð¾ Ð´Ð¾ÑÑÑÐ¿Ð°.\u005Cr\u005Cnâ  ÐÐÐ¢ Ð°Ð±Ð¾Ð½ÐµÐ½ÑÑÐºÐ¾Ð¹ Ð¿Ð»Ð°ÑÑ Ð·Ð° Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð¾Ð½Ð»Ð°Ð¹Ð½\u002DÑÐµÑÐ²Ð¸ÑÐ¾Ð¼ Ð² Ð±Ð°Ð·Ð¾Ð²Ð¾Ð¼ ÑÑÐ½ÐºÑÐ¸Ð¾Ð½Ð°Ð»Ðµ.\u005Cr\u005Cnâ  ÐÐÐ¢ Ð¾Ð³ÑÐ°Ð½Ð¸ÑÐµÐ½Ð¸Ñ Ð½Ð° ÐºÐ¾Ð»Ð¸ÑÐµÑÑÐ²Ð¾ Ð¿Ð¾Ð´ÐºÐ»ÑÑÐµÐ½Ð½Ð¾Ð³Ð¾ Ð¾Ð±Ð¾ÑÑÐ´Ð¾Ð²Ð°Ð½Ð¸Ñ. \u005Cr\u005Cnâ  ÐÐµ ÑÑÐµÐ±ÑÐµÑÑÑ Ð¾Ð±ÑÐ»ÑÐ¶Ð¸Ð²Ð°Ð½Ð¸Ðµ ÑÑÐ¾ÑÐ¾Ð½Ð½ÐµÐ¹ Ð¾ÑÐ³Ð°Ð½Ð¸Ð·Ð°ÑÐ¸ÐµÐ¹. \u0022,\u0022link\u0022:\u0022http://auto\u002Dscan.ru/prostoy\u002Dmonitoring\u002Dtransporta\u002Ddlya\u002Dlegkovyh\u002Davtoparkov/?utm_source\u003Dzont\u002Donline\u0026utm_medium\u003Darticle\u0026utm_campaign\u003Dztc\u002Das\u0026utm_content\u003D{ad_id}\u0026utm_term\u003D{web\u002Dservice}\u0022,\u0022active_after\u0022:1618299089.127,\u0022icon\u0022:\u0022service_news\u0022},{\u0022title\u0022:\u0022ÐÐ»Ð°Ð´ÐµÐ»ÑÑÐ°Ð¼ ÐºÐ¾Ð½ÑÑÐ¾Ð»Ð»ÐµÑÐ¾Ð² Ð1000+, Ð2000+, Ð¡2000+ âï¸\u0022,\u0022description\u0022:\u0022ÐÐ°Ñ ÑÐ½Ð¸Ð²ÐµÑÑÐ°Ð»ÑÐ½ÑÐ¹ ÐºÐ¾Ð½ÑÑÐ¾Ð»Ð»ÐµÑ ÑÐµÐ¿ÐµÑÑ Ð¼Ð¾Ð¶ÐµÑ ÑÐ¿ÑÐ°Ð²Ð»ÑÑÑ, Ð¿ÑÐ¾Ð²Ð¾Ð´Ð¸ÑÑ Ð¼Ð¾Ð½Ð¸ÑÐ¾ÑÐ¸Ð½Ð³ Ð¸ ÐºÐ¾Ð½ÑÑÐ¾Ð»Ð¸ÑÐ¾Ð²Ð°ÑÑ Ð²Ð½ÐµÑÐ½Ð¸Ðµ ÑÑÑÑÐ¾Ð¹ÑÑÐ²Ð° Ð¿Ð¾ Ð¸Ð½ÑÐµÑÑÐµÐ¹ÑÑ ð¢ModBus RTU. \u005Cr\u005Cn\u005Cr\u005CnÐÐ»Ñ ÑÑÑÐ°Ð½Ð¾Ð²ÐºÐ¸ ÑÑÐ¾Ð³Ð¾ Ð¸Ð½ÑÐµÑÑÐµÐ¹ÑÐ° ÑÐºÐ°ÑÐ°Ð¹ÑÐµ ÐµÐ³Ð¾ Ñ Ð½Ð°ÑÐµÐ³Ð¾ ÑÐ°Ð¹ÑÐ° Ð¸ Ð·Ð°Ð³ÑÑÐ·Ð¸ÑÐµ âªï¸ Ð² ÑÑÑÑÐ¾Ð¹ÑÑÐ²Ð¾. \u005Cr\u005Cn\u005Cr\u005CnÐÐ»Ð°Ð´ÐµÐ»ÑÑÐ°Ð¼ ZONT H2000+ Ð¿ÐµÑÐµÐ´ ÑÐºÐ°ÑÐ¸Ð²Ð°Ð½Ð¸ÐµÐ¼ Ð½ÐµÐ¾Ð±ÑÐ¾Ð´Ð¸Ð¼Ð¾ Ð¿ÑÐ¾Ð²ÐµÑÐ¸ÑÑ Ð²ÐµÑÑÐ¸Ñ Ð¿Ð»Ð°ÑÑ ÑÐ²Ð¾ÐµÐ³Ð¾ ÐºÐ¾Ð½ÑÑÐ¾Ð»Ð»ÐµÑÐ° (âï¸ÑÐºÐ°Ð·Ð°Ð½Ð° Ð² ÐÐ±ÑÐ¸Ñ Ð½Ð°ÑÑÑÐ¾Ð¹ÐºÐ°Ñ). \u0022,\u0022link\u0022:\u0022https://zont\u002Donline.ru/news/modbus\u0022,\u0022active_after\u0022:1615962244.006,\u0022icon\u0022:\u0022service_news\u0022},{\u0022title\u0022:\u0022ÐÐ±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ðµ ZONT SMART 2.0, Ð1000+ Ð¸ Ð2000+\u0022,\u0022description\u0022:\u0022ð¡ ÐÐ»Ð°Ð´ÐµÐ»ÑÑÐ°Ð¼ Ð¿ÑÐ¸Ð±Ð¾ÑÐ¾Ð² ZONT SMART 2.0, Ð1000+ Ð¸ Ð2000+ Ð¿ÑÐµÐ´Ð»Ð°Ð³Ð°ÐµÐ¼ Ð¾Ð±Ð½Ð¾Ð²Ð¸ÑÑ Ð¿ÑÐ¾ÑÐ¸Ð²ÐºÑ Ð½Ð° Ð²ÐµÑÑÐ¸Ñ 141:1 Ð¸ Ð¿Ð¾Ð»ÑÑÐ¸ÑÑ 5 Ð¿ÑÐµÐ¸Ð¼ÑÑÐµÑÑÐ²:\u005Cr\u005Cn\u005Cr\u005Cn1ï¸â£ ÐÑÐ¾Ð±ÑÐ°Ð¶ÐµÐ½Ð¸Ðµ ÑÑÐ°Ð±Ð°ÑÑÐ²Ð°Ð½Ð¸Ñ Ð¾ÑÑÐ°Ð½Ð½ÑÑ Ð´Ð°ÑÑÐ¸ÐºÐ¾Ð² Ð´Ð°Ð¶Ðµ Ð¿ÑÐ¸ Ð²ÑÐºÐ»ÑÑÐµÐ½Ð½Ð¾Ð¼ Â«ÑÐµÐ¶Ð¸Ð¼Ðµ Ð¾ÑÑÐ°Ð½ÑÂ» \u002D Ð±ÑÐ´ÑÑÐµ Ð² ÐºÑÑÑÐµ! âï¸\u005Cr\u005Cn2ï¸â£ ÐÑÐµ Ð±Ð¾Ð»ÐµÐµ ÑÐ¾Ð½ÐºÐ°Ñ Ð½Ð°ÑÑÑÐ¾Ð¹ÐºÐ° ÐÐÐ. Ð£ÐºÐ°Ð¶Ð¸ÑÐµ ÐºÐ¾Ð»Ð¸ÑÐµÑÑÐ²Ð¾ Ð³ÑÐ°Ð´ÑÑÐ¾Ð², Ð´Ð¾Ð¿ÑÑÑÐ¸Ð¼Ð¾Ðµ Ð¿ÑÐ¸ Ð¾ÑÐºÐ»Ð¾Ð½ÐµÐ½Ð¸Ð¸ ÑÐ°ÐºÑÐ¸ÑÐµÑÐºÐ¾Ð¹ ÑÐµÐ¼Ð¿ÐµÑÐ°ÑÑÑÑ Ð²Ð¾Ð·Ð´ÑÑÐ° Ð¾Ñ ÑÐµÐ»ÐµÐ²Ð¾Ð¹, Ð¿ÑÐ¸ Ð¿ÑÐµÐ²ÑÑÐµÐ½Ð¸Ð¸ ÐºÐ¾ÑÐ¾ÑÐ¾Ð³Ð¾ ÑÐ°Ð±Ð¾ÑÐ° âï¸ÐÐÐâï¸ Ð±ÑÐ´ÐµÑ Ð¿ÑÐµÐºÑÐ°ÑÐµÐ½Ð°.  \u005Cr\u005Cn3ï¸â£ Ð ÐµÐ°Ð»Ð¸Ð·Ð¾Ð²Ð°Ð½Ð° Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑÑ ÑÐ¾Ð·Ð´Ð°Ð½Ð¸Ñ Ð½Ð° 1 Ð¿ÑÐ¸Ð±Ð¾ÑÐµ ÑÐ°ÐºÑÐ¸ÑÐµÑÐºÐ¸ Ð½ÐµÑÐºÐ¾Ð»ÑÐºÐ¸Ñ ÐºÐ¾ÑÐµÐ»ÑÐ½ÑÑ Ð² ÑÐ°Ð·Ð½ÑÑ Ð¿Ð¾Ð¼ÐµÑÐµÐ½Ð¸ÑÑ.\u005Cr\u005Cn4ï¸â£ ÐÐµÑÐ¸Ð¾Ð´ Ð¾Ð¿ÑÐ¾ÑÐ° ÑÐ¸ÑÑÐ¾Ð²ÑÑ Ð´Ð°ÑÑÐ¸ÐºÐ¾Ð² ÑÐ¼ÐµÐ½ÑÑÐµÐ½ Ð´Ð¾ 1 ÑÐµÐºÑÐ½Ð´Ñ. ð\u005Cr\u005Cn5ï¸â£ Ð£Ð»ÑÑÑÐµÐ½Ñ Ð°Ð»Ð³Ð¾ÑÐ¸ÑÐ¼Ñ ÑÐ°Ð±Ð¾ÑÑ, Ð¾ÑÐ²ÐµÑÐ°ÑÑÐ¸Ðµ Ð·Ð° ÑÐµÐ»Ð¾ÑÑÐ½Ð¾ÑÑÑ ÐºÐ¾Ð½ÑÐ¸Ð³ÑÑÐ°ÑÐ¸Ð¸ Ð¸ ÑÑÐ°Ð±Ð¸Ð»ÑÐ½Ð¾ÑÑÑ ÑÐ°Ð±Ð¾ÑÑ Ð¿ÑÐ¸Ð±Ð¾ÑÐ°.\u005Cr\u005Cn\u005Cr\u005Cnâ ÐÐ°Ð¿Ð¾Ð¼Ð¸Ð½Ð°ÐµÐ¼, ÑÑÐ¾ Ð²ÐµÑÑÐ¸Ñ Ð¿ÑÐ¾ÑÐ¸Ð²ÐºÐ¸ Ð¾Ð±Ð½Ð¾Ð²Ð»ÑÐµÑÑÑ Ð² Â«ÐÐ±ÑÐ¸Ñ Ð½Ð°ÑÑÑÐ¾Ð¹ÐºÐ°ÑÂ».\u0022,\u0022link\u0022:\u0022https://zont\u002Donline.ru/news/proshivka141_1\u0022,\u0022active_after\u0022:1613648740.182,\u0022icon\u0022:\u0022news\u0022},{\u0022title\u0022:\u0022Ð¡ÑÐµÐ½Ð°ÑÐ¸Ð¸ Ð²Ð°ÑÐµÐ³Ð¾ ÐºÐ¾Ð¼ÑÐ¾ÑÑÐ°! âï¸\u0022,\u0022description\u0022:\u0022ð ÐÑÐ¿Ð¾Ð»ÑÐ·ÑÐ¹ÑÐµ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑÑ ÑÐ¾Ð·Ð´Ð°Ð½Ð¸Ñ Ð² Ð»Ð¸ÑÐ½Ð¾Ð¼ ÐºÐ°Ð±Ð¸Ð½ÐµÑÐµ ÑÑÐµÐ½Ð°ÑÐ¸ÐµÐ² Ð² ÑÐ½Ð¸Ð²ÐµÑÑÐ°Ð»ÑÐ½ÑÑ ÐºÐ¾Ð½ÑÑÐ¾Ð»Ð»ÐµÑÐ°Ñ ZONT H1000+, ZONT H2000+ Ð¸ ZONT C2000+.\u005Cr\u005Cn\u005Cr\u005CnÐÑÐ¸Ð¼ÐµÐ½ÐµÐ½Ð¸Ðµ ÑÑÐµÐ½Ð°ÑÐ¸ÐµÐ² Ð¾Ð±ÐµÑÐ¿ÐµÑÐ¸Ñ:\u005Cr\u005Cnâï¸ ÑÐ²ÐµÐ»Ð¸ÑÐµÐ½Ð½ÑÑ ÑÐºÐ¾Ð½Ð¾Ð¼Ð¸Ñ ÑÐ½ÐµÑÐ³Ð¾ÑÐµÑÑÑÑÐ¾Ð²,\u005Cr\u005Cnâï¸ Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑÑ Ð¿ÑÐ¸ Ð»ÑÐ±ÑÑ Ð¾Ð±ÑÑÐ¾ÑÑÐµÐ»ÑÑÑÐ²Ð°Ñ, \u005Cr\u005Cnâï¸ Ð°Ð²ÑÐ¾Ð¼Ð°ÑÐ¸Ð·Ð°ÑÐ¸Ñ Ð±Ð¾Ð»ÑÑÐ¸Ð½ÑÑÐ²Ð° Ð¸Ð½Ð¶ÐµÐ½ÐµÑÐ½ÑÑ Ð¸ Ð±ÑÑÐ¾Ð²ÑÑ Ð¿ÑÐ¾ÑÐµÑÑÐ¾Ð². \u005Cr\u005Cn\u005Cr\u005CnÐÐ±ÑÐµÐ´Ð¸Ð½ÑÐ¹ÑÐµ Ð² ÑÑÐµÐ½Ð°ÑÐ¸Ð¸ Ð½ÐµÑÐºÐ¾Ð»ÑÐºÐ¾ Ð¿ÑÐ¸Ð±Ð¾ÑÐ¾Ð² Ð¸ ÑÑÑÑÐ¾Ð¹ÑÑÐ² Ð½Ð° Ð¾Ð±ÑÐµÐºÑÐµ. ÐÐ¾Ð»Ð½Ð°Ñ ÑÐ²Ð¾Ð±Ð¾Ð´Ð° Ð¿ÑÐ¾Ð³ÑÐ°Ð¼Ð¼Ð¸ÑÐ¾Ð²Ð°Ð½Ð¸Ñ Ð¿Ð¾Ð·Ð²Ð¾Ð»ÑÐµÑ ÑÐµÐ°Ð»Ð¸Ð·Ð¾Ð²Ð°ÑÑ Ð¿ÑÐ¾ÐµÐºÑÑ Ð»ÑÐ±Ð¾Ð¹ ÑÐ»Ð¾Ð¶Ð½Ð¾ÑÑÐ¸.ð\u005Cr\u005Cn\u005Cr\u005CnÐÐ¾Ð´ÑÐ¾Ð±Ð½ÐµÐµ ÑÐ¸ÑÐ°Ð¹ÑÐµ Ð½Ð° Ð½Ð°ÑÐµÐ¼ ÑÐ°Ð¹ÑÐµ zont\u002Donline.ru Ð² ÑÐ°Ð·Ð´ÐµÐ»Ðµ Â«ÐÐ¾Ð´Ð´ÐµÑÐ¶ÐºÐ°Â»â:\u0022,\u0022link\u0022:\u0022https://zont\u002Donline.ru/knowledge/baza\u002Dzont/diagnostika\u002Dvstrechajuschihsja\u002Dneispravnostej/kak\u002Dsozdat\u002Dscenarii\u002Draboty\u0022,\u0022active_after\u0022:1611748520.114,\u0022icon\u0022:\u0022news\u0022},{\u0022title\u0022:\u0022ZONT Ð´ÑÑÐ¶Ð¸Ñ Ñ ÐÐ»Ð¸ÑÐ¾Ð¹! ð«\u0022,\u0022description\u0022:\u0022ð¥ ÐÑÐ»Ð¸ÑÐ½Ð°Ñ Ð½Ð¾Ð²Ð¾ÑÑÑ Ð´Ð»Ñ Ð²Ð»Ð°Ð´ÐµÐ»ÑÑÐµÐ² Ð¿ÑÐ¸Ð±Ð¾ÑÐ¾Ð² Ð¾ÑÐ¾Ð¿Ð¸ÑÐµÐ»ÑÐ½Ð¾Ð¹ Ð°Ð²ÑÐ¾Ð¼Ð°ÑÐ¸ÐºÐ¸ â ÑÐ¿ÑÐ°Ð²Ð»ÑÑÑ Ð²Ð°ÑÐ¸Ð¼Ð¸ Ð¿ÑÐ¸Ð±Ð¾ÑÐ°Ð¼Ð¸ Ð¿Ð¾Ð¼Ð¾Ð¶ÐµÑ ð± ÐÐ»Ð¸ÑÐ°! \u005Cr\u005Cn\u005Cr\u005Cnâ¨ Ð¡Ð¾Ð·Ð´Ð°Ð²Ð°Ð¹ÑÐµ ÑÑÐµÐ½Ð°ÑÐ¸Ð¸, â¡Ð¸Ð½Ð´Ð¸Ð²Ð¸Ð´ÑÐ°Ð»ÑÐ½ÑÐµ Ð·Ð°Ð´Ð°ÑÐ¸ Ð´Ð»Ñ ÑÐµÐ³ÑÐ»Ð¸ÑÐ¾Ð²Ð°Ð½Ð¸Ñ (Ð² Ð¿ÑÐ¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ð¸ Ð¯Ð½Ð´ÐµÐºÑ) Ð¸ Ð¸ÑÐ¿Ð¾Ð»ÑÐ·ÑÐ¹ÑÐµ ðÐ³Ð¾Ð»Ð¾ÑÐ¾Ð²ÑÐµ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ. \u005Cr\u005Cn\u005Cr\u005CnÐÐ»Ð¸ÑÐ° ÑÐ¿ÑÐ°Ð²Ð»ÑÐµÑ ÑÐ»ÐµÐ´ÑÑÑÐ¸Ð¼Ð¸ Ð¿ÑÐ¸Ð±Ð¾ÑÐ°Ð¼Ð¸:\u005Cr\u005Cnâ ZONT SMART \u005Cr\u005Cnâ ZONT SMART 2.0 \u005Cr\u005Cnâ ZONT H\u002D1V\u005Cr\u005Cnâ ZONT H1000+\u005Cr\u005Cnâ ZONT H2000+\u005Cr\u005Cnâ ZONT Climatic (1.1, 1.2, 1.3) \u005Cr\u005Cn\u005Cr\u005Cnâ¡ Ð§Ð¸ÑÐ°Ð¹ÑÐµ Ð¾Ð± Ð¾Ð±ÑÐµÐ´Ð¸Ð½ÐµÐ½Ð¸Ð¸ Ð°ÐºÐºÐ°ÑÐ½ÑÐ¾Ð² ZONT Ð¸ Ð¯Ð½Ð´ÐµÐºÑ Ð½Ð° Ð½Ð°ÑÐµÐ¼ ÑÐ°Ð¹ÑÐµ zont\u002Donline.ru Ð² ÑÐ°Ð·Ð´ÐµÐ»Ðµ Â«ÐÐ¾Ð´Ð´ÐµÑÐ¶ÐºÐ°Â»â:\u0022,\u0022link\u0022:\u0022https://zont\u002Donline.ru/knowledge/baza\u002Dzont/diagnostika\u002Dvstrechajuschihsja\u002Dneispravnostej/upravlenie\u002Dumnymi\u002Dustrojstvami\u002Dzont\u002Ds\u0022,\u0022active_after\u0022:1607497780.403,\u0022icon\u0022:\u0022news\u0022},{\u0022title\u0022:\u0022ÐÐ»Ð°Ð´ÐµÐ»ÑÑÐ°Ð¼ ZONT SMART 2.0!\u0022,\u0022description\u0022:\u0022ÐÐ°Ð¶Ð½Ð°Ñ Ð½Ð¾Ð²Ð¾ÑÑÑ Ð´Ð»Ñ Ð²Ð»Ð°Ð´ÐµÐ»ÑÑÐµÐ² Ð¸ Ð¶ÐµÐ»Ð°ÑÑÐ¸Ñ ÐµÐ³Ð¾ ÑÑÑÐ°Ð½Ð¾Ð²Ð¸ÑÑ!\u005Cr\u005Cn\u005Cr\u005CnÐ¢ÐµÑÐ½Ð¸ÑÐµÑÐºÐ¸Ðµ Ð¸ÑÐ¿ÑÑÐ°Ð½Ð¸Ñ Ð¸ Ð±ÐµÑÐ°\u002DÑÐµÑÑÐ¸ÑÐ¾Ð²Ð°Ð½Ð¸Ðµ Ð¿ÑÐ¾Ð¹Ð´ÐµÐ½Ñ ÑÑÐ¿ÐµÑÐ½Ð¾. Ð¡Â ÑÐµÐ³Ð¾Ð´Ð½ÑÑÐ½ÐµÐ³Ð¾ Ð´Ð½Ñ Ð¾ÑÐºÑÑÑÑ Ð½Ð¾Ð²ÑÐµ ÑÑÐ½ÐºÑÐ¸Ð¸ Ñ Ð¿ÑÐ¸Ð±Ð¾ÑÐ°:\u005Cr\u005Cn    â¢ Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ 2 ÐºÐ¾ÑÐ»Ð°Ð¼Ð¸ (Ð¾ÑÐ½Ð¾Ð²Ð½Ð¾Ð¹ Ð¸ ÑÐµÐ·ÐµÑÐ²Ð½ÑÐ¹),\u005Cr\u005Cn    â¢ Ð¡Ð°Ð¼Ð¾ÑÑÐ¾ÑÑÐµÐ»ÑÐ½Ð¾Ðµ ÑÐ¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð±Ð¾Ð¹Ð»ÐµÑÐ¾Ð¼ ÐºÐ¾ÑÐ²ÐµÐ½Ð½Ð¾Ð³Ð¾ Ð½Ð°Ð³ÑÐµÐ²Ð°\u003B\u005Cr\u005Cn    â¢ Ð£Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð½Ð°ÑÐ¾ÑÐ¾Ð¼, ÑÐµÑÐ²Ð¾Ð¿ÑÐ¸Ð²Ð¾Ð´Ð¾Ð¼, ÐºÑÐ°Ð½Ð¾Ð¼ Ð¸Ð»Ð¸ Ð´ÑÑÐ³Ð¸Ð¼ ÑÐ»ÐµÐºÑÑÐ¸ÑÐµÑÐºÐ¸Ð¼ Ð¿ÑÐ¸Ð±Ð¾ÑÐ¾Ð¼ (3 ÑÐ½Ð¸Ð²ÐµÑÑÐ°Ð»ÑÐ½ÑÑ Ð²ÑÐ¾Ð´Ð°/Ð²ÑÑÐ¾Ð´Ð°),\u005Cr\u005Cn    â¢ ÐÐ°ÑÐ¸ÑÐ° ÐÐÐ¡ Ð¾Ñ Ð²ÑÐµÐ´Ð¾Ð½Ð¾ÑÐ½Ð¾Ð¹ Ð»ÐµÐ³Ð¸Ð¾Ð½ÐµÐ»Ð»Ñ!\u0022,\u0022link\u0022:\u0022https://zont\u002Donline.ru/news/obnovlennyj\u002Dsmart\u002D20\u0022,\u0022active_after\u0022:1604992519.466,\u0022icon\u0022:\u0022news\u0022},{\u0022title\u0022:\u0022ÐÑÑÑÐµÑÐ°Ð¹ÑÐµ ÑÐ°Ð·Ð´ÐµÐ» Ð½Ð¾Ð²Ð¾ÑÑÐµÐ¹!\u0022,\u0022description\u0022:\u0022ÐÐ´ÐµÑÑ Ð¼Ñ Ð±ÑÐ´ÐµÐ¼ ÑÐ°ÑÑÐºÐ°Ð·ÑÐ²Ð°ÑÑ Ð²Ð°Ð¼ Ð¾ Ð½Ð¾Ð²Ð¾Ð²Ð²ÐµÐ´ÐµÐ½Ð¸ÑÑ Ð² ÑÐµÑÐ²Ð¸ÑÐµ ZONT, Ð½Ð¾Ð²ÑÑ ÑÑÐ½ÐºÑÐ¸ÑÑ Ð¿ÑÐ¸Ð±Ð¾ÑÐ¾Ð² Ð¸ Ð¿ÑÐ¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ñ, Ð° ÑÐ°ÐºÐ¶Ðµ Ð¾ ÑÐºÐ¸Ð´ÐºÐ°Ñ Ð¸ Ð°ÐºÑÐ¸ÑÑ\u0022,\u0022link\u0022:\u0022\u0022,\u0022active_after\u0022:1599567302.826,\u0022icon\u0022:\u0022incident\u0022}],\u0022geozones\u0022:[],\u0022maintenance_plans\u0022:[]}");
