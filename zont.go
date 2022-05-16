@@ -8,7 +8,6 @@ import (
 	"log"
 	"net/http"
 	"net/url"
-	"reflect"
 	"regexp"
 	"strconv"
 	"strings"
@@ -16,6 +15,13 @@ import (
 
 	"github.com/PuerkitoBio/goquery"
 )
+
+type GeoData struct {
+	Latitude  float64   `json:"latitude,omitempty"`
+	Longitude float64   `json:"longitude,omitempty"`
+	Time      time.Time `json:"time,omitempty"`
+	Speed     float64   `json:"speed,omitempty"`
+}
 
 type Response struct {
 	Ok        bool `json:"ok"`
@@ -122,33 +128,49 @@ func getZontMileAge(w http.ResponseWriter, r *http.Request) {
 								}
 				`
 		request = fmt.Sprintf(request, item.Oid, startDate.Unix(), endDate.Unix())
-		fmt.Println(request)
-		fmt.Printf("start %v end %v", startDate.Format("2006.01.02"), endDate.Format("2006.01.02"))
 		body = getZontApi(&params, "application/json", "POST", "/api/load_data", request, url.Values{})
 		respReq := Response{}
 		err := json.Unmarshal(body, &respReq)
 		if err != nil {
 			fmt.Println(err)
 		}
+		geoData := []GeoData{}
 		for _, resp := range respReq.Responses {
 			for _, gps := range resp.Gps {
-				relaxeReflex(gps)
+				geoData = append(geoData, getGeoData(gps))
 			}
+			fmt.Println(geoData)
 		}
-		// fmt.Println(string(body))
+		actions := []Actions{}
+		for _, gd := range geoData {
+			action := Actions{}
+
+			actions = append(actions, action)
+		}
+
+		body, err = json.Marshal(actions)
+		if err != nil {
+			fmt.Println(err)
+		}
 	}
 	w.Write(body)
 
 }
-func relaxeReflex(t interface{}) {
-	switch reflect.TypeOf(t).Kind() {
-	case reflect.Slice:
-		s := reflect.ValueOf(t)
 
-		for i := 0; i < s.Len(); i++ {
-			fmt.Println(s.Index(i))
-		}
+func getGeoData(t interface{}) GeoData {
+	listSlice, ok := t.([]interface{})
+	geoData := GeoData{}
+
+	if !ok {
+		return geoData
 	}
+
+	timeUnix := listSlice[0].(float64)
+	geoData.Time = time.Unix(int64(timeUnix), 0)
+	geoData.Latitude = listSlice[1].(float64)
+	geoData.Longitude = listSlice[2].(float64)
+	geoData.Speed = listSlice[3].(float64)
+	return geoData
 }
 
 func getZontCars(w http.ResponseWriter, r *http.Request) {
