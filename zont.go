@@ -14,13 +14,13 @@ import (
 	"time"
 
 	"github.com/PuerkitoBio/goquery"
+	"github.com/connerdouglass/go-geo"
 )
 
 type GeoData struct {
-	Latitude  float64   `json:"latitude,omitempty"`
-	Longitude float64   `json:"longitude,omitempty"`
-	Time      time.Time `json:"time,omitempty"`
-	Speed     float64   `json:"speed,omitempty"`
+	Coordinate geo.Coordinate `json:"coordinate,omitempty"`
+	Time       time.Time      `json:"time,omitempty"`
+	Speed      float64        `json:"speed,omitempty"`
 }
 
 type Response struct {
@@ -88,17 +88,15 @@ func getZontMileAge(w http.ResponseWriter, r *http.Request) {
 	startDate := firstOfMonth
 	endDate := lastOfMonth
 
+	layout := "2006-01-02T15:04:05 -0700"
 	if params.StartDate != "" {
-
-		layout := "2006-01-02T15:04:05"
-		startDate, err = time.Parse(layout, params.StartDate)
+		startDate, err = time.Parse(layout, params.StartDate+" +0300")
 		if err != nil {
 			log.Println(err)
 		}
 	}
 	if params.EndDate != "" {
-		layout := "2006-01-02T15:04:05"
-		endDate, err = time.Parse(layout, params.EndDate)
+		endDate, err = time.Parse(layout, params.EndDate+" +0300")
 		if err != nil {
 			log.Println(err)
 		}
@@ -109,25 +107,26 @@ func getZontMileAge(w http.ResponseWriter, r *http.Request) {
 	carsData := []Objs{}
 
 	err, body, carsData = carsDevices(params, err, body, carsData)
+	actions := []Actions{}
+	tmpData := make(map[string]*Actions, 0)
 
 	for _, item := range carsData {
 		request := `{"requests": [{
-									  "device_id": %v,
-									  "mintime": %v,
-									  "maxtime": %v,
-									  "data_types": [
-										"gps"
-									  ],
-									  "request_options": {
-										"gps": {
-										  "include_last_before": true
-										}
-									  }
-									}
-								  ]
-								}
-				`
-		request = fmt.Sprintf(request, item.Oid, startDate.Unix(), endDate.Unix())
+					  "device_id": %v,
+					  "mintime": %v,
+					  "maxtime": %v,
+					  "data_types": [
+						"gps"
+					  ],
+					  "request_options": {
+						"gps": {
+						  "include_last_before": true
+						}
+					  }
+					}
+				  ]
+				}`
+		request = fmt.Sprintf(request, item.Oid, startDate.Local().Unix(), endDate.Local().Unix())
 		body = getZontApi(&params, "application/json", "POST", "/api/load_data", request, url.Values{})
 		respReq := Response{}
 		err := json.Unmarshal(body, &respReq)
@@ -139,19 +138,42 @@ func getZontMileAge(w http.ResponseWriter, r *http.Request) {
 			for _, gps := range resp.Gps {
 				geoData = append(geoData, getGeoData(gps))
 			}
-			fmt.Println(geoData)
 		}
-		actions := []Actions{}
+		prevGeo := geo.Coordinate{}
+		// prevDate := startDate.Add(-1 * time.Minute)
+
+		distance := 0.00
 		for _, gd := range geoData {
-			action := Actions{}
 
-			actions = append(actions, action)
-		}
+			if prevGeo.Latitude != 0 && prevGeo.Longitude != 0 {
+				distance = float64(geo.DistanceBetween(prevGeo, gd.Coordinate))
+				timeStamp := gd.Time.Format("20060102")
+				t1 := tmpData[timeStamp]
 
-		body, err = json.Marshal(actions)
-		if err != nil {
-			fmt.Println(err)
+				if t1 == nil {
+					action := Actions{}
+					t1 = &action
+				}
+
+				t1.Distance += distance / 1000
+				t1.Oid = item.Oid
+				t1.Start = time.Date(gd.Time.Year(), gd.Time.Month(), gd.Time.Day(), 0, 0, 0, 0, currentLocation).Format(layout)
+				t1.Stop = time.Date(gd.Time.Year(), gd.Time.Month(), gd.Time.Day(), 23, 59, 59, 0, currentLocation).Format(layout)
+
+				// 	actions = append(actions, action)
+				tmpData[timeStamp] = t1
+
+			}
+			prevGeo = gd.Coordinate
 		}
+		for _, value := range tmpData {
+			actions = append(actions, *value)
+
+		}
+	}
+	body, err = json.Marshal(actions)
+	if err != nil {
+		fmt.Println(err)
 	}
 	w.Write(body)
 
@@ -167,8 +189,9 @@ func getGeoData(t interface{}) GeoData {
 
 	timeUnix := listSlice[0].(float64)
 	geoData.Time = time.Unix(int64(timeUnix), 0)
-	geoData.Latitude = listSlice[1].(float64)
-	geoData.Longitude = listSlice[2].(float64)
+
+	geoData.Coordinate.Latitude = listSlice[2].(float64)
+	geoData.Coordinate.Longitude = listSlice[1].(float64)
 	geoData.Speed = listSlice[3].(float64)
 	return geoData
 }

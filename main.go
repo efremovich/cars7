@@ -36,6 +36,9 @@ func main() {
 	http.HandleFunc("/zont/mileage", getZontMileAge)
 	http.HandleFunc("/zont/cars", getZontCars)
 
+	http.HandleFunc("/ccars/mileage", getMileAgeCcar)
+	http.HandleFunc("/ccars/cars", getCCars)
+
 	fmt.Println(http.ListenAndServe(":49200", nil))
 }
 func login(params *Params) {
