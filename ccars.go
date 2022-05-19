@@ -48,17 +48,16 @@ type CarsCCar struct {
 
 var tokens map[string]*respToken
 
-type CCarsMileage struct {
-	Cars []struct {
-		ID      string      `json:"_id"`
-		Details interface{} `json:"details"`
-	} `json:"cars"`
-}
-
-type DataMileAge struct {
-	Mileage int     `json:"mileage"`
-	InRoute float64 `json:"inRoute"`
-	Stops   int     `json:"stops"`
+type CCarsMileage []struct {
+	ID           string `json:"_id"`
+	Brand        string `json:"brand"`
+	Model        string `json:"model"`
+	LicencePlate string `json:"licencePlate"`
+	Vin          string `json:"vin"`
+	Oid          string `json:"vehicle_id"`
+	MileAge      int    `json:"mileage"`
+	Start        string `json:"start"`
+	Stop         string `json:"stop"`
 }
 
 // func (p *CCarsMileage) UnmarshalJSON(data []byte) (err error) {
@@ -91,33 +90,53 @@ func getMileAgeCcar(w http.ResponseWriter, r *http.Request) {
 	startDate := firstOfMonth
 	endDate := lastOfMonth
 
-	layout := "2006-01-02T15:04:05 -0700"
+	layout := "2006-01-02T15:04:05-07:00"
 	if params.StartDate != "" {
-		startDate, err = time.Parse(layout, params.StartDate+" +0300")
+		startDate, err = time.Parse(layout, params.StartDate+"+03:00")
 		if err != nil {
 			log.Println(err)
 		}
 	}
 	if params.EndDate != "" {
-		endDate, err = time.Parse(layout, params.EndDate+" +0300")
+		endDate, err = time.Parse(layout, params.EndDate+"+03:00")
 		if err != nil {
 			log.Println(err)
 		}
 	}
 	carIDs := getccCars(params)
-	cars := CarsCCar{
-		TimeFrom: startDate.Format(layout),
-		TimeTo:   endDate.Format(layout),
+
+	days := int(endDate.Unix()-startDate.Unix()) / 60 / 60 / 24
+
+	sendLayout := "2006-01-02T15:04-07:00"
+	ccMileAge := make(map[string]CCarsMileage)
+	for i := 0; i < days+1; i++ {
+		ma := CCarsMileage{}
+		st := startDate.AddDate(0, 0, i)
+
+		cars := CarsCCar{
+			TimeFrom: time.Date(
+				st.Year(), st.Month(), st.Day(), 0, 0, 0, 0, now.Location(),
+			).Format(sendLayout),
+			TimeTo: time.Date(
+				st.Year(), st.Month(), st.Day(), 23, 59, 59, 0, now.Location(),
+			).Format(sendLayout),
+		}
+		cars.Cars = []string{}
+		cars.Cars = append(cars.Cars, carIDs...)
+		carsJson, _ := json.Marshal(cars)
+		body = getCCarsApi(&params, "POST", "/api/v1/efficiency-management/efficiency", string(carsJson), url.Values{})
+		err = json.Unmarshal(body, &ma)
+
+		ccMileAge[cars.TimeFrom] = ma
 	}
-	cars.Cars = append(cars.Cars, carIDs...)
-	carsJson, err := json.Marshal(cars)
-
-	body = getCCarsApi(&params, "POST", "/api/v1/efficiency-management/report/routes-and-stops", string(carsJson), url.Values{})
-	ccMileAge := make(map[string]interface{})
-
-	err = json.Unmarshal([]byte(body), &ccMileAge)
-
-	body, err = json.Marshal(body)
+	actions := CCarsMileage{}
+	for date, value := range ccMileAge {
+		for _, car := range value {
+			car.Start = date
+			actions = append(actions, car)
+		}
+	}
+	body, err = json.Marshal(actions)
 
 	w.Write(body)
 
@@ -146,7 +165,7 @@ func getCCars(w http.ResponseWriter, r *http.Request) {
 	for _, car := range rrespCar.Rows {
 
 		carData := respCar{}
-		carData.Oid = car.ID
+		carData.Oid = car.VehicleID
 		carData.IMEI = car.Vin
 		carData.Name = car.LicencePlate
 		carsData = append(carsData, carData)
