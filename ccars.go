@@ -36,8 +36,7 @@ type respCcarCar struct {
 }
 
 type respToken struct {
-	Token        string
-	refreshToken string
+	Token string
 }
 
 type CarsCCar struct {
@@ -55,7 +54,7 @@ type CCarsMileage []struct {
 	LicencePlate string `json:"licencePlate"`
 	Vin          string `json:"vin"`
 	Oid          string `json:"vehicle_id"`
-	MileAge      int    `json:"mileage"`
+	Distance     int    `json:"mileage"`
 	Start        string `json:"start"`
 	Stop         string `json:"stop"`
 }
@@ -125,7 +124,7 @@ func getMileAgeCcar(w http.ResponseWriter, r *http.Request) {
 		cars.Cars = append(cars.Cars, carIDs...)
 		carsJson, _ := json.Marshal(cars)
 		body = getCCarsApi(&params, "POST", "/api/v1/efficiency-management/efficiency", string(carsJson), url.Values{})
-		err = json.Unmarshal(body, &ma)
+		_ = json.Unmarshal(body, &ma)
 
 		ccMileAge[cars.TimeFrom] = ma
 	}
@@ -136,7 +135,7 @@ func getMileAgeCcar(w http.ResponseWriter, r *http.Request) {
 			actions = append(actions, car)
 		}
 	}
-	body, err = json.Marshal(actions)
+	body, _ = json.Marshal(actions)
 
 	w.Write(body)
 
@@ -171,7 +170,7 @@ func getCCars(w http.ResponseWriter, r *http.Request) {
 		carsData = append(carsData, carData)
 
 	}
-	body, err = json.Marshal(carsData)
+	body, _ = json.Marshal(carsData)
 	w.Write(body)
 
 }
@@ -193,7 +192,13 @@ func loginCcars(params *Params) {
 	data.Set("username", params.Login)
 	data.Set("password", params.Password)
 	putData := `{"email":"%v","password":"%v"}`
-	body := getCCarsApi(params, "POST", "/api/v1/user-management/login", fmt.Sprintf(putData, params.Login, params.Password), url.Values{})
+	body := getCCarsApi(
+		params,
+		"POST",
+		"/api/v1/user-management/login",
+		fmt.Sprintf(putData, params.Login, params.Password),
+		url.Values{},
+	)
 	rToken := respToken{}
 	err = json.Unmarshal(body, &rToken)
 	if err != nil {

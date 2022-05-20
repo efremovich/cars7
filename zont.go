@@ -57,20 +57,6 @@ type Devices struct {
 	} `json:"devices"`
 }
 
-type Au struct {
-	Requests []struct {
-		DeviceID       int      `json:"device_id"`
-		Mintime        int      `json:"mintime"`
-		Maxtime        int      `json:"maxtime"`
-		DataTypes      []string `json:"data_types"`
-		RequestOptions struct {
-			Gps struct {
-				IncludeLastBefore bool `json:"include_last_before"`
-			} `json:"gps"`
-		} `json:"request_options"`
-	} `json:"requests"`
-}
-
 func getZontMileAge(w http.ResponseWriter, r *http.Request) {
 	var params Params
 	body := StreamToByte(r.Body)
