@@ -107,7 +107,6 @@ func getMileAgeCcar(w http.ResponseWriter, r *http.Request) {
 
 	days := int(endDate.Unix()-startDate.Unix()) / 60 / 60 / 24
 
-	sendLayout := "2006-01-02T15:04-07:00"
 	ccMileAge := make(map[string]CCarsMileage)
 	for i := 0; i < days+1; i++ {
 		ma := CCarsMileage{}
@@ -116,10 +115,10 @@ func getMileAgeCcar(w http.ResponseWriter, r *http.Request) {
 		cars := CarsCCar{
 			TimeFrom: time.Date(
 				st.Year(), st.Month(), st.Day(), 0, 0, 0, 0, now.Location(),
-			).Format(sendLayout),
+			).Format(layout),
 			TimeTo: time.Date(
 				st.Year(), st.Month(), st.Day(), 23, 59, 59, 0, now.Location(),
-			).Format(sendLayout),
+			).Format(layout),
 		}
 		cars.Cars = []string{}
 		cars.Cars = append(cars.Cars, carIDs...)
@@ -132,7 +131,7 @@ func getMileAgeCcar(w http.ResponseWriter, r *http.Request) {
 	actions := CCarsMileage{}
 	for date, value := range ccMileAge {
 		for _, car := range value {
-			car.Start = date
+			car.Start = date[:len(date)-6]
 			car.Distance = car.MileAge
 			actions = append(actions, car)
 		}
