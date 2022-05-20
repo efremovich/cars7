@@ -49,11 +49,12 @@ var tokens map[string]*respToken
 
 type CCarsMileage []struct {
 	ID           string `json:"_id"`
+	Oid          string `json:"oid"`
 	Brand        string `json:"brand"`
 	Model        string `json:"model"`
 	LicencePlate string `json:"licencePlate"`
 	Vin          string `json:"vin"`
-	Oid          string `json:"vehicle_id"`
+	VehicleID    string `json:"vehicle_id"`
 	Distance     int    `json:"distance"`
 	MileAge      int    `json:"mileage"`
 	Start        string `json:"start"`
@@ -133,6 +134,7 @@ func getMileAgeCcar(w http.ResponseWriter, r *http.Request) {
 		for _, car := range value {
 			car.Start = date[:len(date)-6]
 			car.Distance = car.MileAge
+			car.Oid = car.VehicleID
 			actions = append(actions, car)
 		}
 	}
