@@ -54,7 +54,8 @@ type CCarsMileage []struct {
 	LicencePlate string `json:"licencePlate"`
 	Vin          string `json:"vin"`
 	Oid          string `json:"vehicle_id"`
-	Distance     int    `json:"mileage"`
+	Distance     int    `json:"distance"`
+	MileAge      int    `json:"mileage"`
 	Start        string `json:"start"`
 	Stop         string `json:"stop"`
 }
@@ -132,6 +133,7 @@ func getMileAgeCcar(w http.ResponseWriter, r *http.Request) {
 	for date, value := range ccMileAge {
 		for _, car := range value {
 			car.Start = date
+			car.Distance = car.MileAge
 			actions = append(actions, car)
 		}
 	}
