@@ -90,9 +90,7 @@ func getZontMileAge(w http.ResponseWriter, r *http.Request) {
 
 	loginZont(&params)
 
-	carsData := []Objs{}
-
-	err, body, carsData = carsDevices(params, err, body, carsData)
+	carsData := carsDevices(params)
 	actions := []Actions{}
 	tmpData := make(map[string]*Actions, 0)
 
@@ -191,26 +189,26 @@ func getZontCars(w http.ResponseWriter, r *http.Request) {
 	}
 
 	loginZont(&params)
-	carsData := []Objs{}
 
-	err, body, carsData = carsDevices(params, err, body, carsData)
+	carsData := carsDevices(params)
 
-	body, err = json.Marshal(carsData)
+	body, _ = json.Marshal(carsData)
 	w.Write(body)
 }
 
-func carsDevices(params Params, err error, body []byte, carsData []Objs) (error, []byte, []Objs) {
+func carsDevices(params Params) []Objs {
+	carsData := []Objs{}
 	client := getClient(false, params.Password)
-	resp, err := client.Get(params.URLstring + "/console/")
+	resp,_ := client.Get(params.URLstring + "/console/")
 
-	body, _ = ioutil.ReadAll(resp.Body)
+	body, _ := ioutil.ReadAll(resp.Body)
 
 	regularExpression := regexp.MustCompile(`JSON\.parse\(\"(.*)\"\);`)
 
 	result := strings.ReplaceAll(regularExpression.FindString(string(body)), `JSON.parse("`, "")
-	result, err = strconv.Unquote(fmt.Sprintf(`"%s"`, result[:len(result)-3]))
+	result, _ = strconv.Unquote(fmt.Sprintf(`"%s"`, result[:len(result)-3]))
 	devicesData := Devices{}
-	err = json.Unmarshal([]byte(result), &devicesData)
+  err := json.Unmarshal([]byte(result), &devicesData)
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -221,7 +219,7 @@ func carsDevices(params Params, err error, body []byte, carsData []Objs) (error,
 		deviceData.Oid = device.ID
 		carsData = append(carsData, deviceData)
 	}
-	return err, body, carsData
+	return carsData
 }
 
 func loginZont(params *Params) {

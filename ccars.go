@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -9,8 +10,6 @@ import (
 	"net/url"
 	"strings"
 	"time"
-
-	"github.com/goccy/go-json"
 )
 
 type respCar struct {

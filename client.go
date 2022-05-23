@@ -13,17 +13,9 @@ import (
 	"golang.org/x/net/publicsuffix"
 )
 
-//ErrTooManyRedirect - Too many redirects
-//ErrHTTPRedirect - Redirect to non-https server
-var (
-	ErrTooManyRedirect = errors.New("Too many redirects")
-
-//	ErrHTTPRedirect    = errors.New("Redirect to non-https server")
-)
-
-func redirectPolicyFunc(req *http.Request, via []*http.Request) error {
+func redirectPolicyFunc(_ *http.Request, via []*http.Request) error {
 	if len(via) > 10 {
-		return ErrTooManyRedirect
+		return errors.New("to many redirects")
 	}
 	return nil
 }
@@ -52,11 +44,7 @@ func getClient(isTLSEnabled bool, name string) http.Client {
 		CheckRedirect: redir,
 	}
 	if isTLSEnabled {
-		tr := &http.Transport{
-			TLSClientConfig: &tls.Config{
-				Renegotiation:      tls.RenegotiateOnceAsClient,
-				InsecureSkipVerify: true},
-		}
+		tr := &http.Transport{TLSClientConfig: &tls.Config{Renegotiation: tls.RenegotiateOnceAsClient, InsecureSkipVerify: true}}
 		client.Transport = tr
 	}
 	return client

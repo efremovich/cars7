@@ -108,7 +108,7 @@ func getMileAge(w http.ResponseWriter, r *http.Request) {
 
 	mileAgeActions := []Actions{}
 	objectsData := ObjectsData{}
-	err = json.Unmarshal(body, &objectsData)
+	_ = json.Unmarshal(body, &objectsData)
 	for _, obj := range objectsData.ObjsInfo.Objs {
 		data := url.Values{}
 		data.Set("from", startDate)
@@ -118,13 +118,13 @@ func getMileAge(w http.ResponseWriter, r *http.Request) {
 		data.Set("to", endtDate)
 		body = getApi(&params, "POST", "/api/v2/quickreport/getreport", data)
 		mileAgeData := MileAgeData{}
-		err = json.Unmarshal(body, &mileAgeData)
+		_ = json.Unmarshal(body, &mileAgeData)
 		for _, act := range mileAgeData.Actions {
 			act.Oid = obj.Oid
 			mileAgeActions = append(mileAgeActions, act)
 		}
 	}
-	body, err = json.Marshal(mileAgeActions)
+	body, _ = json.Marshal(mileAgeActions)
 	w.Write(body)
 
 }
@@ -148,20 +148,20 @@ func getFortCars(w http.ResponseWriter, r *http.Request) {
 	body = getApi(&params, "GET", "/api/Api.svc/getfullupdateinfo", data)
 	carsData := []Objs{}
 	objectsData := ObjectsData{}
-	err = json.Unmarshal(body, &objectsData)
+	_ = json.Unmarshal(body, &objectsData)
 	for _, obj := range objectsData.ObjsInfo.Objs {
 		data := url.Values{}
 		oid := strconv.Itoa(obj.Oid)
 		data.Set("oid", oid)
 		body = getApi(&params, "GET", "/api/Api.svc/objectinfo", data)
 		objinfo := Objs{}
-		err = json.Unmarshal(body, &objinfo)
+		_ = json.Unmarshal(body, &objinfo)
 		obj.Name = objinfo.Name
 		obj.IMEI = objinfo.IMEI
 		carsData = append(carsData, obj)
 	}
 
-	body, err = json.Marshal(carsData)
+	body, _ = json.Marshal(carsData)
 	w.Write(body)
 }
 
@@ -170,24 +170,24 @@ func getApi(params *Params, method, urlPath string, data url.Values) []byte {
 	client := getClient(false, params.Password)
 	u := params.URLstring + urlPath
 	var rbody io.Reader
-	if method == "GET" {
-		u += "?" + data.Encode()
-	} else if method == "PUT" {
-		// rbody = strings.NewReader(putData)
-	} else {
-		rbody = strings.NewReader(data.Encode())
-	}
 
 	req, err := http.NewRequest(method, u, rbody)
 	if err != nil {
 		panic(err)
 	}
-	req.Header.Set("Accept", "application/json")
-	if method == "POST" {
-		req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
-	} else if method == "PUT" {
+	switch method {
+	case "GET":
+		u += "?" + data.Encode()
+	case "PUT":
 		req.Header.Set("Content-Type", "application/json")
+	// rbody = strings.NewReader(putData)
+	default:
+		rbody = strings.NewReader(data.Encode())
+		req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
 	}
+
+	req.Header.Set("Accept", "application/json")
+
 	resp, err := client.Do(req)
 	if err != nil {
 		return []byte{}
@@ -217,8 +217,8 @@ func loginFort(params *Params) {
 	data.Set("ddlLanguage", "ru-ru")
 	data.Set("CheckNewInterface", "on")
 	data.Set("__EVENTTARGET", "lbEnter")
-	doc, err := goquery.NewDocumentFromReader(resp.Body)
-	doc.Find("input[type=hidden]").Each(func(i int, s *goquery.Selection) {
+	doc, _ := goquery.NewDocumentFromReader(resp.Body)
+	doc.Find("input[type=hidden]").Each(func(_ int, s *goquery.Selection) {
 		name, _ := s.Attr("name")
 		val, _ := s.Attr("value")
 		data.Add(name, val)
