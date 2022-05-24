@@ -9,13 +9,14 @@ import (
 var coockie = make(map[string]*cookiejar.Jar)
 
 type Params struct {
-	StartDate string `json:"start_date"`
-	EndDate   string `json:"end_date"`
-	Category  string `json:"category"`
-	Car       string `json:"car"`
-	Password  string `json:"password"`
-	Login     string `json:"login"`
-	URLstring string `json:"url_string"`
+	StartDate  string `json:"start_date,omitempty"`
+	EndDate    string `json:"end_date,omitempty"`
+	Category   string `json:"category,omitempty"`
+	Car        string `json:"car,omitempty"`
+	Password   string `json:"password,omitempty"`
+	Login      string `json:"login,omitempty"`
+	URLstring  string `json:"url_string,omitempty"`
+	CompenceID string `json:"compence_id,omitempty"`
 }
 
 func main() {
@@ -25,6 +26,8 @@ func main() {
 	http.HandleFunc("/getFine", getFine)
 	http.HandleFunc("/getRefills", getRefills)
 	http.HandleFunc("/getCompence", cars7Compence)
+	http.HandleFunc("/getCompenceFile", cars7GetDocement)
+	http.HandleFunc("/createOrUpdateCompence", cars7CreateOrUpdateDocement)
 	http.HandleFunc("/getBonus", getBonus)
 
 	http.HandleFunc("/fort/mileage", getMileAge)

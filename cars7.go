@@ -1,10 +1,15 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
+	"io"
 	"io/ioutil"
+	"mime/multipart"
 	"net/http"
 	"net/url"
+	"os"
+	"strings"
 	"time"
 
 	"encoding/json"
@@ -15,7 +20,7 @@ import (
 func login(params *Params) {
 	client := getClient(false, "cars7")
 	queryLoqin := url.QueryEscape(params.Login)
-	loginURL := "http://lk.cars7.ru/Account/LoginApp?login=" + queryLoqin + "&password=" + params.Password
+	loginURL := "http://b2blk.cars7.ru/Account/LoginApp?login=" + queryLoqin + "&password=" + params.Password
 	fmt.Println(loginURL)
 	resp, err := client.Get(loginURL)
 
@@ -113,7 +118,7 @@ func getDataCSV(params *Params) []byte {
 	formData.Set("Car", "")
 
 	resp, err := client.PostForm(
-		"http://lk.cars7.ru/Export/ExportToCsv?type="+params.Category+"&category=0&timezone=-3",
+		"http://b2blk.cars7.ru/Export/ExportToCsv?type="+params.Category+"&category=0&timezone=-3",
 		formData,
 	)
 	if err != nil {
@@ -132,7 +137,7 @@ func getDataCSV(params *Params) []byte {
 	if err != nil {
 		fmt.Printf("Ошибка преобразования json: %v", err)
 	}
-	resp, err = client.Get("http://lk.cars7.ru/Export/GetFileCsv?url=" + url.QueryEscape(file.File))
+	resp, err = client.Get("http://b2blk.cars7.ru/Export/GetFileCsv?url=" + url.QueryEscape(file.File))
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -145,16 +150,21 @@ func getDataCSV(params *Params) []byte {
 }
 
 type Compence struct {
-	ID       string    `json:"id"`
-	OrderID  string    `json:"order_id"`
-	Date     time.Time `json:"date"`
-	Sum      string    `json:"sum"`
-	PayDay   time.Time `json:"pay_day"`
-	Status   string    `json:"status"`
-	Comment  string    `json:"comment"`
-	Vehicle  string
-	Orderer  string
-	Document []byte `json:"document"`
+	ID      string    `json:"id,omitempty"`
+	OrderID string    `json:"order_id,omitempty"`
+	Date    time.Time `json:"date,omitempty"`
+	Sum     string    `json:"sum,omitempty"`
+	PayDay  time.Time `json:"pay_day,omitempty"`
+	Status  string    `json:"status,omitempty"`
+	Comment string    `json:"comment,omitempty"`
+	Vehicle string    `json:"vehicle,omitempty"`
+	Orderer string    `json:"orderer,omitempty"`
+}
+
+type FileCompence struct {
+	Name     string `json:"name,omitempty"`
+	TypeDoc  string `json:"type_doc,omitempty"`
+	Document []byte `json:"document,omitempty"`
 }
 
 func cars7Compence(w http.ResponseWriter, r *http.Request) {
@@ -175,7 +185,7 @@ func cars7Compence(w http.ResponseWriter, r *http.Request) {
 	formData.Set("DateEnd", endDate)
 	formData.Set("Timezone", "-3")
 
-	resp, err := client.PostForm("https://lk.cars7.ru/Data/GetData?page=0&type=9&category=0&isClear=true", formData)
+	resp, err := client.PostForm("https://b2blk.cars7.ru/Data/GetData?page=0&type=9&category=0&isClear=true", formData)
 	if err != nil {
 		fmt.Println("resp err: ", err)
 	}
@@ -206,7 +216,7 @@ func cars7Compence(w http.ResponseWriter, r *http.Request) {
 			}
 
 		})
-		resp, _ = client.Get(fmt.Sprintf("https://lk.cars7.ru/Data/NewItem?type=9&id=%v&tz=-3&copy=false", compence.ID))
+		resp, _ = client.Get(fmt.Sprintf("https://b2blk.cars7.ru/Data/NewItem?type=9&id=%v&tz=-3&copy=false", compence.ID))
 
 		data, err := goquery.NewDocumentFromResponse(resp)
 		if err != nil {
@@ -228,11 +238,148 @@ func cars7Compence(w http.ResponseWriter, r *http.Request) {
 		data.Find("option[selected='selected']").Each(func(_ int, s *goquery.Selection) {
 			compence.Status = s.Text()
 		})
-
-		compences = append(compences, compence)
 	})
 
 	body, _ = json.Marshal(compences)
 	w.Write(body)
 
+}
+
+func cars7GetDocement(w http.ResponseWriter, r *http.Request) {
+	var params Params
+	body := StreamToByte(r.Body)
+	err := json.Unmarshal(body, &params)
+	if err != nil {
+		fmt.Println("JSON unmarshal error:", err)
+	}
+
+	login(&params)
+	client := getClient(false, "cars7")
+
+	resp, err := client.Get(fmt.Sprintf("https://b2blk.cars7.ru/Data/CreateClaim?type=1&id=%v", params.CompenceID))
+	if err != nil {
+		fmt.Println(err)
+	}
+	body, _ = ioutil.ReadAll(resp.Body)
+	compence := FileCompence{}
+	compence.Name = fmt.Sprintf("Притензия для %v", params.CompenceID)
+	compence.TypeDoc = resp.Header.Get("content-type")
+	compence.Document = body
+
+	body, _ = json.Marshal(compence)
+	w.Write(body)
+}
+
+func cars7CreateOrUpdateDocement(w http.ResponseWriter, r *http.Request) {
+	// statuses := map[string]string{
+	// 	"Оплачен":    "1",
+	// 	"Не оплачен": "0",
+	// 	"Добровольная оплата картой или на Р/С": "6",
+	// 	"В суде":               "4",
+	// 	"В ожидании претензии": "7",
+	// }
+
+	r.ParseMultipartForm(20 << 20)
+
+	// Get handler for filename, size and headers
+	file, handler, err := r.FormFile("file")
+	if err != nil {
+		fmt.Println("Error Retrieving the File")
+		fmt.Println(err)
+		return
+	}
+	defer file.Close()
+	dst, err := os.CreateTemp("", handler.Filename)
+	defer dst.Close()
+
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	// Copy the uploaded file to the created file on the filesystem
+	if _, err := io.Copy(dst, file); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	incomeBody := r.FormValue("params")
+	type CreateParams struct {
+		Login      string `json:"login,omitempty"`
+		Password   string `json:"password,omitempty"`
+		OrderID    string `json:"order_id,omitempty"`
+		Summ       string `json:"summ,omitempty"`
+		Status     string `json:"status,omitempty"`
+		Comment    string `json:"comment,omitempty"`
+		CompenceID string `json:"compence_id,omitempty"`
+	}
+	var params CreateParams
+	err = json.Unmarshal([]byte(incomeBody), &params)
+	if err != nil {
+		fmt.Println("JSON unmarshal error:", err)
+	}
+	parLoginPass := Params{
+		Login:    params.Login,
+		Password: params.Password,
+	}
+	login(&parLoginPass)
+	client := getClient(false, "cars7")
+
+	filedata, _ := os.Open(dst.Name())
+	values := map[string]io.Reader{
+		"file":                          filedata,
+		"Compensation.Lease.Identifier": strings.NewReader(params.OrderID),
+		"Compensation.Amount":           strings.NewReader(params.Summ),
+		"Compensation.Comment":          strings.NewReader(params.Comment),
+		"Compensation.Status":           strings.NewReader(params.Status),
+		"Compensation.CompensationID":   strings.NewReader(params.CompenceID),
+	}
+
+	var b bytes.Buffer
+	wmpd := multipart.NewWriter(&b)
+	for key, r := range values {
+		var part io.Writer
+
+		if x, ok := r.(io.Closer); ok {
+			defer x.Close()
+		}
+
+		if x, ok := r.(*os.File); ok {
+			if handler.Size > 0 {
+				part, err = wmpd.CreateFormFile(key, x.Name())
+				if err != nil {
+					fmt.Printf("form file err %v", err)
+				}
+			}
+		} else {
+			if part, err = wmpd.CreateFormField(key); err != nil {
+				fmt.Printf("form field err %v", err)
+			}
+		}
+
+		_, err := io.Copy(part, r)
+		if err != nil {
+			fmt.Printf("form copy file err %v", err)
+		}
+
+	}
+	defer wmpd.Close()
+
+	// Now that you have a form, you can submit it to your handler.
+	req, err := http.NewRequest("POST", "https://b2blk.cars7.ru/Data/SaveCompensation", &b)
+	if err != nil {
+		return
+	}
+	// Don't forget to set the content type, this will contain the boundary.
+	req.Header.Set("Content-Type", wmpd.FormDataContentType())
+
+	// Submit the request
+	res, err := client.Do(req)
+	if err != nil {
+		return
+	}
+	defer res.Body.Close()
+
+	body, _ := ioutil.ReadAll(res.Body)
+	w.Write(body)
 }
