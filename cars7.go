@@ -188,14 +188,32 @@ func cars7Compence(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("resp err: ", err)
 	}
 	doc, err := goquery.NewDocumentFromResponse(resp)
+
+	compences := []Compence{}
+	doc.Find(".change_page").Each(func(_ int, s *goquery.Selection) {
+		resp, err := client.PostForm(fmt.Sprintf("https://lk.cars7.ru%v", s.AttrOr("href", "")), formData)
+		if err != nil {
+			fmt.Println("resp err: ", err)
+		}
+		compences = append(compences, getCompenceData(resp)...)
+	})
+
+	body, _ = json.Marshal(compences)
+	w.Write(body)
+
+}
+
+func getCompenceData(resp *http.Response) []Compence {
+
+	compences := []Compence{}
+	compence := Compence{}
+	client := getClient(true, "cars7")
+	doc, err := goquery.NewDocumentFromResponse(resp)
 	if err != nil {
 		fmt.Println("goquery err: ", err)
 	}
-
-	compences := []Compence{}
 	layout := "02.01.2006 15:04:05"
 	doc.Find("tbody tr").Each(func(_ int, s *goquery.Selection) {
-		compence := Compence{}
 
 		s.Find(".button_edit").Each(func(_ int, id *goquery.Selection) {
 			compence.ID = id.AttrOr("data-value", "0")
@@ -214,7 +232,7 @@ func cars7Compence(w http.ResponseWriter, r *http.Request) {
 			}
 
 		})
-		resp, _ = client.Get(fmt.Sprintf("https://lk.cars7.ru/Data/NewItem?type=9&id=%v&tz=-3&copy=false", compence.ID))
+		resp, _ := client.Get(fmt.Sprintf("https://lk.cars7.ru/Data/NewItem?type=9&id=%v&tz=-3&copy=false", compence.ID))
 
 		data, err := goquery.NewDocumentFromResponse(resp)
 		if err != nil {
@@ -238,10 +256,7 @@ func cars7Compence(w http.ResponseWriter, r *http.Request) {
 		})
 		compences = append(compences, compence)
 	})
-
-	body, _ = json.Marshal(compences)
-	w.Write(body)
-
+	return compences
 }
 
 func cars7GetDocement(w http.ResponseWriter, r *http.Request) {
