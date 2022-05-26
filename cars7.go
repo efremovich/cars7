@@ -18,17 +18,14 @@ import (
 )
 
 func login(params *Params) {
-	client := getClient(false, "cars7")
+	client := getClient(true, "cars7")
 	queryLoqin := url.QueryEscape(params.Login)
-	loginURL := "http://b2blk.cars7.ru/Account/LoginApp?login=" + queryLoqin + "&password=" + params.Password
-	fmt.Println(loginURL)
-	resp, err := client.Get(loginURL)
+	loginURL := "http://lk.cars7.ru/Account/LoginApp?login=" + queryLoqin + "&password=" + params.Password
+	_, err := client.Get(loginURL)
 
 	if err != nil {
 		fmt.Println(err)
 	}
-	body, _ := ioutil.ReadAll(resp.Body)
-	fmt.Println(string(body))
 }
 
 func getOrders(w http.ResponseWriter, r *http.Request) {
@@ -108,7 +105,7 @@ func getBonus(w http.ResponseWriter, r *http.Request) {
 
 func getDataCSV(params *Params) []byte {
 	login(params)
-	client := getClient(false, "cars7")
+	client := getClient(true, "cars7")
 	startDate := params.formatTime(params.StartDate, "2006-01-02T15:04:05Z")
 	endDate := params.formatTime(params.EndDate, "2006-01-02T15:04:05Z")
 	fmt.Printf("Запрос транзакций с %s по %s", startDate, endDate)
@@ -118,7 +115,7 @@ func getDataCSV(params *Params) []byte {
 	formData.Set("Car", "")
 
 	resp, err := client.PostForm(
-		"http://b2blk.cars7.ru/Export/ExportToCsv?type="+params.Category+"&category=0&timezone=-3",
+		"http://lk.cars7.ru/Export/ExportToCsv?type="+params.Category+"&category=0&timezone=-3",
 		formData,
 	)
 	if err != nil {
@@ -137,7 +134,7 @@ func getDataCSV(params *Params) []byte {
 	if err != nil {
 		fmt.Printf("Ошибка преобразования json: %v", err)
 	}
-	resp, err = client.Get("http://b2blk.cars7.ru/Export/GetFileCsv?url=" + url.QueryEscape(file.File))
+	resp, err = client.Get("http://lk.cars7.ru/Export/GetFileCsv?url=" + url.QueryEscape(file.File))
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -176,7 +173,8 @@ func cars7Compence(w http.ResponseWriter, r *http.Request) {
 	}
 
 	login(&params)
-	client := getClient(false, "cars7")
+	client := getClient(true, "cars7")
+
 	startDate := params.formatTime(params.StartDate, "2006-01-02T15:04:05.000Z")
 	endDate := params.formatTime(params.EndDate, "2006-01-02T15:04:05.000Z")
 	fmt.Printf("Запрос компенсаций с %s по %s", startDate, endDate)
@@ -185,7 +183,7 @@ func cars7Compence(w http.ResponseWriter, r *http.Request) {
 	formData.Set("DateEnd", endDate)
 	formData.Set("Timezone", "-3")
 
-	resp, err := client.PostForm("https://b2blk.cars7.ru/Data/GetData?page=0&type=9&category=0&isClear=true", formData)
+	resp, err := client.PostForm("https://lk.cars7.ru/Data/GetData?page=0&type=9&category=0&isClear=true", formData)
 	if err != nil {
 		fmt.Println("resp err: ", err)
 	}
@@ -216,7 +214,7 @@ func cars7Compence(w http.ResponseWriter, r *http.Request) {
 			}
 
 		})
-		resp, _ = client.Get(fmt.Sprintf("https://b2blk.cars7.ru/Data/NewItem?type=9&id=%v&tz=-3&copy=false", compence.ID))
+		resp, _ = client.Get(fmt.Sprintf("https://lk.cars7.ru/Data/NewItem?type=9&id=%v&tz=-3&copy=false", compence.ID))
 
 		data, err := goquery.NewDocumentFromResponse(resp)
 		if err != nil {
@@ -238,6 +236,7 @@ func cars7Compence(w http.ResponseWriter, r *http.Request) {
 		data.Find("option[selected='selected']").Each(func(_ int, s *goquery.Selection) {
 			compence.Status = s.Text()
 		})
+		compences = append(compences, compence)
 	})
 
 	body, _ = json.Marshal(compences)
@@ -254,9 +253,9 @@ func cars7GetDocement(w http.ResponseWriter, r *http.Request) {
 	}
 
 	login(&params)
-	client := getClient(false, "cars7")
+	client := getClient(true, "cars7")
 
-	resp, err := client.Get(fmt.Sprintf("https://b2blk.cars7.ru/Data/CreateClaim?type=1&id=%v", params.CompenceID))
+	resp, err := client.Get(fmt.Sprintf("https://lk.cars7.ru/Data/CreateClaim?type=1&id=%v", params.CompenceID))
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -323,7 +322,7 @@ func cars7CreateOrUpdateDocement(w http.ResponseWriter, r *http.Request) {
 		Password: params.Password,
 	}
 	login(&parLoginPass)
-	client := getClient(false, "cars7")
+	client := getClient(true, "cars7")
 
 	filedata, _ := os.Open(dst.Name())
 	values := map[string]io.Reader{
@@ -366,7 +365,7 @@ func cars7CreateOrUpdateDocement(w http.ResponseWriter, r *http.Request) {
 	defer wmpd.Close()
 
 	// Now that you have a form, you can submit it to your handler.
-	req, err := http.NewRequest("POST", "https://b2blk.cars7.ru/Data/SaveCompensation", &b)
+	req, err := http.NewRequest("POST", "https://lk.cars7.ru/Data/SaveCompensation", &b)
 	if err != nil {
 		return
 	}

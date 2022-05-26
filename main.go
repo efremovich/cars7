@@ -20,7 +20,6 @@ type Params struct {
 }
 
 func main() {
-	createJar("cars7")
 	http.HandleFunc("/getOrders", getOrders)
 	http.HandleFunc("/getCars", getCars)
 	http.HandleFunc("/getFine", getFine)
