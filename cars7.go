@@ -147,15 +147,15 @@ func getDataCSV(params *Params) []byte {
 }
 
 type Compence struct {
-	ID      string    `json:"id,omitempty"`
-	OrderID string    `json:"order_id,omitempty"`
-	Date    time.Time `json:"date,omitempty"`
-	Sum     string    `json:"sum,omitempty"`
-	PayDay  time.Time `json:"pay_day,omitempty"`
-	Status  string    `json:"status,omitempty"`
-	Comment string    `json:"comment,omitempty"`
-	Vehicle string    `json:"vehicle,omitempty"`
-	Orderer string    `json:"orderer,omitempty"`
+	ID      string    `json:"id"`
+	OrderID string    `json:"order_id"`
+	Date    time.Time `json:"date"`
+	Sum     string    `json:"sum"`
+	PayDay  time.Time `json:"pay_day"`
+	Status  string    `json:"status"`
+	Comment string    `json:"comment"`
+	Vehicle string    `json:"vehicle"`
+	Orderer string    `json:"orderer"`
 }
 
 type FileCompence struct {
