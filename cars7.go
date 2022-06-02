@@ -12,6 +12,7 @@ import (
 	"strings"
 	"time"
 
+	"encoding/base64"
 	"encoding/json"
 
 	"github.com/PuerkitoBio/goquery"
@@ -300,31 +301,7 @@ func cars7CreateOrUpdateDocement(w http.ResponseWriter, r *http.Request) {
 	// 	"В ожидании претензии": "7",
 	// }
 
-	r.ParseMultipartForm(20 << 20)
-
-	// Get handler for filename, size and headers
-	file, handler, err := r.FormFile("file")
-	if err != nil {
-		fmt.Println("Error Retrieving the File")
-		fmt.Println(err)
-		return
-	}
-	defer file.Close()
-	dst, err := os.CreateTemp("", handler.Filename)
-	defer dst.Close()
-
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-
-	// Copy the uploaded file to the created file on the filesystem
-	if _, err := io.Copy(dst, file); err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-
-	incomeBody := r.FormValue("params")
+	body := StreamToByte(r.Body)
 	type CreateParams struct {
 		Login      string `json:"login,omitempty"`
 		Password   string `json:"password,omitempty"`
@@ -333,20 +310,37 @@ func cars7CreateOrUpdateDocement(w http.ResponseWriter, r *http.Request) {
 		Status     string `json:"status,omitempty"`
 		Comment    string `json:"comment,omitempty"`
 		CompenceID string `json:"compence_id,omitempty"`
+		File       string `json:"file"`
 	}
 	var params CreateParams
-	err = json.Unmarshal([]byte(incomeBody), &params)
+	err := json.Unmarshal(body, &params)
 	if err != nil {
 		fmt.Println("JSON unmarshal error:", err)
+	}
+
+	rawfile, err := base64.RawStdEncoding.DecodeString(params.File)
+
+	if err != nil {
+		fmt.Println("Error Retrieving the File")
+		fmt.Println(err)
+		return
 	}
 	parLoginPass := Params{
 		Login:    params.Login,
 		Password: params.Password,
 	}
-	login(&parLoginPass)
-	client := getClient(true, "cars7")
 
-	filedata, _ := os.Open(dst.Name())
+	login(&parLoginPass)
+
+  client := getClient(true, "cars7")
+
+	filedata, _ := os.Open(os.TempDir() + "tmp.tmp")
+	_, err = filedata.Write(rawfile)
+	if err != nil {
+		fmt.Println(err)
+	}
+	defer filedata.Close()
+
 	values := map[string]io.Reader{
 		"file":                          filedata,
 		"Compensation.Lease.Identifier": strings.NewReader(params.OrderID),
@@ -366,7 +360,7 @@ func cars7CreateOrUpdateDocement(w http.ResponseWriter, r *http.Request) {
 		}
 
 		if x, ok := r.(*os.File); ok {
-			if handler.Size > 0 {
+			if len(rawfile) > 0 {
 				part, err = wmpd.CreateFormFile(key, x.Name())
 				if err != nil {
 					fmt.Printf("form file err %v", err)
@@ -401,6 +395,6 @@ func cars7CreateOrUpdateDocement(w http.ResponseWriter, r *http.Request) {
 	}
 	defer res.Body.Close()
 
-	body, _ := ioutil.ReadAll(res.Body)
+	body, _ = ioutil.ReadAll(res.Body)
 	w.Write(body)
 }
