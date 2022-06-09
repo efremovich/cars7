@@ -198,8 +198,8 @@ func getZontCars(w http.ResponseWriter, r *http.Request) {
 
 func carsDevices(params Params) []Objs {
 	carsData := []Objs{}
-	client := getClient(false, params.Password)
-	resp,_ := client.Get(params.URLstring + "/console/")
+	client := getClient(false, params.Password+"_"+params.Login)
+	resp, _ := client.Get(params.URLstring + "/console/")
 
 	body, _ := ioutil.ReadAll(resp.Body)
 
@@ -208,7 +208,7 @@ func carsDevices(params Params) []Objs {
 	result := strings.ReplaceAll(regularExpression.FindString(string(body)), `JSON.parse("`, "")
 	result, _ = strconv.Unquote(fmt.Sprintf(`"%s"`, result[:len(result)-3]))
 	devicesData := Devices{}
-  err := json.Unmarshal([]byte(result), &devicesData)
+	err := json.Unmarshal([]byte(result), &devicesData)
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -223,7 +223,7 @@ func carsDevices(params Params) []Objs {
 }
 
 func loginZont(params *Params) {
-	client := getClient(false, params.Password)
+	client := getClient(false, params.Password+"_"+params.Login)
 	resp, err := client.Get(params.URLstring + "/login")
 	if err != nil {
 		fmt.Println(err, "Ошибка авторизации fort-monitor")
@@ -245,7 +245,7 @@ func loginZont(params *Params) {
 
 func getZontApi(params *Params, contentType, method, urlPath, putData string, data url.Values) []byte {
 
-	client := getClient(false, params.Password)
+	client := getClient(false, params.Password+"_"+params.Login)
 	u := params.URLstring + urlPath
 	var rbody io.Reader
 	if method == "GET" {

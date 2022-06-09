@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"net/url"
 	"os"
+	"path/filepath"
 	"strings"
 	"time"
 
@@ -305,11 +306,11 @@ func cars7CreateOrUpdateDocement(w http.ResponseWriter, r *http.Request) {
 	type CreateParams struct {
 		Login      string `json:"login,omitempty"`
 		Password   string `json:"password,omitempty"`
-		OrderID    string `json:"order_id,omitempty"`
+		OrderID    string `json:"order_id"`
 		Summ       string `json:"summ,omitempty"`
-		Status     string `json:"status,omitempty"`
-		Comment    string `json:"comment,omitempty"`
-		CompenceID string `json:"compence_id,omitempty"`
+		Status     string `json:"status"`
+		Comment    string `json:"comment"`
+		CompenceID string `json:"compence_id"`
 		File       string `json:"file"`
 	}
 	var params CreateParams
@@ -318,7 +319,7 @@ func cars7CreateOrUpdateDocement(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("JSON unmarshal error:", err)
 	}
 
-	rawfile, err := base64.RawStdEncoding.DecodeString(params.File)
+	rawfile, err := base64.StdEncoding.DecodeString(params.File)
 
 	if err != nil {
 		fmt.Println("Error Retrieving the File")
@@ -332,14 +333,13 @@ func cars7CreateOrUpdateDocement(w http.ResponseWriter, r *http.Request) {
 
 	login(&parLoginPass)
 
-  client := getClient(true, "cars7")
+	client := getClient(true, "cars7")
 
-	filedata, _ := os.Open(os.TempDir() + "tmp.tmp")
+	filedata, _ := os.CreateTemp("", "tmp")
 	_, err = filedata.Write(rawfile)
 	if err != nil {
 		fmt.Println(err)
 	}
-	defer filedata.Close()
 
 	values := map[string]io.Reader{
 		"file":                          filedata,
@@ -360,11 +360,10 @@ func cars7CreateOrUpdateDocement(w http.ResponseWriter, r *http.Request) {
 		}
 
 		if x, ok := r.(*os.File); ok {
-			if len(rawfile) > 0 {
-				part, err = wmpd.CreateFormFile(key, x.Name())
-				if err != nil {
-					fmt.Printf("form file err %v", err)
-				}
+			part, err = wmpd.CreateFormFile(key, filepath.Base(x.Name()))
+
+			if err != nil {
+				fmt.Printf("form file err %v", err)
 			}
 		} else {
 			if part, err = wmpd.CreateFormField(key); err != nil {
@@ -379,7 +378,7 @@ func cars7CreateOrUpdateDocement(w http.ResponseWriter, r *http.Request) {
 
 	}
 	defer wmpd.Close()
-
+	defer filedata.Close()
 	// Now that you have a form, you can submit it to your handler.
 	req, err := http.NewRequest("POST", "https://lk.cars7.ru/Data/SaveCompensation", &b)
 	if err != nil {
@@ -396,5 +395,6 @@ func cars7CreateOrUpdateDocement(w http.ResponseWriter, r *http.Request) {
 	defer res.Body.Close()
 
 	body, _ = ioutil.ReadAll(res.Body)
+	fmt.Println(string(body))
 	w.Write(body)
 }
