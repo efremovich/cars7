@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"mime/multipart"
 	"net/http"
+	"net/textproto"
 	"net/url"
 	"os"
 	"path/filepath"
@@ -335,7 +336,7 @@ func cars7CreateOrUpdateDocement(w http.ResponseWriter, r *http.Request) {
 
 	client := getClient(true, "cars7")
 
-	filedata, _ := os.CreateTemp("", "tmp")
+	filedata, _ := os.CreateTemp("", "*.pdf")
 	_, err = filedata.Write(rawfile)
 	if err != nil {
 		fmt.Println(err)
@@ -360,18 +361,23 @@ func cars7CreateOrUpdateDocement(w http.ResponseWriter, r *http.Request) {
 		}
 
 		if x, ok := r.(*os.File); ok {
-			part, err = wmpd.CreateFormFile(key, filepath.Base(x.Name()))
+			part, err = createFormFile(key, filepath.Base(x.Name()), wmpd)
 
 			if err != nil {
 				fmt.Printf("form file err %v", err)
 			}
+
+			_, err = io.Copy(part, r)
+			f, _ := os.Open(x.Name())
+			_, err = io.Copy(part, f)
+
 		} else {
 			if part, err = wmpd.CreateFormField(key); err != nil {
 				fmt.Printf("form field err %v", err)
 			}
+			_, err = io.Copy(part, r)
 		}
 
-		_, err := io.Copy(part, r)
 		if err != nil {
 			fmt.Printf("form copy file err %v", err)
 		}
@@ -397,4 +403,21 @@ func cars7CreateOrUpdateDocement(w http.ResponseWriter, r *http.Request) {
 	body, _ = ioutil.ReadAll(res.Body)
 	fmt.Println(string(body))
 	w.Write(body)
+}
+
+// CreateFormFile is a convenience wrapper around CreatePart. It creates
+// a new form-data header with the provided field name and file name.
+func createFormFile(fieldname, filename string, w *multipart.Writer) (io.Writer, error) {
+	h := make(textproto.MIMEHeader)
+	h.Set("Content-Disposition",
+		fmt.Sprintf(`form-data; name="%s"; filename="%s"`,
+			escapeQuotes(fieldname), escapeQuotes(filename)))
+	h.Set("Content-Type", "application/pdf")
+	return w.CreatePart(h)
+}
+
+var quoteEscaper = strings.NewReplacer("\\", "\\\\", `"`, "\\\"")
+
+func escapeQuotes(s string) string {
+	return quoteEscaper.Replace(s)
 }
