@@ -2,6 +2,8 @@ package main
 
 import (
 	"bytes"
+	"encoding/base64"
+	"encoding/json"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -14,9 +16,6 @@ import (
 	"strings"
 	"time"
 
-	"encoding/base64"
-	"encoding/json"
-
 	"github.com/PuerkitoBio/goquery"
 )
 
@@ -25,7 +24,6 @@ func login(params *Params) {
 	queryLoqin := url.QueryEscape(params.Login)
 	loginURL := "http://lk.cars7.ru/Account/LoginApp?login=" + queryLoqin + "&password=" + params.Password
 	_, err := client.Get(loginURL)
-
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -44,7 +42,6 @@ func getOrders(w http.ResponseWriter, r *http.Request) {
 }
 
 func getCars(w http.ResponseWriter, r *http.Request) {
-
 	var params Params
 	body := StreamToByte(r.Body)
 	err := json.Unmarshal(body, &params)
@@ -57,7 +54,6 @@ func getCars(w http.ResponseWriter, r *http.Request) {
 }
 
 func getFine(w http.ResponseWriter, r *http.Request) {
-
 	var params Params
 
 	body := StreamToByte(r.Body)
@@ -203,11 +199,9 @@ func cars7Compence(w http.ResponseWriter, r *http.Request) {
 
 	body, _ = json.Marshal(compences)
 	w.Write(body)
-
 }
 
 func getCompenceData(resp *http.Response) []Compence {
-
 	statuses := map[string]string{
 		"Оплачен":    "1",
 		"Не оплачен": "0",
@@ -226,8 +220,8 @@ func getCompenceData(resp *http.Response) []Compence {
 		fmt.Println("goquery err: ", err)
 	}
 	layout := "02.01.2006 15:04:05"
-	doc.Find("tbody tr").Each(func(_ int, s *goquery.Selection) {
 
+  doc.Find("tbody tr").Each(func(_ int, s *goquery.Selection) {
 		s.Find(".button_edit").Each(func(_ int, id *goquery.Selection) {
 			compence.ID = id.AttrOr("data-value", "0")
 		})
@@ -243,9 +237,8 @@ func getCompenceData(resp *http.Response) []Compence {
 				date, _ := time.Parse(layout, data.Text())
 				compence.PayDay = date
 			}
-
 		})
-		resp, _ := client.Get(fmt.Sprintf("https://lk.cars7.ru/Data/NewItem?type=9&id=%v&tz=-3&copy=false", compence.ID))
+		resp, _ := client.Get(fmt.Sprintf("https://lk.cars7.ru/Data/NewItem?type=9&id=%v&category=0&tz=-3&copy=false", compence.ID))
 
 		data, err := goquery.NewDocumentFromResponse(resp)
 		if err != nil {
@@ -255,8 +248,8 @@ func getCompenceData(resp *http.Response) []Compence {
 		data.Find("#Compensation_Lease_Identifier").Each(func(_ int, s *goquery.Selection) {
 			compence.OrderID = s.AttrOr("value", "")
 		})
-
-		data.Find("#Compensation_Amount").Each(func(_ int, s *goquery.Selection) {
+		
+    data.Find(`[name="Compensation.Amount"]`).Each(func(_ int, s *goquery.Selection) {
 			compence.Sum = s.AttrOr("value", "")
 		})
 
@@ -324,7 +317,6 @@ func cars7CreateOrUpdateDocement(w http.ResponseWriter, r *http.Request) {
 	}
 
 	rawfile, err := base64.StdEncoding.DecodeString(params.File)
-
 	if err != nil {
 		fmt.Println("Error Retrieving the File")
 		fmt.Println(err)
