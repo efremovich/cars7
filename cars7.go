@@ -203,7 +203,7 @@ func cars7Compence(w http.ResponseWriter, r *http.Request) {
 
 func getCompenceData(resp *http.Response) []Compence {
 	statuses := map[string]string{
-		"Оплаченa":    "1",
+		"Оплачена":    "1",
 		"Не оплачен": "0",
 		"Ждёт добровольную оплату картой или на Р/С":                            "6",
 		"Ждёт добровольную оплату картой или на Р/С (блокировка через 30 дней)": "9",
