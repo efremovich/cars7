@@ -203,7 +203,7 @@ func cars7Compence(w http.ResponseWriter, r *http.Request) {
 
 func getCompenceData(resp *http.Response) []Compence {
 	statuses := map[string]string{
-		"Оплачен":    "1",
+		"Оплаченa":    "1",
 		"Не оплачен": "0",
 		"Ждёт добровольную оплату картой или на Р/С":                            "6",
 		"Ждёт добровольную оплату картой или на Р/С (блокировка через 30 дней)": "9",
@@ -258,7 +258,12 @@ func getCompenceData(resp *http.Response) []Compence {
 		})
 
 		data.Find("option[selected='selected']").Each(func(_ int, s *goquery.Selection) {
+      if statuses[s.Text()] != ""{
 			compence.Status = statuses[s.Text()]
+      }else{
+			compence.Status = "0"
+
+      }
 		})
 		compences = append(compences, compence)
 	})
