@@ -23,7 +23,8 @@ func login(params *Params) {
 	client := getClient(true, "cars7")
 	queryLoqin := url.QueryEscape(params.Login)
 	loginURL := "http://lk.cars7.ru/Account/LoginApp?login=" + queryLoqin + "&password=" + params.Password
-	_, err := client.Get(loginURL)
+	resp, err := client.Get(loginURL)
+	defer resp.Body.Close()
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -117,6 +118,8 @@ func getDataCSV(params *Params) []byte {
 		"http://lk.cars7.ru/Export/ExportToCsv?type="+params.Category+"&category=0&timezone=-3",
 		formData,
 	)
+
+	defer resp.Body.Close()
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -138,6 +141,7 @@ func getDataCSV(params *Params) []byte {
 		fmt.Println(err)
 	}
 
+	defer resp.Body.Close()
 	body, err = ioutil.ReadAll(resp.Body)
 	if err != nil {
 		fmt.Println(err)
@@ -186,6 +190,8 @@ func cars7Compence(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println("resp err: ", err)
 	}
+
+	defer resp.Body.Close()
 	doc, err := goquery.NewDocumentFromResponse(resp)
 
 	compences := []Compence{}
@@ -194,6 +200,7 @@ func cars7Compence(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			fmt.Println("resp err: ", err)
 		}
+		defer resp.Body.Close()
 		compences = append(compences, getCompenceData(resp)...)
 	})
 
@@ -203,7 +210,7 @@ func cars7Compence(w http.ResponseWriter, r *http.Request) {
 
 func getCompenceData(resp *http.Response) []Compence {
 	statuses := map[string]string{
-		"Оплачена":    "1",
+		"Оплачена":   "1",
 		"Не оплачен": "0",
 		"Ждёт добровольную оплату картой или на Р/С":                            "6",
 		"Ждёт добровольную оплату картой или на Р/С (блокировка через 30 дней)": "9",
@@ -221,7 +228,7 @@ func getCompenceData(resp *http.Response) []Compence {
 	}
 	layout := "02.01.2006 15:04:05"
 
-  doc.Find("tbody tr").Each(func(_ int, s *goquery.Selection) {
+	doc.Find("tbody tr").Each(func(_ int, s *goquery.Selection) {
 		s.Find(".button_edit").Each(func(_ int, id *goquery.Selection) {
 			compence.ID = id.AttrOr("data-value", "0")
 		})
@@ -239,6 +246,7 @@ func getCompenceData(resp *http.Response) []Compence {
 			}
 		})
 		resp, _ := client.Get(fmt.Sprintf("https://lk.cars7.ru/Data/NewItem?type=9&id=%v&category=0&tz=-3&copy=false", compence.ID))
+		defer resp.Body.Close()
 
 		data, err := goquery.NewDocumentFromResponse(resp)
 		if err != nil {
@@ -248,8 +256,8 @@ func getCompenceData(resp *http.Response) []Compence {
 		data.Find("#Compensation_Lease_Identifier").Each(func(_ int, s *goquery.Selection) {
 			compence.OrderID = s.AttrOr("value", "")
 		})
-		
-    data.Find(`[name="Compensation.Amount"]`).Each(func(_ int, s *goquery.Selection) {
+
+		data.Find(`[name="Compensation.Amount"]`).Each(func(_ int, s *goquery.Selection) {
 			compence.Sum = s.AttrOr("value", "")
 		})
 
@@ -258,12 +266,11 @@ func getCompenceData(resp *http.Response) []Compence {
 		})
 
 		data.Find("option[selected='selected']").Each(func(_ int, s *goquery.Selection) {
-      if statuses[s.Text()] != ""{
-			compence.Status = statuses[s.Text()]
-      }else{
-			compence.Status = "0"
-
-      }
+			if statuses[s.Text()] != "" {
+				compence.Status = statuses[s.Text()]
+			} else {
+				compence.Status = "0"
+			}
 		})
 		compences = append(compences, compence)
 	})
@@ -285,6 +292,8 @@ func cars7GetDocement(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err)
 	}
+
+	defer resp.Body.Close()
 	body, _ = ioutil.ReadAll(resp.Body)
 	compence := FileCompence{}
 	compence.Name = fmt.Sprintf("Притензия для %v", params.CompenceID)
@@ -362,7 +371,6 @@ func cars7CreateOrUpdateDocement(w http.ResponseWriter, r *http.Request) {
 
 		if x, ok := r.(*os.File); ok {
 			part, err = createFormFile(key, filepath.Base(x.Name()), wmpd)
-
 			if err != nil {
 				fmt.Printf("form file err %v", err)
 			}
