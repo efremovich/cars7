@@ -136,7 +136,8 @@ func getDataCSV(params *Params) []byte {
 	if err != nil {
 		fmt.Printf("Ошибка преобразования json: %v", err)
 	}
-	resp, err = client.Get("http://lk.cars7.ru/Export/GetFileCsv?url=" + url.QueryEscape(file.File))
+	f := filepath.Clean(file.File)
+	resp, err = client.Get("http://lk.cars7.ru/Export/GetFileCsv?url=" + url.QueryEscape(f))
 	if err != nil {
 		fmt.Println(err)
 	}
